@@ -1,7 +1,3 @@
-# **Group ID - 2020-175 **
-
-# **Research Domain - Robotics and Intelligent Systems**
-
 # **Main Conponment** 
 
 *  ## Research questions : In Sri Lanka Doesn't have any Automated conversational appointment management system for Sinhala users.
@@ -34,6 +30,10 @@
 *  ### Research questions : NLU connection into RASA Framework.
 
 *  ### Objective : Developing a chat flow for the patient.
+
+# **Group ID - 2020-175**
+
+# **Research Domain - Robotics and Intelligent Systems**
 
 # **Supervisor - Prof. Koliya Pulasinghe**
 
