@@ -30,16 +30,19 @@
 *  ### Research questions : NLU connection into RASA Framework.
 
 *  ### Objective : Developing a chat flow for the patient.
+ 
+# Other information
 
-## **Group ID** - 2020-175
+* ## **Group ID** - 2020-175
+ 
+* ## **Research Domain** - Robotics and Intelligent Systems
+ 
+* ## **Supervisor** - Prof. Koliya Pulasinghe
 
-## **Research Domain** - Robotics and Intelligent Systems
+* ## **Co Supervisor** - Ms. Vijani Piyawardana
 
-## **Supervisor** - Prof. Koliya Pulasinghe
+* ## **Member Details -**
 
-## **Co Supervisor** - Ms. Vijani Piyawardana
-
-## **Member Details -**
 
 | IT Number   | Name               |
 | ----------- | ------------------ |
