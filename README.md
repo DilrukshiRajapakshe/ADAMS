@@ -41,13 +41,12 @@
 
 * ## **Co Supervisor** - Ms. Vijani Piyawardana
 
-* ## **Member Details -**
+* ## **Member Details -:**
 
-
-| IT Number   | Name               |
-| ----------- | ------------------ |
-| IT16234062  | D.D.S Rajapakshe   |
-| IT17029278  | U.L.N.P. Uswatte   |
-| IT17255820  | Kudawithana K.N.B  |
-| IT17043656  | Nishshanka N.A.B.D |
+        | IT Number   | Name               |
+        | ----------- | ------------------ |
+        | IT16234062  | D.D.S Rajapakshe   |
+        | IT17029278  | U.L.N.P. Uswatte   |
+        | IT17255820  | Kudawithana K.N.B  |
+        | IT17043656  | Nishshanka N.A.B.D |
 
