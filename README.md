@@ -31,15 +31,15 @@
 
 *  ### Objective : Developing a chat flow for the patient.
 
-# **Group ID** - ## 2020-175
+## **Group ID** - 2020-175
 
-# **Research Domain** - ## Robotics and Intelligent Systems
+## **Research Domain** - Robotics and Intelligent Systems
 
-# **Supervisor** - ## Prof. Koliya Pulasinghe
+## **Supervisor** - Prof. Koliya Pulasinghe
 
-# **Co Supervisor** - ## Ms. Vijani Piyawardana
+## **Co Supervisor** - Ms. Vijani Piyawardana
 
-# **Member Details -**
+## **Member Details -**
 
 | IT Number   | Name               |
 | ----------- | ------------------ |
