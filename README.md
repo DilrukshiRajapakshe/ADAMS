@@ -11,7 +11,7 @@
 
 *  ### Research questions : Most patients do not recognize their disease.
 
-*  ### Objective : Determine the optimum identification to sort out the human diseases (patient is given)
+*  ### Objective : Determine the optimum identification to sort out the human diseases (patient is given).
 
 ## 2. 2nd Member -:   
 
@@ -23,10 +23,10 @@
 
 *  ### Research questions : Sinhala Medical doamin text into speech and Dialogue generation.
 
-*  ### Objective : Dialogue management of the Mobile App(voice and Text)
+*  ### Objective : Dialogue management of the Mobile App(voice and Text).
 
 ## 4. 4th Member -:
 
-*  ### Research questions : NLU connection into RASA Framework
+*  ### Research questions : NLU connection into RASA Framework.
 
-*  ### Objective : Developing a chat flow for the patient
+*  ### Objective : Developing a chat flow for the patient.
