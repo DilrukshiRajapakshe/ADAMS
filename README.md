@@ -1,8 +1,9 @@
 # **Main** 
 
-## Research questions : In Sri Lanka Doesn't have any Automated conversational appointment management system for Sinhala users.
+*  ## Research questions : In Sri Lanka Doesn't have any Automated conversational appointment management system for Sinhala users.
 
-## objective : Automated Doctor Appointment Management System for medical domain in Sinhala user(ADAMS).
+*  ## objective : Automated Doctor Appointment Management System for medical domain in Sinhala user(ADAMS).
+
 
 # **Individual**
 
