@@ -1,16 +1,16 @@
 import React from 'react';
 import './App.css';
-import SideBar from './sidebar/sidebar';
-
+import SideBar from './component/sidebar';
+import Logo from './image/logo.png';
 
 function App() {
   return (
     <div id="App">
-      <SideBar />
-      <div id="Main-page">
-        <h1 id="main-hedline" >Main Page</h1>
-        <h2>Page content</h2>
+      <div className="container" >
+        <div id="imageDiv"><img id='logo' src={Logo}></img></div>
+        <div id="h5Div"><h6 id="tital">ADAMS Administration Dashboard</h6></div>
       </div>
+      <SideBar/>
     </div>
   );
 }

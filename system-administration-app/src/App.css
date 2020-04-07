@@ -35,9 +35,10 @@ a:hover{
   color: #d1d1d1;
 }
 .bm-burger-button {
+  margin-top: 50px;
   position: fixed;
-  width: 36px;
-  height: 30px;
+  width: 17px;
+  height: 17px;
   left: 36px;
   top: 36px;
 } 
@@ -75,6 +76,35 @@ a:hover{
 .bm-overlay :hover {
   background: rgba(30, 30, 30, 1);
 }
-#main-hedline{
-  margin: 20px;
+
+.bm-menu-wrap{
+  width: 200px;
 }
+
+.container{
+  display: flex;
+  padding-left: 0px;
+  padding-right: 0px;
+  background: #333333;
+  max-width: 100%;
+}
+
+#h5Div{
+  flex: 5;
+}
+
+#imageDiv{
+  flex: 1;
+}
+
+#logo{
+  width: 150px;
+  height: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#tital{
+  margin-top: 30px;
+}
+ 
