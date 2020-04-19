@@ -1,0 +1,110 @@
+html,
+body {
+  margin: 0;
+  background: rgba(30, 30, 30, 1);
+}
+
+#App {
+  font-family: sans-serif;
+  height: 100vh;
+  color: white;
+}
+
+#Main-page {
+  text-align: center;
+  overflow: auto;
+}
+
+.bm-item {
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #d1d1d1;
+  transition: color 0.2s;
+}
+
+.bm-item :focus {
+  border: #333333;
+}
+
+a:focus {
+  outline: none;
+}
+
+a:hover{
+  color: #d1d1d1;
+}
+.bm-burger-button {
+  margin-top: 50px;
+  position: fixed;
+  width: 17px;
+  height: 17px;
+  left: 36px;
+  top: 36px;
+} 
+
+.bm-burger-bars {
+  background: rgb(99, 98, 98);
+}
+
+.bm-cross-button {
+  height: 30px;
+  width: 30px;
+}
+
+.bm-cross {
+  background: rgb(99, 98, 98);
+}
+
+.bm-menu {
+  background: #333333;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+.bm-morph-shape {
+  fill: #1E1E1E;
+}
+
+.bm-item-list {
+  color: #333333;
+}
+
+.bm-overlay {
+  background: rgba(30, 30, 30, 1);
+}
+.bm-overlay :hover {
+  background: rgba(30, 30, 30, 1);
+}
+
+.bm-menu-wrap{
+  width: 200px;
+}
+
+.container{
+  display: flex;
+  padding-left: 0px;
+  padding-right: 0px;
+  background: #333333;
+  max-width: 100%;
+}
+
+#h5Div{
+  flex: 5;
+}
+
+#imageDiv{
+  flex: 1;
+}
+
+#logo{
+  width: 150px;
+  height: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#tital{
+  margin-top: 30px;
+}
+ 
