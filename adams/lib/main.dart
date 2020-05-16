@@ -1,249 +1,207 @@
-import 'package:flutter/material.dart';
 import 'dart:async';
-import 'dart:io' as io;
-import 'package:file/file.dart';
-import 'package:file/local.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_audio_recorder/flutter_audio_recorder.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:flutter/material.dart';
+import 'package:speech_to_text/speech_recognition_error.dart';
+import 'package:speech_to_text/speech_recognition_result.dart';
+import 'package:speech_to_text/speech_to_text.dart';
 
-void main() {
-  SystemChrome.setEnabledSystemUIOverlays([]);
-  return runApp(new MyApp());
+void main() => runApp(MyApp());
+
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
 }
 
-class MyApp extends StatelessWidget {
+class _MyAppState extends State<MyApp> {
+  bool _hasSpeech = false;
+  bool _stressTest = false;
+  double level = 0.0;
+  int _stressLoops = 0;
+  String lastWords = "";
+  String lastError = "";
+  String lastStatus = "";
+  String _currentLocaleId = "";
+  List<LocaleName> _localeNames = [];
+  final SpeechToText speech = SpeechToText();
 
+  @override
+  void initState() {
+    super.initState();
+    initSpeechState();
+  }
+
+  Future<void> initSpeechState() async {
+    bool hasSpeech = await speech.initialize(
+        onError: errorListener, onStatus: statusListener);
+    if (hasSpeech) {
+      _localeNames = await speech.locales();
+
+      var systemLocale = await speech.systemLocale();
+      _currentLocaleId = systemLocale.localeId;
+    }
+
+    if (!mounted) return;
+
+    setState(() {
+      _hasSpeech = hasSpeech;
+      _currentLocaleId = "si_LK";
+    });
+  }
+//  initSpeechState()
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'ADAMS',
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-      ),
-      home: MyHomePage(title: 'ADAMS'),
-    );
-  }
-
-}
-
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-  final String title;
-  @override
-  _MyHomePageState createState() => new _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-
-    return new MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-        ),
-      home: new Scaffold(
+      theme: ThemeData(primaryColor: Colors.purple[600]),
+      home: Scaffold(
         appBar: AppBar(
-
-          title: Text(widget.title),
+          title: const Text('ADAMS'),
         ),
-        body: SafeArea(
-          child: new RecorderExample(),
-        ),
-      ),
-    );
-  }
-}
-
-class RecorderExample extends StatefulWidget {
-  final LocalFileSystem localFileSystem;
-
-  RecorderExample({localFileSystem})
-      : this.localFileSystem = localFileSystem ?? LocalFileSystem();
-
-  @override
-  State<StatefulWidget> createState() => new RecorderExampleState();
-}
-
-class RecorderExampleState extends State<RecorderExample> {
-  FlutterAudioRecorder _recorder;
-  Recording _current;
-  RecordingStatus _currentStatus = RecordingStatus.Unset;
-
-  get daialog => 'Hi, I am ADAMS.';
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    _init();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-
-        child: Column(
-
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-
-            Text(
-              '$daialog',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.deepPurple,
-                  fontSize: 20,
+        body: Column(children: [
+          Expanded(
+            child: Column(
+              children: <Widget>[
+                Expanded(
+                  child: Stack(
+                    children: <Widget>[
+                      Container(
+                        color: Theme.of(context).selectedRowColor,
+                        child: Center(
+                          child: Text(
+                            lastWords,
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ]),
+        floatingActionButton: FloatingActionButton(
+          child: Align(
+            child: Container(
+              width: 40,
+              height: 40,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                      blurRadius: .26,
+                      spreadRadius: level * 1.5,
+                      color: Colors.purple.withOpacity(0.5))
+                ],
+                color: Colors.white,
+                borderRadius:BorderRadius.all(
+                    Radius.circular(50)
+                ),
+              ),
+              child: IconButton(
+                icon: Icon(
+                  Icons.mic,
+                  color: Colors.purple[600],
+                ),
               ),
             ),
-            Text(''
-                ''),
-            SpinKitRipple(
-              size: 50.0,
-              itemBuilder: (BuildContext context, int index) {
-                return DecoratedBox(
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: index.isEven ? Colors.purpleAccent : Colors.deepPurple,
-                  ),
-                );
-              },
-            ),
-          ],
+          ),
+          onPressed: !_hasSpeech || speech.isListening
+              ? null
+              : startListening,
+          tooltip: 'ADAMS',
+          backgroundColor: Colors.white,
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          switch (_currentStatus) {
-            case RecordingStatus.Initialized:
-              {
-                _start();
-                break;
-              }
-            case RecordingStatus.Recording:
-              {
-                _stop();
-                break;
-              }
-            case RecordingStatus.Stopped:
-              {
-                _init();
-                break;
-              }
-            default:
-              break;
-          }
-        },
-        tooltip: 'Increment',
-        child: _buildText(_currentStatus),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       ),
     );
   }
 
-  _init() async {
-    try {
-      if (await FlutterAudioRecorder.hasPermissions) {
-        String customPath = '/flutter_audio_recorder_';
-        io.Directory appDocDirectory;
-//        io.Directory appDocDirectory = await getApplicationDocumentsDirectory();
-        if (io.Platform.isIOS) {
-          appDocDirectory = await getApplicationDocumentsDirectory();
-        } else {
-          appDocDirectory = await getExternalStorageDirectory();
-        }
+  void stressTest() {
+    if (_stressTest) {
+      return;
+    }
+    _stressLoops = 0;
+    _stressTest = true;
+    print("Starting stress test...");
+    startListening();
+  }
 
-        customPath = appDocDirectory.path +
-            customPath +
-            DateTime.now().millisecondsSinceEpoch.toString();
-
-        _recorder =
-            FlutterAudioRecorder(customPath, audioFormat: AudioFormat.WAV);
-
-        await _recorder.initialized;
-
-        var current = await _recorder.current(channel: 0);
-
-        setState(() {
-          _current = current;
-          _currentStatus = current.status;
-          print(_currentStatus);
-        });
-      } else {
-        Scaffold.of(context).showSnackBar(
-            new SnackBar(content: new Text("You must accept permissions")));
+  void changeStatusForStress(String status) {
+    if (!_stressTest) {
+      return;
+    }
+    if (speech.isListening) {
+      stopListening();
+    } else {
+      if (_stressLoops >= 100) {
+        _stressTest = false;
+        print("Stress test complete.");
+        return;
       }
-    } catch (e) {
-      print(e);
+      print("Stress loop: $_stressLoops");
+      ++_stressLoops;
+      startListening();
     }
   }
 
-  _start() async {
-    try {
-      await _recorder.start();
-      var recording = await _recorder.current(channel: 0);
-      setState(() {
-        _current = recording;
-      });
-
-      const tick = const Duration(milliseconds: 50);
-      new Timer.periodic(tick, (Timer t) async {
-        if (_currentStatus == RecordingStatus.Stopped) {
-          t.cancel();
-        }
-
-        var current = await _recorder.current(channel: 0);
-        // print(current.status);
-        setState(() {
-          _current = current;
-          _currentStatus = _current.status;
-        });
-      });
-    } catch (e) {
-      print(e);
-    }
+  void startListening() {
+    lastWords = "";
+    lastError = "";
+    speech.listen(
+        onResult: resultListener,
+        listenFor: Duration(seconds: 10),
+        localeId: _currentLocaleId,
+        onSoundLevelChange: soundLevelListener,
+        cancelOnError: true,
+        partialResults: true);
+    setState(() {});
   }
 
-  _stop() async {
-    var result = await _recorder.stop();
-    print("Stop recording: ${result.path}");
-    print("Stop recording: ${result.duration}");
-    File file = widget.localFileSystem.file(result.path);
-    print("File length: ${await file.length()}");
+  void stopListening() {
+    speech.stop();
     setState(() {
-      _current = result;
-      _currentStatus = _current.status;
+      level = 0.0;
     });
   }
 
-  Widget _buildText(RecordingStatus status) {
-    var text = "";
-    switch (_currentStatus) {
-      case RecordingStatus.Initialized:
-        {
-          text = 'Start';
-          break;
-        }
-      case RecordingStatus.Recording:
-        {
-          text = 'Stope';
-          break;
-        }
-      case RecordingStatus.Stopped:
-        {
-          text = 'Init';
-          break;
-        }
-      default:
-        break;
-    }
-    return Text(text, style: TextStyle(color: Colors.white));
+  void cancelListening() {
+    speech.cancel();
+    setState(() {
+      level = 0.0;
+    });
   }
 
+  void resultListener(SpeechRecognitionResult result) {
+    setState(() {
+      lastWords = "${result.recognizedWords}";
+    });
+    printText();
+  }
+
+  void soundLevelListener(double level) {
+    setState(() {
+      this.level = level;
+    });
+  }
+
+  void errorListener(SpeechRecognitionError error) {
+    setState(() {
+      lastError = "${error.errorMsg} - ${error.permanent}";
+    });
+  }
+
+  void statusListener(String status) {
+    changeStatusForStress(status);
+    setState(() {
+      lastStatus = "$status";
+    });
+  }
+
+  void printText(){
+    if(speech.isListening){
+    }else{
+      if(lastWords != null)
+        print(lastWords);
+    }
+  }
 }
-
-
