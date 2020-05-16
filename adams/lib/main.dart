@@ -200,8 +200,9 @@ class _MyAppState extends State<MyApp> {
   void printText(){
     if(speech.isListening){
     }else{
-      if(lastWords != null)
-        print(lastWords);
+      if(lastWords != null) {
+//        print(lastWords);
+      }
     }
   }
 }
