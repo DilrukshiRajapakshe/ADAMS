@@ -1,57 +1,40 @@
+
+import 'dart:io';
+
 import 'package:flutter/material.dart';
-import 'bot/bot.dart';
-import 'dart:async';
+import 'UI/bot/bot.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'UI/login/Login.dart';
 
-void main(){
-  runApp(MaterialApp(
-    home: MyApp(),
-    debugShowCheckedModeBanner: false,
-  ));
-}
+void main() => runApp(MyApp());
 
-class MyApp extends StatefulWidget{
-  @override
-  _MyAppState createState() => _MyAppState();
-
-}
-
-class _MyAppState extends State<MyApp>{
-
-  @override
-  void initState(){
-    super.initState();
-    Future.delayed(Duration(
-      seconds: 3
-    ),
-        (){
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context)=> bot(),
-              )
-          );
-        },
-    );
-  }
+class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.purple[600],
-      body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Center(
-                child: Image(image: AssetImage('assets/image/logo.png'),
-                  width: 350,
-                  height: 150,
-                ),
-            ),
-          ],
-        ),
-      ),
+
+    return MaterialApp(
+      title: 'ADAMS',
+      theme: ThemeData(primaryColor: Colors.purple[600]),
+      debugShowCheckedModeBanner: false,
+      home: LoadingScreen(),
+    );
+  }
+}
+
+
+class LoadingScreen extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return StreamBuilder(
+      stream: FirebaseAuth.instance.onAuthStateChanged,
+      builder: (context,AsyncSnapshot<FirebaseUser> snapshot) {
+        if(!snapshot.hasData || snapshot.data == null){
+          return Login();
+        }
+        return bot();
+      },
     );
   }
 }
