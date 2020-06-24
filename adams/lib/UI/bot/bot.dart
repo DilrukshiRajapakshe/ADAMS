@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:speech_to_text/speech_recognition_error.dart';
 import 'package:speech_to_text/speech_recognition_result.dart';
 import 'package:speech_to_text/speech_to_text.dart';
-import 'package:adams/sideNav/sideNav.dart';
+import 'package:adams/UI/sideNav/sideNav.dart';
 void main() => runApp(bot());
 
 class bot extends StatefulWidget {
@@ -20,7 +20,6 @@ class _MyAppState extends State<bot> {
   String lastError = "";
   String lastStatus = "";
   String _currentLocaleId = "";
-  List<LocaleName> _localeNames = [];
   final SpeechToText speech = SpeechToText();
 
   @override
@@ -33,12 +32,9 @@ class _MyAppState extends State<bot> {
     bool hasSpeech = await speech.initialize(
         onError: errorListener, onStatus: statusListener);
     if (hasSpeech) {
-      _localeNames = await speech.locales();
-
       var systemLocale = await speech.systemLocale();
       _currentLocaleId = systemLocale.localeId;
     }
-
     if (!mounted) return;
 
     setState(() {
@@ -165,13 +161,6 @@ class _MyAppState extends State<bot> {
     });
   }
 
-  void cancelListening() {
-    speech.cancel();
-    setState(() {
-      level = 0.0;
-    });
-  }
-
   void resultListener(SpeechRecognitionResult result) {
     setState(() {
       lastWords = "${result.recognizedWords}";
@@ -202,7 +191,7 @@ class _MyAppState extends State<bot> {
     if(speech.isListening){
     }else{
       if(lastWords != null) {
-//        print(lastWords);
+        print(lastWords);
       }
     }
   }

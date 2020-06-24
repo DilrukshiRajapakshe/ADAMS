@@ -1,8 +1,38 @@
+import 'package:adams/Login/LoginService.dart';
 import 'package:flutter/material.dart';
+import 'appointment/Appointment.dart';
 import 'setting/setting.dart';
-import 'profile/profile.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
-class SideNav extends StatelessWidget{
+class SideNav extends StatefulWidget {
+  @override
+  _SideNavState createState() => _SideNavState();
+}
+
+class _SideNavState extends State<SideNav> {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  String _userName = "";
+  String _userEmail = "";
+  String _userUrl = 'https://res.cloudinary.com/sewwandi/image/upload/v1589990314/upload.png';
+
+  @override
+  void initState() {
+    super.initState();
+    initUserState();
+  }
+
+  Future<void> initUserState() async {
+    final FirebaseUser currentUser = await _auth.currentUser();
+    String name = currentUser.displayName;
+    String email = currentUser.email;
+    String url = currentUser.photoUrl;
+
+    setState(() {
+       _userName = name;
+       _userEmail = email;
+       _userUrl = url;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,30 +57,26 @@ class SideNav extends StatelessWidget{
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       image: DecorationImage(
-                        image: NetworkImage('https://res.cloudinary.com/sewwandi/image/upload/v1589990314/upload.png'),
-                        fit:BoxFit.fill,
+                        image: NetworkImage(
+                            _userUrl
+                        ),
+                        fit: BoxFit.cover,
                       ),
                     ),
                   ),
                   Text(
-                      "Name",
+                    _userName,
                       style: TextStyle(
                         fontSize: 22,
                         color: Colors.white,
                       ),
+                    textAlign: TextAlign.center,
                   ),
                   Text(
-                    "Email",
+                    _userEmail,
                     style: TextStyle(
                       color: Colors.white,
                     ),
-                  ),
-                  Align(
-                      alignment: Alignment.centerRight,
-                      child: Icon(
-                          Icons.edit,
-                          color: Colors.white,
-                      ),
                   ),
                 ],
               ),
@@ -59,14 +85,14 @@ class SideNav extends StatelessWidget{
           ListTile(
             leading: Icon(Icons.person),
             title: Text(
-              "Profile",
+              "Appointment",
               style: TextStyle(
                 fontSize: 18,
               ),
             ),
             onTap: (){
               Navigator.of(context).pop();
-              Route route = MaterialPageRoute(builder: (context) => Profile());
+              Route route = MaterialPageRoute(builder: (context) => Appointment());
               Navigator.push(context, route);
             },
           ),
@@ -92,7 +118,10 @@ class SideNav extends StatelessWidget{
                 fontSize: 18,
               ),
             ),
-            onTap: null,
+            onTap: (){
+              LoginService().signOutGoogle();
+              Navigator.of(context).pop();
+            },
           ),
         ],
       )
