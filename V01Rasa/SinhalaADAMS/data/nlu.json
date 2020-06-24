@@ -1,0 +1,72 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "හෙලෝ",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "හලෝ",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "හෙලෝ මට සහයක් අවශ්‍යයයි",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "ඔබගේ උපකාරයට බෙහෙවින් ස්තූතී",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "ස්තූතී",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "බොහොම ස්තූතී",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "මට දියවැඩියාව පිලිබද වෛද්‍යවරයෙකු මුන ගැසිය යුතුය",
+        "intent": "chanel_service",
+        "entities": [
+          {
+            "start": 3,
+            "end": 13,
+            "value": "දියවැඩියාව",
+            "entity": "Disease"
+          }
+        ]
+      },
+      {
+        "text": "මට වෛද්‍යවරයෙකු දියවැඩියාව සම්බන්ධයෙන් මුනගැසිය යුතුය",
+        "intent": "chanel_service",
+        "entities": [
+          {
+            "start": 16,
+            "end": 26,
+            "value": "දියවැඩියාව",
+            "entity": "Disease"
+          }
+        ]
+      },
+      {
+        "text": "වෛද්‍යවරයෙකු මට දියවැඩියාව සම්බන්දයෙන් මුනගැසිය යුතුය",
+        "intent": "chanel_service",
+        "entities": [
+          {
+            "start": 16,
+            "end": 26,
+            "value": "දියවැඩියාව",
+            "entity": "Disease"
+          }
+        ]
+      }
+    ]
+  }
+}
