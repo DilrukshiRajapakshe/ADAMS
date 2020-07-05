@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:adams/mic-Color/ColorServiceImpl.dart';
 import 'package:flutter/material.dart';
 import 'package:speech_to_text/speech_recognition_error.dart';
 import 'package:speech_to_text/speech_recognition_result.dart';
@@ -20,6 +21,7 @@ class _MyAppState extends State<bot> {
   String lastError = "";
   String lastStatus = "";
   String _currentLocaleId = "";
+  var colorOf = Colors.purple[600];
   final SpeechToText speech = SpeechToText();
 
   @override
@@ -42,9 +44,11 @@ class _MyAppState extends State<bot> {
       _currentLocaleId = "si_LK";
     });
   }
-//  initSpeechState()
+
   @override
   Widget build(BuildContext context) {
+    ColorServiceImpl c = new ColorServiceImpl();
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: Colors.purple[600]),
@@ -97,7 +101,7 @@ class _MyAppState extends State<bot> {
               child: IconButton(
                 icon: Icon(
                   Icons.mic,
-                  color: Colors.purple[600],
+                  color: colorOf,
                 ),
               ),
             ),
@@ -146,7 +150,7 @@ class _MyAppState extends State<bot> {
     lastError = "";
     speech.listen(
         onResult: resultListener,
-        listenFor: Duration(seconds: 10),
+        listenFor: Duration(seconds: 20),
         localeId: _currentLocaleId,
         onSoundLevelChange: soundLevelListener,
         cancelOnError: true,
@@ -191,7 +195,7 @@ class _MyAppState extends State<bot> {
     if(speech.isListening){
     }else{
       if(lastWords != null) {
-        print(lastWords);
+       
       }
     }
   }
