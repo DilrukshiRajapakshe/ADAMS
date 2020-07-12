@@ -1,0 +1,446 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "හායි",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "කොහොමද ඔබට",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "සුබ උදෑසනක්",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "මගේ පරිශීලක නාමය කමල්",
+        "intent": "username",
+        "entities": []
+      },
+      {
+        "text": "මම කමල්",
+        "intent": "username",
+        "entities": []
+      },
+      {
+        "text": "කමල්",
+        "intent": "username",
+        "entities": []
+      },
+      {
+        "text": "මගේ මුරපදය වනුයේ නිසල්",
+        "intent": "password",
+        "entities": []
+      },
+      {
+        "text": "මගේ මුරපදය නිසල්",
+        "intent": "password",
+        "entities": []
+      },
+      {
+        "text": "නිසල්",
+        "intent": "password",
+        "entities": []
+      },
+      {
+        "text": "ඔබගේ සේවයට ස්තූතී",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "ස්තූතී",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "ස්තූතී නැවත හමුවෙමු",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "මගේ මුරපද ආකාරය වනුයේ ජාතික හැදුනුම්පත් අංකයයි. මගේ මුරපදය වනුයේ 2345678911V",
+        "intent": "idnumber",
+        "entities": []
+      },
+      {
+        "text": "මගේ මුරපදය 2345678911V වන අතර මුරපද ආකාරය ජාතික හැදුනුම්පත් අංකයයි",
+        "intent": "idnumber",
+        "entities": []
+      },
+      {
+        "text": "මගේමුරපද ආකාරය වනුයේ ගුවන් බලපත්‍ර අංකයයි. මගේ මුරපදය වනුයේ 245678965412",
+        "intent": "idnumber",
+        "entities": []
+      },
+      {
+        "text": "මගේ මුරපදය 245678965412 වන අතර මුරපද ආකාරය ගුවන් බලපත්‍ර අංකයයි",
+        "intent": "idnumber",
+        "entities": []
+      },
+      {
+        "text": "ඔව් මම නිතර වෛද්‍යවරයෙකු හමූවීමට යනවා",
+        "intent": "meet_doctor",
+        "entities": []
+      },
+      {
+        "text": "මම වෛද්‍යවරයෙකු හමූවීමට යනවා",
+        "intent": "meet_doctor",
+        "entities": []
+      },
+      {
+        "text": "මම නිතර වෛද්‍යවරයෙකු හමූවීමට යනවා",
+        "intent": "meet_doctor",
+        "entities": []
+      },
+      {
+        "text": "මම වෛද්‍ය සිල්වා මුනගැසීමට යනවා",
+        "intent": "doctor_names",
+        "entities": []
+      },
+      {
+        "text": "වෛද්‍ය සිල්වා මුනගැසීමට යනවා",
+        "intent": "doctor_names",
+        "entities": []
+      },
+      {
+        "text": "වෛද්‍ය සිල්වා",
+        "intent": "doctor_names",
+        "entities": []
+      },
+      {
+        "text": "මට දියවැඩියා රෝගය තියනවා",
+        "intent": "dibetic",
+        "entities": []
+      },
+      {
+        "text": "මම දියවැඩියා රෝගියෙක්",
+        "intent": "dibetic",
+        "entities": []
+      },
+      {
+        "text": "ඔව් මට දියවැඩියා රෝගය තියනවා",
+        "intent": "dibetic",
+        "entities": []
+      },
+      {
+        "text": "ඔව් මට අධිරුධිර පීඩනය තියෙනවා",
+        "intent": "high_blood",
+        "entities": []
+      },
+      {
+        "text": "මට අධිරුධිර පීඩන තත්වයක් තියනවා",
+        "intent": "high_blood",
+        "entities": []
+      },
+      {
+        "text": "මම අධිරුධිර පීඩනයෙන් පෙලෙනවා",
+        "intent": "high_blood",
+        "entities": []
+      },
+      {
+        "text": "මට අඩුරුධිර පීඩන තත්වයක් නැ",
+        "intent": "low_blood",
+        "entities": []
+      },
+      {
+        "text": "මම අඩුරුධිර පීඩනයෙන් පෙලෙන්නෙ නැ",
+        "intent": "low_blood",
+        "entities": []
+      },
+      {
+        "text": "මට අඩුරුධිර පීඩනය නැ",
+        "intent": "low_blood",
+        "entities": []
+      },
+      {
+        "text": "ඔව් මම කොලෙස්ටරෝල් රෝගයෙන් පෙලෙන අයෙක්",
+        "intent": "cores",
+        "entities": []
+      },
+      {
+        "text": "ඔව් මට කොලෙස්ටරෝල් රෝගය තියනවා",
+        "intent": "cores",
+        "entities": []
+      },
+      {
+        "text": "ඔව් මම කොලෙස්ටරෝල් රෝගියෙක්",
+        "intent": "cores",
+        "entities": []
+      },
+      {
+        "text": "මට අන්නාසි වලින් ආසාද්මිකතාවය ඇතිවෙනවා",
+        "intent": "alergy",
+        "entities": []
+      },
+      {
+        "text": "අන්නාසි මගින් ආසාද්මිකතා ඇතිවෙනවා",
+        "intent": "alergy",
+        "entities": []
+      },
+      {
+        "text": "අන්නාසි නිසා ආසාද්මිකතා තියනවා",
+        "intent": "alergy",
+        "entities": []
+      },
+      {
+        "text": "මාලඹේ නගරයේ",
+        "intent": "city",
+        "entities": []
+      },
+      {
+        "text": "මා ජීවත්වනුයේ මාලඹේ නගරයේ",
+        "intent": "city",
+        "entities": []
+      },
+      {
+        "text": "මාලඹේ",
+        "intent": "city",
+        "entities": []
+      },
+      {
+        "text": "බණ්ඩාරනායක රෝහල මාලඹේ ආසිරි රෝහල මාලඹේ නෙවිල් ප්‍රනාන්දු රෝහල මාලඹේ",
+        "intent": "hospital_name",
+        "entities": []
+      },
+      {
+        "text": "නෙවිල් ප්‍රනාන්දු රෝහල මාලඹේ ආසිරි රෝහල මාලඹේ බණ්ඩාරනායක රෝහල මාලඹේ",
+        "intent": "hospital_name",
+        "entities": []
+      },
+      {
+        "text": "නෙවිල් ප්‍රනාන්දු රෝහල මාලඹේ ආසිරි රෝහල මාලඹේ බණ්ඩාරනායක රෝහල මාලඹේ සුදුසුයැයි මා සිතනවා",
+        "intent": "hospital_name",
+        "entities": []
+      },
+      {
+        "text": "033225897458 මගේ දුරකථන අංකයයි",
+        "intent": "tele_number",
+        "entities": []
+      },
+      {
+        "text": "මගේ දුරකථන අංකය වනුයේ 033225897458",
+        "intent": "tele_number",
+        "entities": []
+      },
+      {
+        "text": "033225897458 දුරකථන අංකයවේ",
+        "intent": "tele_number",
+        "entities": []
+      },
+      {
+        "text": "24",
+        "intent": "age",
+        "entities": []
+      },
+      {
+        "text": "මගේ වයස 24",
+        "intent": "age",
+        "entities": []
+      },
+      {
+        "text": "වයස 24",
+        "intent": "age",
+        "entities": []
+      },
+      {
+        "text": "පද්ධතිය තුල ලියාපදිංචිවීම",
+        "intent": "start_rej",
+        "entities": []
+      },
+      {
+        "text": "වෛද්‍යවරයෙකු හමුවීමට අවශ්‍යයයි",
+        "intent": "start_appoint",
+        "entities": []
+      },
+      {
+        "text": "රෝග පිලිබද තොරතුරු දැනගැනීමට අවශ්‍යයයි",
+        "intent": "start_dise",
+        "entities": []
+      },
+      {
+        "text": "ඖෂධ පිලිබද තොරතුරු දැනගැනීමට අවශ්‍යයයි",
+        "intent": "start_medi",
+        "entities": []
+      },
+      {
+        "text": "සායනික සේවාවාන් ලබා ගැනීමට අවශ්‍යයයි",
+        "intent": "start_chanel",
+        "entities": []
+      },
+      {
+        "text": "රෝග ලක්ෂන වලට අදාලව විස්තර දැනගැනීමට අවශ්‍යයයි",
+        "intent": "start_dise_identi",
+        "entities": []
+      },
+      {
+        "text": "වෛද්‍යවරයෙකු හමුවීම",
+        "intent": "start_appoint",
+        "entities": []
+      },
+      {
+        "text": "රෝග පිලිබද තොරතුරු දැනගැනීම",
+        "intent": "start_dise",
+        "entities": []
+      },
+      {
+        "text": "පද්ධතිය තුල ලියාපදිංචිවීමට අවශ්‍යයයි",
+        "intent": "start_rej",
+        "entities": []
+      },
+      {
+        "text": "ඖෂධ පිලිබද තොරතුරු දැනගැනීම ",
+        "intent": "start_medi",
+        "entities": []
+      },
+      {
+        "text": "සායනික සේවාවාන් ලබා ගැනීම",
+        "intent": "start_chanel",
+        "entities": []
+      },
+      {
+        "text": "රෝග ලක්ෂන වලට අදාලව විස්තර දැනගැනීම",
+        "intent": "start_dise_identi",
+        "entities": []
+      },
+      {
+        "text": "මට දියවැඩියාව සම්බන්ධයෙන් වෛද්‍යවරයෙකු හමුවීමට අවශ්‍යයයි",
+        "intent": "doctor_type",
+        "entities": []
+      },
+      {
+        "text": "දියවැඩියා රෝගය පිලිබද වෛද්‍යවරයෙකු මුනගැසිය යුතුයි",
+        "intent": "doctor_type",
+        "entities": []
+      },
+      {
+        "text": "මට දියවැඩියාව රෝගය පිලිබද වෛද්‍යවරයෙකු හමුවීමට අවශ්‍යයයි",
+        "intent": "doctor_type",
+        "entities": []
+      },
+      {
+        "text": "මට වෛද්‍ය නිමල් මුනගැසීමට අවශ්‍යයයි",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": "මට වෛද්‍ය නිමල් හමුවිය යුතුය",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": "වෛද්‍ය නිමල්",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": "මට වෛද්‍ය කමල් මුනගැසීමට අවශ්‍යයයි",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": " මට වෛද්‍ය කමල් හමුවිය යුතුය",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": "වෛද්‍ය කමල්",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": "මට වෛද්‍ය සුනිල් මුනගැසීමට අවශ්‍යයයි",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": "මට වෛද්‍ය සුනිල් හමුවිය යුතුය",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": "වෛද්‍ය සුනිල්",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": "මට සදුදා දිනයේදී ඔහුව හමුවීමට අවශ්‍යයයි",
+        "intent": "chanel_days",
+        "entities": []
+      },
+      {
+        "text": "මට සදුදා දිනයේදී ඔහුව මුනගැසියයුතුය",
+        "intent": "chanel_days",
+        "entities": []
+      },
+      {
+        "text": "මට සදුදා දිනයේදී ඔහුව හමුවිය යුතුය",
+        "intent": "chanel_days",
+        "entities": []
+      },
+      {
+        "text": "මට බදාදා දිනයේදී ඔහුව හමුවීමට අවශ්‍යයයි",
+        "intent": "chanel_days",
+        "entities": []
+      },
+      {
+        "text": "මට බදාදා දිනයේදී ඔහුව මුනගැසියයුතුය",
+        "intent": "chanel_days",
+        "entities": []
+      },
+      {
+        "text": "මට බදාදා දිනයේදී ඔහුව හමුවිය යුතුය",
+        "intent": "chanel_days",
+        "entities": []
+      },
+      {
+        "text": "මට සිකුරාදා දිනයේදී ඔහුව හමුවීමට අවශ්‍යයයි",
+        "intent": "chanel_days",
+        "entities": []
+      },
+      {
+        "text": "මට සිකුරාදා දිනයේදී ඔහුව මුනගැසියයුතුය",
+        "intent": "chanel_days",
+        "entities": []
+      },
+      {
+        "text": "මට සිකුරාදා දිනයේදී ඔහුව හමුවිය යුතුය",
+        "intent": "chanel_days",
+        "entities": []
+      },
+      {
+        "text": "මට පෙරවරු 11.00 සිට පස්වරු 1.00 අතර මුනගැසීමට අවශ්‍යයයි",
+        "intent": "chanel_time",
+        "entities": []
+      },
+      {
+        "text": "මට පෙරවරු 11.00 සිට පස්වරු 1.00 අතර හමුවියයුතුය",
+        "intent": "chanel_time",
+        "entities": []
+      },
+      {
+        "text": "මට පෙරවරු 11.00 සිට පස්වරු 1.00 අතර හමුවීමට අවශ්‍යයයි",
+        "intent": "chanel_time",
+        "entities": []
+      },
+      {
+        "text": "මට පස්වරු 4.00 සිට පස්වරු 6.00 අතර මුනගැසීමට අවශ්‍යයයි",
+        "intent": "chanel_time",
+        "entities": []
+      },
+      {
+        "text": "මට පස්වරු 4.00 සිට පස්වරු 6.00 අතර හමුවියයුතුය",
+        "intent": "chanel_time",
+        "entities": []
+      },
+      {
+        "text": "මට පස්වරු 4.00 සිට පස්වරු 6.00 අතර හමුවීමට අවශ්‍යයයි",
+        "intent": "chanel_time",
+        "entities": []
+      }
+    ]
+  }
+}
