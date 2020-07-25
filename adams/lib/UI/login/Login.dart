@@ -1,4 +1,4 @@
-import 'package:adams/Login/Loginservice.dart';
+import 'package:adams/Login/LoginserviceImpl.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 
@@ -61,7 +61,7 @@ class _LoginState extends State<Login>{
                         print("Email and password are empty");
                         return;
                       }
-                      bool res = await LoginService().signInWithGoogleEmail(_emailCtrl.text, _passwordCtrl.text);
+                      bool res = await LoginServiceImpl().signInWithGoogleEmail(_emailCtrl.text, _passwordCtrl.text);
                       if(!res) {
                         print("Login failed");
                       }
@@ -75,7 +75,7 @@ class _LoginState extends State<Login>{
                     Buttons.Google,
                     text: "Sign up with Google",
                     onPressed: () async {
-                      bool res = await LoginService().signInWithGoogle();
+                      bool res = await LoginServiceImpl().signInWithGoogle();
                       if(Map == null)
                         print("error logging in with google");
                     },

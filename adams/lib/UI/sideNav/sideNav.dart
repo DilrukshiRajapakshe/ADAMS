@@ -1,4 +1,4 @@
-import 'package:adams/Login/LoginService.dart';
+import 'package:adams/Login/LoginserviceImpl.dart';
 import 'package:flutter/material.dart';
 import 'appointment/Appointment.dart';
 import 'setting/setting.dart';
@@ -119,7 +119,7 @@ class _SideNavState extends State<SideNav> {
               ),
             ),
             onTap: (){
-              LoginService().signOutGoogle();
+              LoginServiceImpl().signOutGoogle();
               Navigator.of(context).pop();
             },
           ),
