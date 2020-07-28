@@ -12,6 +12,8 @@ class LoginServiceImpl implements LoginService{
     try {
       AuthResult result = await _auth.signInWithEmailAndPassword(email: email,password: password);
       FirebaseUser user = result.user;
+      assert(!user.isAnonymous);
+      assert(await user.getIdToken() != null);
       if(user != null)
         return true;
       else
@@ -31,10 +33,13 @@ class LoginServiceImpl implements LoginService{
       accessToken: googleSignInAuthentication.accessToken,
       idToken: googleSignInAuthentication.idToken,
     );
+
     final AuthResult authResult = await _auth.signInWithCredential(credential);
     final FirebaseUser user = authResult.user;
+    assert(!user.isAnonymous);
+    assert(await user.getIdToken() != null);
     final FirebaseUser currentUser = await _auth.currentUser();
-
+    assert(user.uid == currentUser.uid);
     return true;
   }
 

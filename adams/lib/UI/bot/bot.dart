@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:adams/fileReader/service/FileReaderServiceImpl.dart';
 import 'package:adams/mic-Color/service/ColorServiceImpl.dart';
 import 'package:flutter/material.dart';
 import 'package:speech_to_text/speech_recognition_error.dart';
@@ -195,7 +196,13 @@ class _MyAppState extends State<bot> {
     if(speech.isListening){
     }else{
       if(lastWords != null) {
-       
+        print("Testing Voice to text");
+        print(lastWords);
+        print("Testing color function");
+        ColorServiceImpl().returnColor("Appointment");
+        print("Testing Json file reader");
+        FileReaderServiceImpl().parseJson();
+        print("Testing rest api");
       }
     }
   }
