@@ -9,14 +9,9 @@ class Login extends StatefulWidget{
 
 class _LoginState extends State<Login>{
 
-  TextEditingController _emailCtrl;
-  TextEditingController _passwordCtrl;
-
   @override
   void initState() {
     super.initState();
-    _emailCtrl = TextEditingController(text: "");
-    _passwordCtrl = TextEditingController(text: "");
   }
 
   @override
@@ -28,47 +23,29 @@ class _LoginState extends State<Login>{
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              const SizedBox(height: 100.00,),
-              Text(
-                "Login",
-                style: TextStyle(
-                  fontSize: 25.00,
-                  fontWeight: FontWeight.bold
-                ),
-              ),
-              const SizedBox(height: 20.00,),
-              TextField(
-                controller: _emailCtrl,
-                decoration: InputDecoration(
-                  hintText: "Email"
-                ),
-              ),
-              const SizedBox(height: 11.00),
-              TextField(
-                controller: _passwordCtrl,
-                obscureText: true,
-                decoration: InputDecoration(
-                    hintText: "Password"
-                ),
-              ),
-              const SizedBox(height: 20.00),
-              Align(
-                  alignment: Alignment.center,
-                  child:RaisedButton(
-                    child: Text("Login"),
-                    onPressed: ()async {
-                      if(_emailCtrl.text.isEmpty || _passwordCtrl.text.isEmpty) {
-                        print("Email and password are empty");
-                        return;
-                      }
-                      bool res = await LoginServiceImpl().signInWithGoogleEmail(_emailCtrl.text, _passwordCtrl.text);
-                      if(!res) {
-                        print("Login failed");
-                      }
-                    },
-                  ),
-              ),
               const SizedBox(height: 40.00),
+              Align(
+                alignment: Alignment.center,
+                child: Container(
+                  width: 155,
+                  height: 150,
+                  padding: EdgeInsets.all(50),
+                  margin: EdgeInsets.only(
+                      top:30,
+                      bottom: 10
+                  ),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    image: DecorationImage(
+                      image: NetworkImage(
+                          "https://res.cloudinary.com/sewwandi/image/upload/v1594310247/Untitled-2.png"
+                      ),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 100.00),
               Align(
                   alignment: Alignment.center,
                   child: SignInButton(
@@ -80,6 +57,25 @@ class _LoginState extends State<Login>{
                         print("error logging in with google");
                     },
                   ),
+              ),
+              const SizedBox(height: 170.00),
+              Align(
+                alignment: Alignment.center,
+                child: Text("From",
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.black38,
+                    )
+                )
+              ),
+              Align(
+                  alignment: Alignment.center,
+                  child: Text("ADAMS",
+                    style: TextStyle(
+                      fontSize: 22,
+                      color: Colors.purple[600],
+                    )
+                  )
               ),
             ],
           ),

@@ -1,6 +1,7 @@
 import 'dart:async';
-import 'package:adams/fileReader/service/FileReaderServiceImpl.dart';
+import 'package:http/http.dart' as http;
 import 'package:adams/mic-Color/service/ColorServiceImpl.dart';
+import 'package:adams/restService/service/restServiceImpl.dart';
 import 'package:flutter/material.dart';
 import 'package:speech_to_text/speech_recognition_error.dart';
 import 'package:speech_to_text/speech_recognition_result.dart';
@@ -124,7 +125,6 @@ class _MyAppState extends State<bot> {
     }
     _stressLoops = 0;
     _stressTest = true;
-    print("Starting stress test...");
     startListening();
   }
 
@@ -137,10 +137,8 @@ class _MyAppState extends State<bot> {
     } else {
       if (_stressLoops >= 100) {
         _stressTest = false;
-        print("Stress test complete.");
         return;
       }
-      print("Stress loop: $_stressLoops");
       ++_stressLoops;
       startListening();
     }
@@ -192,17 +190,10 @@ class _MyAppState extends State<bot> {
     });
   }
 
-  void printText(){
-    if(speech.isListening){
-    }else{
-      if(lastWords != null) {
-        print("Testing Voice to text");
-        print(lastWords);
-        print("Testing color function");
-        ColorServiceImpl().returnColor("Appointment");
-        print("Testing Json file reader");
-        FileReaderServiceImpl().parseJson();
-        print("Testing rest api");
+  Future<void> printText() async {
+    if(!speech.isListening && _hasSpeech){
+      if(lastWords != null ) {
+        await getDiseaseInfo(http.Client(), lastWords);
       }
     }
   }
