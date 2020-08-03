@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:adams/fileReader/service/FileReaderServiceImpl.dart';
 import 'package:http/http.dart' as http;
 import 'package:adams/mic-Color/service/ColorServiceImpl.dart';
 import 'package:adams/restService/service/restServiceImpl.dart';
@@ -194,6 +195,7 @@ class _MyAppState extends State<bot> {
     if(!speech.isListening && _hasSpeech){
       if(lastWords != null ) {
         await getDiseaseInfo(http.Client(), lastWords);
+        parseJson();
       }
     }
   }

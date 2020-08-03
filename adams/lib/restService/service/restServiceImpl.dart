@@ -19,5 +19,4 @@ import 'package:http/http.dart' as http;
       } else {
         throw Exception('Failed to load data in service');
       }
-
   }
