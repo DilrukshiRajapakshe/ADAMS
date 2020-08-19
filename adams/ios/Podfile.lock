@@ -117,6 +117,8 @@ PODS:
   - PromisesObjC (1.2.8)
   - speech_to_text (0.0.1):
     - Flutter
+    - Try
+  - Try (2.1.1)
 
 DEPENDENCIES:
   - firebase_auth (from `.symlinks/plugins/firebase_auth/ios`)
@@ -151,6 +153,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - nanopb
     - PromisesObjC
+    - Try
 
 EXTERNAL SOURCES:
   firebase_auth:
@@ -205,7 +208,8 @@ SPEC CHECKSUMS:
   path_provider_linux: 4d630dc393e1f20364f3e3b4a2ff41d9674a84e4
   path_provider_macos: f760a3c5b04357c380e2fddb6f9db6f3015897e0
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
-  speech_to_text: 41b068d5f61fe3abe7e2bb0296250cf996e45417
+  speech_to_text: b43a7d99aef037bd758ed8e45d79bbac035d2dfe
+  Try: 5ef669ae832617b3cee58cb2c6f99fb767a4ff96
 
 PODFILE CHECKSUM: c34e2287a9ccaa606aeceab922830efb9a6ff69a
 
