@@ -2,6 +2,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'UI/SplashScreen/SplashScreen.dart';
 import 'UI/bot/bot.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'UI/login/Login.dart';
@@ -33,8 +34,13 @@ class LoadingScreen extends StatelessWidget {
         if(!snapshot.hasData || snapshot.data == null){
           return Login();
         }
+        if(snapshot.connectionState == ConnectionState.waiting)
+          return SplashScreen();
         return bot();
       },
     );
   }
 }
+
+//class SplashPage {
+//}

@@ -1,4 +1,5 @@
 import 'package:adams/Login/LoginserviceImpl.dart';
+import 'package:adams/fileReader/service/FileReaderServiceImpl.dart';
 import 'package:flutter/material.dart';
 import 'appointment/Appointment.dart';
 import 'setting/setting.dart';
@@ -10,6 +11,7 @@ class SideNav extends StatefulWidget {
 }
 
 class _SideNavState extends State<SideNav> {
+
   final FirebaseAuth _auth = FirebaseAuth.instance;
   String _userName = "";
   String _userEmail = "";
