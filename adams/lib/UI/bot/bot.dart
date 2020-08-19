@@ -1,9 +1,14 @@
 import 'dart:async';
+import 'package:adams/UserValidation/UserValidation.dart';
+import 'package:adams/Session/Appointment.dart';
+import 'package:adams/mic-Color/service/ColorServiceImpl.dart';
 import 'package:flutter/material.dart';
 import 'package:speech_to_text/speech_recognition_error.dart';
 import 'package:speech_to_text/speech_recognition_result.dart';
 import 'package:speech_to_text/speech_to_text.dart';
 import 'package:adams/UI/sideNav/sideNav.dart';
+import 'package:geolocator/geolocator.dart';
+
 void main() => runApp(bot());
 
 class bot extends StatefulWidget {
@@ -20,13 +25,45 @@ class _MyAppState extends State<bot> {
   String lastError = "";
   String lastStatus = "";
   String _currentLocaleId = "";
+  var colorOf = Colors.purple[600];
+  String _session = "0";
+  String _question = "";
   final SpeechToText speech = SpeechToText();
+  final Geolocator _geolocatorUser = Geolocator()..forceAndroidLocationManager;
+  Position _currentPositionOfUser;
+  String _currentAddressOfUser;
 
   @override
-  void initState() {
+  Future<void> initState() {
     super.initState();
     initSpeechState();
+    voicePrinter();
+    _getCurrentLocationOfUser();
   }
+//location-01
+  _getCurrentLocationOfUser() {
+    _geolocatorUser.getCurrentPosition(desiredAccuracy: LocationAccuracy.best).then((Position positionOfUser) {
+      setState(() {
+        _currentPositionOfUser = positionOfUser;
+      });
+      _getCurrentAddressOfUser();
+    }).catchError((ex) {
+      print(ex);
+    });
+  }
+//location-02
+  _getCurrentAddressOfUser() async {
+    try {
+      List<Placemark> place = await _geolocatorUser.placemarkFromCoordinates(_currentPositionOfUser.latitude, _currentPositionOfUser.longitude);
+      Placemark placeOfUser = place[0];
+      setState(() {
+        _currentAddressOfUser = "${placeOfUser.locality}, ${placeOfUser.country}";
+      });
+    } catch (ex) {
+      print(ex);
+    }
+  }
+
 
   Future<void> initSpeechState() async {
     bool hasSpeech = await speech.initialize(
@@ -42,9 +79,11 @@ class _MyAppState extends State<bot> {
       _currentLocaleId = "si_LK";
     });
   }
-//  initSpeechState()
+
   @override
   Widget build(BuildContext context) {
+    ColorServiceImpl c = new ColorServiceImpl();
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: Colors.purple[600]),
@@ -57,21 +96,21 @@ class _MyAppState extends State<bot> {
           Expanded(
             child: Column(
               children: <Widget>[
-                Expanded(
-                  child: Stack(
-                    children: <Widget>[
-                      Container(
-                        color: Theme.of(context).selectedRowColor,
-                        child: Center(
-                          child: Text(
-                            lastWords,
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                      ),
-                    ],
+                const SizedBox(height: 80.00),
+                Align(
+                  child: Text(
+                    _question,
+                    textAlign: TextAlign.center,
                   ),
                 ),
+                const SizedBox(height: 40.00),
+                Align(
+                  child: Text(
+                    lastWords,
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                const SizedBox(height: 100.00),
               ],
             ),
           ),
@@ -90,21 +129,17 @@ class _MyAppState extends State<bot> {
                       color: Colors.purple.withOpacity(0.5))
                 ],
                 color: Colors.white,
-                borderRadius:BorderRadius.all(
-                    Radius.circular(50)
-                ),
+                borderRadius: BorderRadius.all(Radius.circular(50)),
               ),
               child: IconButton(
                 icon: Icon(
                   Icons.mic,
-                  color: Colors.purple[600],
+                  color: colorOf,
                 ),
               ),
             ),
           ),
-          onPressed: !_hasSpeech || speech.isListening
-              ? null
-              : startListening,
+          onPressed: !_hasSpeech || speech.isListening ? null : startListening,
           tooltip: 'ADAMS',
           backgroundColor: Colors.white,
         ),
@@ -119,7 +154,6 @@ class _MyAppState extends State<bot> {
     }
     _stressLoops = 0;
     _stressTest = true;
-    print("Starting stress test...");
     startListening();
   }
 
@@ -132,21 +166,19 @@ class _MyAppState extends State<bot> {
     } else {
       if (_stressLoops >= 100) {
         _stressTest = false;
-        print("Stress test complete.");
         return;
       }
-      print("Stress loop: $_stressLoops");
       ++_stressLoops;
       startListening();
     }
   }
 
-  void startListening() {
+  void startListening() async {
     lastWords = "";
     lastError = "";
     speech.listen(
         onResult: resultListener,
-        listenFor: Duration(seconds: 10),
+        listenFor: Duration(seconds: 20),
         localeId: _currentLocaleId,
         onSoundLevelChange: soundLevelListener,
         cancelOnError: true,
@@ -187,12 +219,20 @@ class _MyAppState extends State<bot> {
     });
   }
 
-  void printText(){
-    if(speech.isListening){
-    }else{
-      if(lastWords != null) {
-        print(lastWords);
+  Future<void> printText() async {
+    if (!speech.isListening && _hasSpeech) {
+      if (lastWords != null) {
+        _session = await mainRunner(_question, lastWords, _session);
+        print(_currentAddressOfUser);
       }
     }
   }
+
+  Future<void> voicePrinter() async {
+    String t =  await userValidationInit(_session);
+    setState((){
+      _question = t;
+    });
+  }
+
 }

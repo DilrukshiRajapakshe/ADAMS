@@ -1,0 +1,103 @@
+intents:
+  - greet
+  - goodbye
+  - username
+  - password
+  - idnumber
+  - meet_doctor
+  - doctor_names
+  - dibetic
+  - high_blood
+  - low_blood
+  - cores
+  - alergy
+  - city
+  - hospital_name
+  - tele_number
+  - age
+  - start_rej
+  - start_appoint
+  - start_dise
+  - start_medi
+  - start_chanel
+  - start_dise_identi
+  - doctor_type
+  - appoint_doctor
+  - chanel_days
+  - chanel_time
+
+
+actions:
+  - action_meet_doctor
+
+responses:
+  utter_greet:
+  - text: "ආයුබෝවන් මම ඇඩම්ස්. මම තමයි ඔබගේ වෛද්‍යසහකරුවා.කෙසේද මම ඔබට සහාය වන්නේ?
+            පද්ධතිය තුල ලියාපදිංචිවීමට ,වෛද්‍යවරයෙකු හමුවීම , රෝග පිලිබද තොරතුරු දැනගැනීම , ඖෂධ පිලිබද තොරතුරු දැනගැනීම , සායනික සේවාවාන් ලබා ගැනීම , රෝග ලක්ෂන වලට අදාලව විස්තර දැනගැනීම"
+
+  utter_goodbye:
+  - text: "ස්තූතී නැවත හමුවෙමු"
+
+  utter_username:
+  - text: "කරුණාකර ඔබගේ පරිශිලක නාමය පැවසිය හැකිද?"
+
+  utter_password:
+  - text: "කරුණාකර ඔබගේ මුර පදය පැවසිය හැකිද?"
+
+  utter_idnumber:
+  - text: "ඔබගේ ජාතික හැදුනුම්පත් අංකය හෝ ගුවන්බලපත්ත්‍ර අංකය ලබාදෙන්න. මෙහිදී ඔබ ලබාදුන්නේ කුමන   ආකාරයක අංකයක්ද යන්න සදහන් කලයුතුය. එය මුරපද ආකාරයක් වේ. 
+           උදාහරණයක්
+           මුරපද ආකාරය    - ජාතික හැදුනුම්පත් අංකය
+           මුරපදය               - 123456789V"
+  
+  utter_meet_doctor:
+  - text: "ඔබ නිතර වෛද්‍යවරයෙක් හමුවෙනවාද?"
+
+  utter_doctor_name:
+  - text: "එසේනම් ඒ කවර වෛද්‍යවරයාද?"
+
+  utter_dibetic_patient:
+  - text: "ඔබ දියවැඩියාරෝගයෙන් පෙලෙන අයෙක්ද?"
+
+  utter_high_blood:
+  - text: "ඔබ අධිරුධිර පීඩනයෙන් පෙලෙන අයෙක්ද?"
+
+  utter_low_blood:
+  - text: "ඔබ අඩුරුධිර පීඩනයෙන් පෙලෙන අයෙක්ද?"
+
+  utter_corestrol:
+  - text: "ඔබ කොලෙස්ටරෝල් රෝගයෙන් පෙලෙන අයෙක්ද?"
+
+  utter_aler:
+  - text: "ඔබට කිසියම් ආසාද්මිකතාවක් තිබේද?"
+
+  utter_city:
+  - text: "ඔබ වාසය කරන නගරය කුමක්ද?"
+
+  utter_hospital_name:
+  - text: "ඔබට සුදුසුයැයි කියන පෞද්ගලික රෝහල් වල නම් මොනවාද?"
+
+  utter_tele_number:
+  - text: "ඔබගේ දුරකථන අංකය කුමක්ද?"
+
+  utter_age:
+  - text: "ඔබගේ වයස කීයද?"
+
+  utter_confirm_details:
+  - text: "ඔබගේ දත්ත සියල්ල පද්ධතිය විසින් සාර්ථකව සටහන් කරගනන්නා ලදී. නැවත ගිණුමට පිවිසීමෙදී ඔබ පෙර ලබා දුන් පරිශීලක නාමය හා මුරපදය ඇතුලත් කිරීමට කාරුණික වන්න"
+  
+  utter_doctor_type:
+  - text: "ඔබට මුනගැසිය යුත්තේ කිනම් රෝගය සම්බන්ධයෙන් වෛද්‍යවරයෙක්ද?"
+
+  utter_chanel_days:
+  - text: "ඔහු සතියේ මෙම දවස් වලදී රෝගීන් පරීක්ෂාකරනු ලැබේ සදුදා බදාදා සිකුරාදා"
+
+  utter_chanel_time:
+  - text: "ඔහු මෙම වේලාවන්හීදී රෝගීන් පරීක්ෂාකරනු ලබයි  පෙ.ව. 11.00 - ප.ව. 1.00 ,ප.ව.  4.00 - පෙ.ව.6.00"
+
+  utter_succes_apoint:
+  - text: "ඔබගේ වෛද්‍යහමුව වෙන්කරවාගැනීම සාර්ථකයි. ඔබගේ රෝගීපරීක්ෂක අංකය වනුයේ 20"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
