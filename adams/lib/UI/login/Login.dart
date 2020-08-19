@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:adams/Login/LoginserviceImpl.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
@@ -12,6 +14,7 @@ class _LoginState extends State<Login>{
   @override
   void initState() {
     super.initState();
+    
   }
 
   @override
@@ -58,7 +61,7 @@ class _LoginState extends State<Login>{
                     },
                   ),
               ),
-              const SizedBox(height: 170.00),
+              const SizedBox(height: 150.00),
               Align(
                 alignment: Alignment.center,
                 child: Text("From",
