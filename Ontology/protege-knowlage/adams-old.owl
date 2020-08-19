@@ -1,0 +1,339 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://adams-medi.000webhostapp.com/adams.ttl#"
+     xml:base="https://adams-medi.000webhostapp.com/adams.ttl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://adams-medi.000webhostapp.com/adams.owl">
+        <owl:versionIRI rdf:resource="https://adams-medi.000webhostapp.com/adams.owl/1.0.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#Abolishes -->
+
+    <owl:ObjectProperty rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Abolishes">
+        <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Drug"/>
+        <rdfs:range rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Disease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#Medical_food -->
+
+    <owl:ObjectProperty rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Medical_food">
+        <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Drug"/>
+        <rdfs:range rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Disease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#Tests -->
+
+    <owl:ObjectProperty rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Tests">
+        <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Drug"/>
+        <rdfs:range rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Disease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#Under_reviews -->
+
+    <owl:ObjectProperty rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Under_reviews">
+        <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Drug"/>
+        <rdfs:range rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Disease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#Unethical -->
+
+    <owl:ObjectProperty rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Unethical">
+        <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Drug"/>
+        <rdfs:range rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Disease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#Uses -->
+
+    <owl:ObjectProperty rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Uses">
+        <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Drug"/>
+        <rdfs:range rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Disease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#Description -->
+
+    <owl:DatatypeProperty rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Description">
+        <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Disease"/>
+        <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Drug"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#Name -->
+
+    <owl:DatatypeProperty rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Name">
+        <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Disease"/>
+        <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Drug"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#Synonyms -->
+
+    <owl:DatatypeProperty rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Synonyms">
+        <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Disease"/>
+        <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Drug"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#Approved -->
+
+    <owl:Class rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Approved">
+        <rdfs:subClassOf rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Drug"/>
+    </owl:Class>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#Deficiency_diseases -->
+
+    <owl:Class rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Deficiency_diseases">
+        <rdfs:subClassOf rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Disease"/>
+    </owl:Class>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#Disease -->
+
+    <owl:Class rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Disease"/>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#Drug -->
+
+    <owl:Class rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Drug"/>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#Experimental -->
+
+    <owl:Class rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Experimental">
+        <rdfs:subClassOf rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Drug"/>
+    </owl:Class>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#Genetic_diseases -->
+
+    <owl:Class rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Genetic_diseases">
+        <rdfs:subClassOf rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Hereditary_diseases"/>
+    </owl:Class>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#Hereditary_diseases -->
+
+    <owl:Class rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Hereditary_diseases">
+        <rdfs:subClassOf rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Disease"/>
+    </owl:Class>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#Illicit -->
+
+    <owl:Class rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Illicit">
+        <rdfs:subClassOf rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Drug"/>
+    </owl:Class>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#Infectious_diseases -->
+
+    <owl:Class rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Infectious_diseases">
+        <rdfs:subClassOf rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Disease"/>
+    </owl:Class>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#Investigational -->
+
+    <owl:Class rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Investigational">
+        <rdfs:subClassOf rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Drug"/>
+    </owl:Class>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#Non_genetic_hereditary_diseases -->
+
+    <owl:Class rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Non_genetic_hereditary_diseases">
+        <rdfs:subClassOf rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Hereditary_diseases"/>
+    </owl:Class>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#Nutraceutical -->
+
+    <owl:Class rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Nutraceutical">
+        <rdfs:subClassOf rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Drug"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Deficiency_diseases"/>
+            <rdf:Description rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Disease"/>
+            <rdf:Description rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Genetic_diseases"/>
+            <rdf:Description rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Hereditary_diseases"/>
+            <rdf:Description rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Infectious_diseases"/>
+            <rdf:Description rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Non_genetic_hereditary_diseases"/>
+            <rdf:Description rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Physiological_diseases"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#Physiological_diseases -->
+
+    <owl:Class rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Physiological_diseases">
+        <rdfs:subClassOf rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Disease"/>
+    </owl:Class>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#Withdrawn -->
+
+    <owl:Class rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Withdrawn">
+        <rdfs:subClassOf rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Drug"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#DIS0001 -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#DIS0001">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Non_genetic_hereditary_diseases"/>
+        <Description>අධි රුධිර පීඩනය පිළිබඳ වඩාත්ම භයානක දෙය නම් ඔබට එය ඇති බව ඔබ නොදැන සිටීමයි. එයට හේතුව අධි රුධිර පීඩනය ඉතා දරුණු නම් පමනක් රෝග ලක්ෂණ පෙන්විමයි. ඔබේ රුධිර පීඩනය ඉහළ මට්ටමක පවතී දැයි දැන ගැනීමට හොඳම ක්‍රමය වන්නේ නිරන්තර පරීක්ෂාවන් ය. ඔබට නිවසේදී රුධිර පීඩනය නිරීක්ෂණය කළ හැකිය. අධි රුධිර පීඩනය ඇති සමීප ඥාතියෙකු සිටී නම් මෙය විශේෂයෙන් වැදගත් වේ. දැඩි අධි රුධිර පීඩනයේ රෝග ලක්ෂණ නමි: දරුණු හිසරදය, නාසයෙන්ලේ ගැලීම, තෙහෙට්ටුව,  ව්‍යාකූලතාව, දෘෂ්ටි ගැටළු, පපුවේ වේදනාව, හුස්ම ගැනීමේ අපහසුතා, අක්‍රමවත් හෘද ස්පන්දනය සහා මුත්රා වල රුධිරය.</Description>
+        <Name>අධි රුධිර පීඩනය</Name>
+        <Synonyms>hypertension, high blood pressure, අධි රුධිර පීඩනය</Synonyms>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#DIS0002 -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#DIS0002">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Genetic_diseases"/>
+        <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">හිසකෙස් නැතිවීම (ඇලෝපසියා) ඔබේ හිස්කබලට හෝ ඔබේ මුළු ශරීරයටම බලපාන අතර එය තාවකාලික හෝ ස්ථිර විය හැකිය. එය පාරම්පරික, හෝමෝන වෙනස්කම්, වෛද්‍ය තත්වයන්, හිසට විකිරණ චිකිත්සාව, ඉතා ආතති සහගත සිදුවීමක්, කොණ්ඩා මෝස්තර සහ ප්රතිකාර හෝ වයසට යාමේ සාමාන්‍ය කොටසක ප්‍රතිපලයක් විය හැකිය. ඕනෑම කෙනෙකුට හිස මත හිසකෙස් නැති විය හැකි නමුත් එය පිරිමින් අතර බහුලව දක්නට ලැබේ. තට්ටය යනු සාමාන්‍යයෙන් ඔබේ හිස්කබලේ හිසකෙස් නැති වීමයි. වයස සමඟ පරම්පරාගත හිසකෙස් නැතිවීම තට්ටය ඇතිවීමට වඩාත් පොදු හේතුවයි. හිසකෙස් නැතිවීම සහ රෝග ලක්ෂණ වන්නේ, හිසකෙස් හදිසියේ වැටීම, හිස මුදුනේ ක්‍රමයෙන් සිහින් වීම. වටකුරු හෝ පැල්ලම් සහිත තට්ට ලප, හිසකෙස් හදිසියේ ලිහිල් කිරීම සහා හිස්කබල පුරා පැතිර ඇති පරිමාණයේ පැච්. ඔබ එය වළක්වා ගැනීම සඳහා, තෙත් වූ විට කොන්ඩය පිරිමැදීමෙන් වළකින්න, කොන්ඩය මෘදුව පිරිමදින්න, ඔබේ හිසකෙස් හිරු එළියෙන් සහ පාරජම්බුල කිරණවලින් ආරක්ෂා කරගන්න, ඔබ රසායනික චිකිත්සාව සමඟ ප්‍රතිකාර කරන්නේ නම්, සිසිලන තොප්පිය ගැන ඔබේ වෛද්‍යවරයාගෙන් විමසන්න. මෙම තොප්පිය මගින් රසායනික චිකිත්සාව අතරතුර හිසකෙස් අහිමි වීමේ අවදානම අඩු කර ගත හැකිය සහා දුම්පානය නවත්වන්න.</Description>
+        <Name>තට්ටය ඇතිවීම</Name>
+        <Synonyms rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alopecia, baldness, Hair loss, හිසකෙස් නැතිවීම, ඇලෝපසියා, තට්ටය</Synonyms>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#DRUG0001 -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#DRUG0001">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Approved"/>
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Investigational"/>
+        <Under_reviews rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#DIS0002"/>
+        <Uses rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#DIS0002"/>
+        <Description>පිරිමි පාර්ශවයේ හිසකෙස් වර්ධනය උත්තේජනය කිරීම සඳහා මිනොක්සිඩිල් භාවිතා කරයි. වයස අවුරුදු 40 ට අඩු අයට වඩාත් ඵලදායීවේ.  ඖෂධය නැවැත්වීමෙන් මාස කිහිපයක් ඇතුළත නව හිසකෙස් නැති වී යයි. එය ඔබේ හිස්කබලට යෙදිය යුතු ද්‍රවයක් වන අතර සාමාන්‍යයෙන් දිනකට දෙවරක් භාවිතා කරන්න. අතුරු ආබාධ වන්නේ හිස්කබලේ කැසීම, වියලි බව, කුපිත වීම හෝ හිස්කබලේ දැවීල්ල. ඔබට පහත සඳහන් රෝග ලක්ෂණ කිසිවක් අත්විඳින්නේ නම්, වහාම ඔබේ වෛද්‍යවරයා අමතන්න: බර වැඩිවීම, මුහුණේ ඉදිමීම, වළලුකර ඉදිමීම, අත් හෝ ආමාශය ඉදිමීම, සැහැල්ලු හිසරදය, වේගවත් හෘද ස්පන්දනය, පපුවේ වේදනාව සහා හුස්ම ගැනීමේ අපහසුතාව (විශේෂයෙන් වැතිරී සිටින විට). මිනොක්සිඩිල් වල අර්ධ ආයු කාලය පැය 4.2 වන අතර, කාමර උෂ්ණත්වයේ ගබඩා කරන්න. මිනොක්සිඩිල් ඔබේ ඇස්, නාසය හෝ මුඛය තුළට ඇතුළු වීමට ඉඩ නොදෙන්න සහා එය ගිල දමන්න එපා.</Description>
+        <Name>Minoxidil Solution</Name>
+        <Synonyms>මිනොක්සිඩිල්,මිනොසයිඩිල්,මිනොක්සිඩිල්,මිනොක්සිඩිලම්,Minossidile,Minoxidil,Minoxidilum</Synonyms>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.ttl#DRUG0002 -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#DRUG0002">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Approved"/>
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#Investigational"/>
+        <Under_reviews rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#DIS0001"/>
+        <Uses rdf:resource="https://adams-medi.000webhostapp.com/adams.ttl#DIS0001"/>
+        <Description>අධි රුධිර පීඩනය (අධි රුධිර පීඩනය) සඳහා ප්‍රතිකාර කිරීම සඳහා මිනොක්සිඩිල් ඖෂධ භාවිතා කරයි. අධි රුධිර පීඩනය අඩු කිරීමෙන් ආගාතය, හෘදයාබාධ හා වකුගඩු ආබාධ වළක්වා ගත හැකිය. මිනොක්සිඩිල් ක්‍රියා කර රුධිර නාල ලිහිල් කර රුධිරය වඩාත් පහසුවෙන් ගලායැමට සලස්වයි. අතුරු ආබාධ ලෙස කුෂ්ටය‍, කැසීම / ඉදිමීම (විශේෂයෙන් මුහුණේ / දිව / උගුරේ), දරුණු කරකැවිල්ල, හුස්ම ගැනීමේ අපහසුතා හෝ සැහැල්ලු හිසරදය.  මිනොක්සිඩිල් ශරීරයේ හිසකෙස් වර්ධනයට හෝ අඳුරු වීමට හේතු විය හැක. මෙය ඔබට කරදරයක් නම්, ඔබේ වෛද්‍යවරයා හමුවන්න. ඔබ ඖෂධය ගැනීම නැවැත්වූ විට, සාමාන්‍යයෙන් මාස 1 සිට 6 දක්වා කාලය තුළ හිසකෙස් සාමාන්‍ය තත්වයට පත්වේ. වේගවත් හෘද ස්පන්දනය, හෘදයාබාධ ඇතිවීමේ රෝග ලක්ෂණ (හුස්ම හිරවීම, වළලුකර / පාද ඉදිමීම, අසාමාන්‍ය වෙහෙස, අසාමාන්‍ය / හදිසි බර වැඩිවීම වැනි) වැනි බරපතල අතුරු ආබාධ ඇත්නම් වහාම ඔබේ වෛද්‍යවරයාට පවසන්න. ඔබට ආසාත්මිකතාවයක් ඇත්නමි, ගැබිනි නම්, 12 ට අඩු නම්, ඔබේ වෛද්‍ය ඉතිහාසය සහ ඔබේ තත්වය දොස්තරට පැවසීම ඉතා වැදගත් වේ. ඔබ ෆියෝක්‍රොමොසිටෝමා, හෘදයාබාධ, පෙනහළු හා වකුගඩු රෝග වලින් පෙලේ නමි ඔබ ඔබේ වෛද්‍යවරයාට පැවසිය යුතුයි.</Description>
+        <Name>Minoxidil Tablets</Name>
+        <Synonyms>මිනොක්සිඩිල්,මිනොසයිඩිල්,මිනොක්සිඩිල්,මිනොක්සිඩිලම්,Minossidile,Minoxidil,Minoxidilum</Synonyms>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Approved"/>
+            <rdf:Description rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Deficiency_diseases"/>
+            <rdf:Description rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Experimental"/>
+            <rdf:Description rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Genetic_diseases"/>
+            <rdf:Description rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Illicit"/>
+            <rdf:Description rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Infectious_diseases"/>
+            <rdf:Description rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Investigational"/>
+            <rdf:Description rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Non_genetic_hereditary_diseases"/>
+            <rdf:Description rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Nutraceutical"/>
+            <rdf:Description rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Physiological_diseases"/>
+            <rdf:Description rdf:about="https://adams-medi.000webhostapp.com/adams.ttl#Withdrawn"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
