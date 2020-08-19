@@ -39,6 +39,7 @@ class LoginServiceImpl implements LoginService{
     assert(!user.isAnonymous);
     assert(await user.getIdToken() != null);
     final FirebaseUser currentUser = await _auth.currentUser();
+    print(currentUser.email);
     assert(user.uid == currentUser.uid);
     return true;
   }
