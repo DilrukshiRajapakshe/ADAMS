@@ -1,21 +1,17 @@
 [{
-    "service": "Ram1",
-    "url": "Ram",
-    "type": "Ram@gmail.com"
+    "service": "getOntology",
+    "url": "http://192.168.8.102:8000/api/v1/app"
 },
 {
-    "service": "Ram2",
-    "url": "Ram",
-    "type": "Ram@gmail.com"
+    "service": "getAppointmentInfo",
+    "url": "http://192.168.8.102:8001/api/v1/query"
 },
 {
-    "service": "Ram3",
-    "url": "Ram",
-    "type": "Ram@gmail.com"
+    "service": "getRASA",
+    "url": "http://192.168.8.102:5005/webhooks/rest/webhook"
 },
-{
-    "service": "Ram4",
-    "url": "Ram",
-    "type": "Ram@gmail.com"
-}
+    {
+        "service": "sendRASA",
+        "url": "http://192.168.8.102:5005/webhooks/rest/webhook"
+    }
 ]
