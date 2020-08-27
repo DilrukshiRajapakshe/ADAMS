@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:adams/UserValidation/UserValidation.dart';
 import 'package:adams/Session/Appointment.dart';
 import 'package:adams/mic-Color/service/ColorServiceImpl.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:speech_to_text/speech_recognition_error.dart';
 import 'package:speech_to_text/speech_recognition_result.dart';
@@ -13,10 +14,10 @@ void main() => runApp(bot());
 
 class bot extends StatefulWidget {
   @override
-  _MyAppState createState() => _MyAppState();
+  _MyBotState createState() => _MyBotState();
 }
 
-class _MyAppState extends State<bot> {
+class _MyBotState extends State<bot> {
   bool _hasSpeech = false;
   bool _stressTest = false;
   double level = 0.0;
@@ -222,8 +223,8 @@ class _MyAppState extends State<bot> {
   Future<void> printText() async {
     if (!speech.isListening && _hasSpeech) {
       if (lastWords != null) {
-        _session = await mainRunner(_question, lastWords, _session);
-        print(_currentAddressOfUser);
+//        _session = await mainRunner(_question, lastWords, _session);
+
       }
     }
   }

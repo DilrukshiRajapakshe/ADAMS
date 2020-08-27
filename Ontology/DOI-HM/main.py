@@ -1,44 +1,48 @@
 from flask import Flask, request
 import json
-import requests
+from googletrans import Translator
+from disease import get_Decision_Of_disease
+from drug import get_Decision_Of_drug
+from symptom_identification import get_Decision_Of_symptom_identification
 
 main = Flask(__name__)
 
 
-@main.route('/')
-def Drug():
-    # SPARQL query server URL
-    url = 'http://localhost:3030/ds/sparql'
-    # SPARQL Query
-    query = """PREFIX adams: <https://adams-medi.000webhostapp.com/adams.owl#> SELECT ?object 
-    WHERE {?subject ?predicate ?object
-      FILTER (?subject = adams:DRUG0001 && ?predicate = adams:Description ) 
-    } """
-    # Query process
-    r = requests.get(url, params={'format': 'json', 'query': query})
-    # Convert to JSON
-    data = r.json()
-    # JSON value retrieve
-    h = json.dumps(data["results"]["bindings"], ensure_ascii=False)
-    # Str value split
-    y = h.split('[')
-    x = y[1].split(']')
-    # Convert to JSON
-    z = json.loads(x[0])
-    # JSON value retrieve
-    Value = z['object']['value']
+@main.route('/api/v1/symptom', methods=['POST'])
+def identification():
+    response = request.get_json()
+    user_sentences = response['sentences']
+    return_value_ = get_Decision_Of_symptom_identification(user_sentences)
+    json_string = '{"value" : "' + return_value_ + '"}'
+    json_dump = json.dumps(json_string)
+    json_object = json.loads(json_dump)
 
-    return z
+    return json_object
 
 
-@main.route('/test', methods=['GET', 'POST'])
-def test():
-    if request.method == 'POST':
-        t = request.get_json()
-        value = t['value']
-        print(value.split())
-    return "Successfully stored"
+@main.route('/api/v1/drug', methods=['POST'])
+def drug():
+    response = request.get_json()
+    user_sentences = response['sentences']
+    return_value_ = get_Decision_Of_drug(user_sentences)
+    json_string = '{"value" : "' + return_value_ + '"}'
+    json_dump = json.dumps(json_string)
+    json_object = json.loads(json_dump)
+
+    return json_object
+
+
+@main.route('/api/v1/disease', methods=['POST'])
+def Symptom():
+    response = request.get_json()
+    user_sentences = response['sentences']
+    return_value_ = get_Decision_Of_disease(user_sentences)
+    json_string = '{"value" : "' + return_value_ + '"}'
+    json_dump = json.dumps(json_string)
+    json_object = json.loads(json_dump)
+
+    return json_object
 
 
 if __name__ == '__main__':
-    main.run(debug=True, port=15000)
+    main.run(host='0.0.0.0', debug=True, port=8001)

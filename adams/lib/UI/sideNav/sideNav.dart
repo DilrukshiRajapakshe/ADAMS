@@ -112,19 +112,6 @@ class _SideNavState extends State<SideNav> {
                 Navigator.push(context, route);
             },
           ),
-          ListTile(
-            leading: Icon(Icons.arrow_back),
-            title: Text(
-              "Logout",
-              style: TextStyle(
-                fontSize: 18,
-              ),
-            ),
-            onTap: (){
-              LoginServiceImpl().signOutGoogle();
-              Navigator.of(context).pop();
-            },
-          ),
         ],
       )
     );
