@@ -1,17 +1,21 @@
-[{
-    "service": "getOntology",
-    "url": "http://192.168.8.102:8000/api/v1/app"
-},
-{
-    "service": "getAppointmentInfo",
-    "url": "http://192.168.8.102:8001/api/v1/query"
-},
-{
-    "service": "getRASA",
-    "url": "http://192.168.8.102:5005/webhooks/rest/webhook"
-},
+[   {
+        "service": "getDrug",
+        "url": "http://192.168.8.102:8000/api/v1/drug"
+    },
     {
-        "service": "sendRASA",
+        "service": "getAppointmentInfo",
+        "url": "http://192.168.8.102:8001/api/v1/query"
+    },
+    {
+        "service": "getRASA",
         "url": "http://192.168.8.102:5005/webhooks/rest/webhook"
+    },
+    {
+        "service": "getIdentification",
+        "url": "http://192.168.8.102:8000/api/v1/symptom"
+    },
+    {
+        "service": "getDisease",
+        "url": "http://192.168.8.102:8000/api/v1/disease"
     }
 ]
