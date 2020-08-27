@@ -1,0 +1,695 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://adams-medi.000webhostapp.com/vocabulary.owl#"
+     xml:base="https://adams-medi.000webhostapp.com/vocabulary.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vocabulary="https://adams-medi.000webhostapp.com/vocabulary.owl#">
+    <owl:Ontology rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl">
+        <owl:versionIRI rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl/1.0.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#ID -->
+
+    <owl:DatatypeProperty rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#ID"/>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#Name -->
+
+    <owl:DatatypeProperty rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#Name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#Disease -->
+
+    <owl:Class rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#Disease">
+        <rdfs:subClassOf rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Vocabulary"/>
+    </owl:Class>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#Drug -->
+
+    <owl:Class rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#Drug">
+        <rdfs:subClassOf rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Vocabulary"/>
+    </owl:Class>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom -->
+
+    <owl:Class rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom">
+        <rdfs:subClassOf rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Vocabulary"/>
+    </owl:Class>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#Vocabulary -->
+
+    <owl:Class rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#Vocabulary"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#Minoxdile -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#Minoxdile">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Drug"/>
+        <ID>Minoxdile</ID>
+        <Name>Minoxdile</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#Minoxdilum -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#Minoxdilum">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Drug"/>
+        <ID>Minoxdile</ID>
+        <Name>Minoxdilum</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#Minoxidil -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#Minoxidil">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Drug"/>
+        <ID>Minoxdile</ID>
+        <Name>Minoxidil</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#covid19 -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#covid19">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Disease"/>
+        <ID>covid 19</ID>
+        <Name>covid19</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#අධිකඋණ -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#අධිකඋණ">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>අධිකඋණ</ID>
+        <Name>අධිකඋණ</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#අධිරුධිරපීඩනය -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#අධිරුධිරපීඩනය">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Disease"/>
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>අධිරුධිරපීඩනය</ID>
+        <Name>අධිරුධිරපීඩනය</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#අභ්‍යන්තරවරුධිරයවහනය -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#අභ්‍යන්තරවරුධිරයවහනය">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>අභ්‍යන්තරව රුධිරය වහනය</ID>
+        <Name>අභ්‍යන්තරවරුධිරයවහනය</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#ඇඟගිනිකබලවගේ -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#ඇඟගිනිකබලවගේ">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>අධිකඋණ</ID>
+        <Name>ඇඟගිනිකබලවගේ</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#ඇඟගොඩක්රස්නෙයි -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#ඇඟගොඩක්රස්නෙයි">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>අධිකඋණ</ID>
+        <Name>ඇඟගොඩක්රස්නෙයි</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#ඇස්රතුයි -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#ඇස්රතුයි">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>ඇස්රතුවීම</ID>
+        <Name>ඇස්රතුයි</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#ඇස්රතුවීම -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#ඇස්රතුවීම">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>ඇස්රතුවීම</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#ඇස්වලින්රුධිරයවහනය -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#ඇස්වලින්රුධිරයවහනය">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>ඇස්වලින් රුධිරය වහනය</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#උගුරඅමාරුයි -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#උගුරඅමාරුයි">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>උගුරේඅමාරුව</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#උගුරරිදෙනවා -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#උගුරරිදෙනවා">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>උගුරේඅමාරුව</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#උගුරේඅමාරුව -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#උගුරේඅමාරුව">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>උගුරේඅමාරුව</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#උණඅධිකයි -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#උණඅධිකයි">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>අධිකඋණ</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#උණවැඩියි -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#උණවැඩියි">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>අධිකඋණ</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#ඔලුවකැක්කුම -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#ඔලුවකැක්කුම">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>හිසරදය</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#ඔළුවරිදෙනවා -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#ඔළුවරිදෙනවා">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>හිසරදය</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#කකුල්ඇඟිලිකලුපාටවීම -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#කකුල්ඇඟිලිකලුපාටවීම">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>පාඇඟිලිදුර්වර්ණවීම</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#කකුල්ඇඟිලිදුර්වර්ණවීම -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#කකුල්ඇඟිලිදුර්වර්ණවීම">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>පාඇඟිලිදුර්වර්ණවීම</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#කකුල්ඇඟිලිවලපාටඅඩුවීම -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#කකුල්ඇඟිලිවලපාටඅඩුවීම">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>පාඇඟිලිදුර්වර්ණවීම</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#කන්ඇස්නාසවලින්රුධිරයවහනය -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#කන්ඇස්නාසවලින්රුධිරයවහනය">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>කන් ඇස් නාසවලින් රුධිරය වහනය</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#කන්වලින්රුධිරයවහනය -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#කන්වලින්රුධිරයවහනය">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>කන්වලින් රුධිරය වහනය</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#කසනතුවාල -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#කසනතුවාල"/>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#ගඳ-සුවඳදැනෙන්නැහැ -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#ගඳ-සුවඳදැනෙන්නැහැ">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>ගඳසුවඳනොදැනීම.</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#ගඳසුවඳනොදැනීම. -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#ගඳසුවඳනොදැනීම.">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>ගඳසුවඳනොදැනීම.</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#ගඳසුවඳනොදැනේ -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#ගඳසුවඳනොදැනේ">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>ගඳසුවඳනොදැනීම.</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#ජොයින්ට්රිදෙනවා -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#ජොයින්ට්රිදෙනවා">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>සන්ධිසහමාංශපේශිවේදනාව</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#තුවාලකසනවා -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#තුවාලකසනවා">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>සමේදද</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#නාසයසිරවීම -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#නාසයසිරවීම">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>නාසයසිරවීම</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#නාසයහිරවීම -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#නාසයහිරවීම">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>නාසයසිරවීම</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#නාසයෙන්රුධිරයවහනය -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#නාසයෙන්රුධිරයවහනය">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>නාසයෙන් රුධිරය වහනය</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#පාඇඟිලිකලුපාටවීම -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#පාඇඟිලිකලුපාටවීම">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>පාඇඟිලිදුර්වර්ණවීම</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#පාඇඟිලිදුර්වර්ණවීම -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#පාඇඟිලිදුර්වර්ණවීම">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>පාඇඟිලිදුර්වර්ණවීම</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#පාචනය -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#පාචනය">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>පාචනය</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#පොඩිවැඩක්කළත්ඇඟටමහන්සිගතියදැනීම -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#පොඩිවැඩක්කළත්ඇඟටමහන්සිගතියදැනීම">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>විඩාව</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#පොඩිවැඩක්කළත්හැතිඅරිනවා -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#පොඩිවැඩක්කළත්හැතිඅරිනවා">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>විඩාව</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#බඩයනවා -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#බඩයනවා">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>පාචනය</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#බඩරිදෙනවා -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#බඩරිදෙනවා">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>පාචනය</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#බඩේඅමාරුව -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#බඩේඅමාරුව">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>පාචනය</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#බ්ලඩ්ප්‍රෙෂර්වැඩියි -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#බ්ලඩ්ප්‍රෙෂර්වැඩියි">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>අධිරුධිරපීඩනය</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#මදඋණගතිය -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#මදඋණගතිය">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>මදඋණගතිය</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#මහන්සිය -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#මහන්සිය">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>විඩාව</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#මිනොක්ස්ඩිලම් -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#මිනොක්ස්ඩිලම්">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Drug"/>
+        <ID>Minoxdile</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#මිනොක්ස්ඩිල් -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#මිනොක්ස්ඩිල්">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Drug"/>
+        <ID>Minoxdile</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#මිනොක්සිඩිල් -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#මිනොක්සිඩිල්">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Drug"/>
+        <ID>Minoxdile</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#මුඛයෙන්රුධිරයවහනය -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#මුඛයෙන්රුධිරයවහනය">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>මුඛයෙන් රුධිරය වහනය</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#මුළුඇඟමරිදෙනවා -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#මුළුඇඟමරිදෙනවා">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>සන්ධිසහමාංශපේශිවේදනාව</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#රතුපාටඇස් -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#රතුපාටඇස්">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>ඇස්රතුවීම</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#රතුපාටයිඇස් -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#රතුපාටයිඇස්">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>ඇස්රතුවීම</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#රුධිරපීඩනයවැඩි -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#රුධිරපීඩනයවැඩි">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>අධිරුධිරපීඩනය</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#ලාඋණ -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#ලාඋණ">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>මදඋණගතිය</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#වමනය -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#වමනය">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>වමනය</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#විඩාව -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#විඩාව">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>විඩාව</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#වියලිකැස්ස -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#වියලිකැස්ස">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>වියලිකැස්ස</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#වේලුනුකැස්ස -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#වේලුනුකැස්ස">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>වියලිකැස්ස</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#සන්ධිසහමාංශපේශිවේදනාව -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#සන්ධිසහමාංශපේශිවේදනාව">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>සන්ධිසහමාංශපේශිවේදනාව</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#සමේදද -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#සමේදද">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>සමේදද</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#සමේරෝග -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#සමේරෝග">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>සමේදද</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#හන්දිරිදෙනවා -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#හන්දිරිදෙනවා">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>සන්ධිසහමාංශපේශිවේදනාව</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#හිසරදය -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#හිසරදය">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>හිසරදය</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#හුස්මගන්නබැහැ -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#හුස්මගන්නබැහැ">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>හුස්මගැනීමේඅපහසුතාව</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#හුස්මගැනීමේඅපහසුතාව -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#හුස්මගැනීමේඅපහසුතාව">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>හුස්මගැනීමේඅපහසුතාව</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#හුස්මහිරවෙනවා -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#හුස්මහිරවෙනවා">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>හුස්මගැනීමේඅපහසුතාව</ID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/vocabulary.owl#හොඳනොවනසමේතුවාල -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/vocabulary.owl#හොඳනොවනසමේතුවාල">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/vocabulary.owl#Symptom"/>
+        <ID>සමේදද</ID>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

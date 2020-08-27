@@ -1,0 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
+
+final FirebaseAuth _auth = FirebaseAuth.instance;
+
+Future<String> getUserName() async {
+    final FirebaseUser currentUser = await _auth.currentUser();
+   return currentUser.displayName;
+}
