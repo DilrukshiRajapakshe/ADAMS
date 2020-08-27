@@ -1,0 +1,1 @@
+const JSON_PATH_URL = "assets/images/config.json";

@@ -23,24 +23,14 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
 class LoadingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
     return StreamBuilder(
-      stream: FirebaseAuth.instance.onAuthStateChanged,
       builder: (context,AsyncSnapshot<FirebaseUser> snapshot) {
-        if(!snapshot.hasData || snapshot.data == null){
-          return Login();
-        }
-        if(snapshot.connectionState == ConnectionState.waiting)
-          return SplashScreen();
-        return bot();
+        return Splash_Screen();
       },
     );
   }
 }
-
-//class SplashPage {
-//}
