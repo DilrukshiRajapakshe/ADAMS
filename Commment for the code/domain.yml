@@ -1,0 +1,53 @@
+intents:      # Intent id related to quection
+  - secretname
+  - start_appoint
+  - doctor_type
+  - appoint_doctor
+  - appoint_location
+  - continue_process
+  - clinic_service
+  - start_disease_identity
+  - basic_dise_identity
+  - dise_identity_continue
+  - dise_identi_more
+  - start_dise_infor
+  - basic_dise_name
+  - dise_infor_continue
+  - dise_more_infor
+  - start_medi
+  - basic_medi_name
+  - medi_continue
+  - drug_more_info
+  - adams_know
+  
+actions: #Action id related to the answers
+  - action_meet_doctor
+  - action_apoint_session
+  - action_register
+  - action_doctor_location
+  - action_identify_disease
+  - action_disease_details
+  - action_disease_details_continue_flow
+  - action_identify_more_disease
+  - action_medi_details
+  - action_doctor_type
+  - action_continue_flow
+  - action_disease_information
+  - action_ask_disease
+  - action_ask_medicine
+  - action_symtoms_continue_flow
+  - action_dis_continue_flow
+  - action_details_more_disease
+  - action_details_more_drug
+
+ 
+
+responses:
+
+  utter_adams_info: # utter message output
+  - text: "ශ්‍රී ලාංකීය වෛද්‍ය ශේස්ත්‍රයේ පුළුල් වෙනසක් ඇතිකරමින් නිර්මාණය වූ මෙම ඇඩම්ස් නැමති ජංගම දුරකථන මෘදුකාංගය මගින් දැන් ඔබට ඔබගේ නිවසේ සිටම  වෛද්‍යවරයෙකු වෙන්කරවා ගැනීම, රෝග පිලිබද තොරතුරු දැනගනීම, රෝග ලක්ෂණ වලට අදාල තොරතුරු දැනගැනීම, ඖෂධ පිලිබදව තොරතුරු ලබා ගැනීමේ සේවාවන් සිදු කරගත හැක. වෛද්‍යවරයෙකු වෙන්කරවා ගැනීමට අංක '1' ලෙස පවසන්න, රෝගයක් හදුනා ගැනීමටනම් අංක '2' ලෙස පවසන්න , රෝගයක් පිලිබද තොරතුරු දැනගැනීමටනම් අංක '3' ලෙස පවසන්න, ඖෂධයක් පිලිබද තොරතුරු දැනගැනීමටනම් අංක '4' ලෙස පවසන්න, ඇඩම්ස් හදුනාගැනීම සදහා අංක '5' ලෙස පවසන්න."
+ 
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

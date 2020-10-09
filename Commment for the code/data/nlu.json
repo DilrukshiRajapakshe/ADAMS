@@ -1,0 +1,622 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "මගේ රහස්‍ය නාමය කමල්",
+        "intent": "secretname",
+        "entities": []
+      },
+      {
+        "text": "මගේ රහස්‍ය නාමය අමල්",
+        "intent": "secretname",
+        "entities": []
+      },
+      {
+        "text": "මගේ රහස්‍ය නාමය අමර",
+        "intent": "secretname",
+        "entities": []
+      },
+      {
+        "text": "රහස්‍ය නාමය අමර",
+        "intent": "secretname",
+        "entities": []
+      },
+      {
+        "text": "රහස්‍ය නාමය කමල්",
+        "intent": "secretname",
+        "entities": []
+      },
+      {
+        "text": "කමල්",
+        "intent": "secretname",
+        "entities": []
+      },
+      {
+        "text": "අමර",
+        "intent": "secretname",
+        "entities": []
+      },
+      {
+        "text": "අමර",
+        "intent": "secretname",
+        "entities": []
+      },
+      {
+        "text": "රහස්‍යනාමය",
+        "intent": "secretname",
+        "entities": []
+      },
+      {
+        "text": "වෛද්‍යවරයෙකු හමුවීමට",
+        "intent": "start_appoint",
+        "entities": []
+      },
+      {
+        "text": "එක",
+        "intent": "start_appoint",
+        "entities": []
+      },
+      {
+        "text": "අංක එක",
+        "intent": "start_appoint",
+        "entities": []
+      },
+      {
+        "text": "අංක 1",
+        "intent": "start_appoint",
+        "entities": []
+      },
+      {
+        "text": "One",
+        "intent": "start_appoint",
+        "entities": []
+      },
+      {
+        "text": "one",
+        "intent": "start_appoint",
+        "entities": []
+      },
+      {
+        "text": "1",
+        "intent": "start_appoint",
+        "entities": []
+      },
+      {
+        "text": "මට දියවැඩියාව සම්බන්ධයෙන් වෛද්‍යවරයෙකු හමුවීමට අවශ්‍යයයි",
+        "intent": "doctor_type",
+        "entities": []
+      },
+      {
+        "text": "මට දියවැඩියාව රෝගය සම්බන්ධයෙන් වෛද්‍යවරයෙකු හමුවිය යුතුය",
+        "intent": "doctor_type",
+        "entities": []
+      },
+      {
+        "text": "මට දියවැඩියාව සම්බන්ධයෙන් වෛද්‍යවරයෙකු හමුවිය යුතුය",
+        "intent": "doctor_type",
+        "entities": []
+      },
+      {
+        "text": "මට දියවැඩියාව පිලිබද වෛද්‍යවරයෙකු හමුවීමට අවශ්‍යයි",
+        "intent": "doctor_type",
+        "entities": []
+      },
+      {
+        "text": "මට දියවැඩියාව රෝගය පිලිබද වෛද්‍යවරයෙකු හමුවීමට අවශ්‍යයි",
+        "intent": "doctor_type",
+        "entities": []
+      },
+      {
+        "text": "මට දියවැඩියාව රෝගය පිලිබද වෛද්‍යවරයෙකු හමුවීමට ඕනේ",
+        "intent": "doctor_type",
+        "entities": []
+      },
+      {
+        "text": "මට දියවැඩියාව රෝගය ගැන වෛද්‍යවරයෙකු හමුවීමට ඕනේ",
+        "intent": "doctor_type",
+        "entities": []
+      },
+      {
+        "text": "මට දියවැඩියාව රෝගය පිලිබද වෛද්‍යවරයෙකු හමුවිය යුතුය",
+        "intent": "doctor_type",
+        "entities": []
+      },
+      {
+        "text": "දියවැඩියා රෝගය පිලිබද වෛද්‍යවරයෙකු මුනගැසිය යුතුයි",
+        "intent": "doctor_type",
+        "entities": []
+      },
+      {
+        "text": "දියවැඩියාව පිලිබද වෛද්‍යවරයෙකු මුනගැසිය යුතුයි",
+        "intent": "doctor_type",
+        "entities": []
+      },
+      {
+        "text": "දියවැඩියාව ගැන වෛද්‍යවරයෙකු මුනගැසිය යුතුයි",
+        "intent": "doctor_type",
+        "entities": []
+      },
+      {
+        "text": "දියවැඩියාව ගැන වෛද්‍යවරයෙකු මුනගැසෙන්න ඕනේ",
+        "intent": "doctor_type",
+        "entities": []
+      },
+      {
+        "text": "අධිරුධිර පීඩනය පිලිබද වෛද්‍යවරයෙකු මුනගැසිය යුතුයි",
+        "intent": "doctor_type",
+        "entities": []
+      },
+      {
+        "text": "මට අධිරුධිර පීඩනය පිලිබද වෛද්‍යවරයෙකු හමුවීමට අවශ්‍යයි",
+        "intent": "doctor_type",
+        "entities": []
+      },
+      {
+        "text": "මට අඩුරුධිර පීඩනය සම්බන්ධයෙන් වෛද්‍යවරයෙකු හමුවීමට අවශ්‍යයි",
+        "intent": "doctor_type",
+        "entities": []
+      },
+      {
+        "text": "අඩුරුධිර පීඩනය පිලිබද වෛද්‍යවරයෙකු මුනගැසිය යුතුයි",
+        "intent": "doctor_type",
+        "entities": []
+      },
+      {
+        "text": "මට අඩුරුධිර පීඩනය පිලිබද වෛද්‍යවරයෙකු හමුවීමට අවශ්‍යයි",
+        "intent": "doctor_type",
+        "entities": []
+      },
+      {
+        "text": "මට කොලෙස්ටරෝල් රෝගය පිලිබද වෛද්‍යවරයෙකු හමුවීමට අවශ්‍යයි",
+        "intent": "doctor_type",
+        "entities": []
+      },
+      {
+        "text": "මට කොලෙස්ටරෝල් රෝගය පිලිබද වෛද්‍යවරයෙකු හමුවිය යුතුය",
+        "intent": "doctor_type",
+        "entities": []
+      },
+      {
+        "text": "මට වෛද්‍ය නිමල් මුනගැසීමට අවශ්‍යයි",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": "මට වෛද්‍ය නිමල් හමුවිය යුතුය",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": "වෛද්‍ය නිමල් මුනගැසිය යුතුය",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": "වෛද්‍ය නිමල් මුණගැසෙන්න ඕනේ",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": "මට වෛද්‍ය නිමල් මුණගැසෙන්න ඕනේ",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": "වෛද්‍ය නිමල් හමු වෙන්න ඕනේ",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": "මට වෛද්‍ය නිමල් හමු වෙන්න ඕනේ",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": "වෛද්‍ය නිමල් හම්බෙන්න ඕනේ",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": "මට වෛද්‍ය නිමල් හම්බෙන්න ඕනේ",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": "වෛද්‍ය නිමල්",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": "වෛද්‍ය නිමල් කරුනාසේන",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": "මට වෛද්‍ය කමල් මුනගැසීමට අවශ්‍යයයි",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": " මට වෛද්‍ය කමල් හමු විය යුතුය",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": "වෛද්‍ය කමල්",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": "මට වෛද්‍ය සුනිල් මුනගැසීමට අවශ්‍යයයි",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": "මට වෛද්‍ය සුනිල් හමුවිය යුතුය",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": "වෛද්‍ය සුනිල්",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": "වෛද්‍ය සුනිල් මුනගැසිය යුතුය",
+        "intent": "appoint_doctor",
+        "entities": []
+      },
+      {
+        "text": "ආසිරි රෝහල ගම්පහ පස්වරු 1.00 සිට පස්වරු 2.00 දක්වා සදුදා",
+        "intent": "appoint_location",
+        "entities": []
+      },
+      {
+        "text": "ආසිරි රෝහල ගම්පහ පස්වරු 1.00 සිට පස්වරු 2.00 දක්වා සදුදා දින හමු විය යුතුය",
+        "intent": "appoint_location",
+        "entities": []
+      },
+      {
+        "text": "ආසිරි රෝහල ගම්පහ පස්වරු 1.00 සිට පස්වරු 2.00 දක්වා සදුදා දින හමුවීමට අවශ්‍යයි",
+        "intent": "appoint_location",
+        "entities": []
+      },
+      {
+        "text": "ආසිරි රෝහල ගම්පහ පස්වරු 1.00 සිට පස්වරු 2.00 දක්වා සදුදා දින හමුවිය යුතුය",
+        "intent": "appoint_location",
+        "entities": []
+      },
+      {
+        "text": "ආසිරි රෝහල ගම්පහ පස්වරු 4.00 සිට පස්වරු 6.00 දක්වා අඟහරුවාදා දින මුනගැසිය යුතුයි",
+        "intent": "appoint_location",
+        "entities": []
+      },
+      {
+        "text": "ආසිරි රෝහල ගම්පහ පස්වරු 3.00 සිට පස්වරු 5.00 දක්වා සිකුරාදා දින මුනගැසෙන්න ඕනේ",
+        "intent": "appoint_location",
+        "entities": []
+      },
+      {
+        "text": "ආසිරි රෝහල ගම්පහ පස්වරු 3.00 සිට පස්වරු 5.00 දක්වා සිකුරාදා දින හමු වෙන්න ඕනේ",
+        "intent": "appoint_location",
+        "entities": []
+      },
+      {
+        "text": "පස්වරු 3.00 සිට පස්වරු 5.00 දක්වා සිකුරාදා දින ආසිරි රෝහල ගම්පහ",
+        "intent": "appoint_location",
+        "entities": []
+      },
+      {
+        "text": "ආසිරි රෝහල ගම්පහ පෙරවරු 8.00 සිට පෙරවරු 10.00 දක්වා සිකුරාදා දින",
+        "intent": "appoint_location",
+        "entities": []
+      },
+      {
+        "text": "පෙරවරු 8.00 සිට පෙරවරු 10.00 දක්වා ආසිරි රෝහල ගම්පහ සිකුරාදා දින",
+        "intent": "appoint_location",
+        "entities": []
+      },
+      {
+        "text": "සිකුරාදා දින පෙරවරු 8 සිට පෙරවරු 10 දක්වා ආසිරි රෝහල ගම්පහ",
+        "intent": "appoint_location",
+        "entities": []
+      },
+      {
+        "text": "අවශ්‍ය",
+        "intent": "continue_process",
+        "entities": []
+      },
+      {
+        "text": "අවශ්‍යයි",
+        "intent": "continue_process",
+        "entities": []
+      },
+      {
+        "text": "අවශ්‍යයයි",
+        "intent": "continue_process",
+        "entities": []
+      },
+      {
+        "text": "need",
+        "intent": "continue_process",
+        "entities": []
+      },
+      {
+        "text": "Need",
+        "intent": "continue_process",
+        "entities": []
+      },
+      {
+        "text": "අවශ්‍ය නොවේ",
+        "intent": "continue_process",
+        "entities": []
+      },
+      {
+        "text": "අවශ්‍ය නැත",
+        "intent": "continue_process",
+        "entities": []
+      },
+      {
+        "text": "Not required",
+        "intent": "continue_process",
+        "entities": []
+      },
+      {
+        "text": "not required",
+        "intent": "continue_process",
+        "entities": []
+      },
+      {
+        "text": "දෙක",
+        "intent": "start_disease_identity",
+        "entities": []
+      },
+      {
+        "text": "අංක දෙක",
+        "intent": "start_disease_identity",
+        "entities": []
+      },
+      {
+        "text": "අංක 2",
+        "intent": "start_disease_identity",
+        "entities": []
+      },
+      {
+        "text": "Two",
+        "intent": "start_disease_identity",
+        "entities": []
+      },
+      {
+        "text": "two",
+        "intent": "start_disease_identity",
+        "entities": []
+      },
+      {
+        "text": "2",
+        "intent": "start_disease_identity",
+        "entities": []
+      },
+      {
+        "text": "මේවා තමයි රෝග ලක්ෂණ",
+        "intent": "basic_dise_identity",
+        "entities": []
+      },
+      {
+        "text": "මේ තමයි රෝග ලක්ෂණ",
+        "intent": "basic_dise_identity",
+        "entities": []
+      },
+      {
+        "text": "මේක තමයි රෝග ලක්ෂණ",
+        "intent": "basic_dise_identity",
+        "entities": []
+      },
+      {
+        "text": "ඕනේ",
+        "intent": "dise_identity_continue",
+        "entities": []
+      },
+      {
+        "text": "ඕනෑකර ඇත",
+        "intent": "dise_identity_continue",
+        "entities": []  
+      },
+      {
+        "text": "ඕනෑයි",
+        "intent": "dise_identity_continue",
+        "entities": []
+      },
+      {
+        "text": "වැඩිදුර රෝග ලක්ෂන තොරතුරු",
+        "intent": "dise_identi_more",
+        "entities": []
+      },
+      {
+        "text": "වැඩිදුර රෝග ලක්ෂන",
+        "intent": "dise_identi_more",
+        "entities": []
+      },
+      {
+        "text": "වැඩිදුර තොරතුරු රෝග ලක්ෂන",
+        "intent": "dise_identi_more",
+        "entities": []
+      },
+      {
+        "text": "තුන",
+        "intent": "start_dise_infor",
+        "entities": []
+      },
+      {
+        "text": "අංක තුන",
+        "intent": "start_dise_infor",
+        "entities": []
+      },
+      {
+        "text": "අංක 3",
+        "intent": "start_dise_infor",
+        "entities": []
+      },
+      {
+        "text": "Three",
+        "intent": "start_dise_infor",
+        "entities": []
+      },
+      {
+        "text": "three",
+        "intent": "start_dise_infor",
+        "entities": []
+      },
+      {
+        "text": "මේ තමයි රෝගය",
+        "intent": "basic_dise_name",
+        "entities": []
+      },
+      {
+        "text": "මෙය තමයි රෝගය",
+        "intent": "basic_dise_name",
+        "entities": []
+      },
+      {
+        "text": "මේක තමයි රෝගය",
+        "intent": "basic_dise_name",
+        "entities": []
+      },
+      {
+        "text": "උවමනායි",
+        "intent": "dise_infor_continue",
+        "entities": []
+      },
+      {
+        "text": "උවමනායි කරයි",
+        "intent": "dise_infor_continue",
+        "entities": []
+      },
+      {
+        "text": "උවමනා කර ඇත",
+        "intent": "dise_infor_continue",
+        "entities": []
+      },
+      {
+        "text": "වැඩිදුර තොරතුරු රෝගය ගැන",
+        "intent": "dise_more_infor",
+        "entities": []
+      },
+      {
+        "text": "රෝගය ගැන වැඩිදුර තොරතුරු",
+        "intent": "dise_more_infor",
+        "entities": []
+      },
+      {
+        "text": "තොරතුරු වැඩිදුර රෝගය ගැන",
+        "intent": "dise_more_infor",
+        "entities": []
+      },
+      {
+        "text": "හතර",
+        "intent": "start_medi",
+        "entities": []
+      },
+      {
+        "text": "අංක හතර",
+        "intent": "start_medi",
+        "entities": []
+      },
+      {
+        "text": "අංක 4",
+        "intent": "start_medi",
+        "entities": []
+      },
+      {
+        "text": "4",
+        "intent": "start_medi",
+        "entities": []
+      },
+      {
+        "text": "Four",
+        "intent": "start_medi",
+        "entities": []
+      },
+      {
+        "text": "four",
+        "intent": "start_medi",
+        "entities": []
+      },
+      {
+        "text": "මෙන්න මේක ඖෂධය",
+        "intent": "basic_medi_name",
+        "entities": []
+      },
+      {
+        "text": "මෙය තමයි ඖෂධය",
+        "intent": "basic_medi_name",
+        "entities": []
+      },
+      {
+        "text": "මේක තමයි ඖෂධය",
+        "intent": "basic_medi_name",
+        "entities": []
+      },
+      {
+        "text": "අනිවාර්යයෙන්ම",
+        "intent": "medi_continue",
+        "entities": []
+      },
+      {
+        "text": "අනිවා",
+        "intent": "medi_continue",
+        "entities": []
+      },
+      {
+        "text": "අනිවාර්ය",
+        "intent": "medi_continue",
+        "entities": []
+      },
+      {
+        "text": "තවදුරටත් ඖෂධය ගැන ",
+        "intent": "drug_more_info",
+        "entities": []
+      },
+      {
+        "text": "තවත් ඖෂධය ගැන ",
+        "intent": "drug_more_info",
+        "entities": []
+      },
+      {
+        "text": "ඖෂධය ගැන තවදුරටත් ",
+        "intent": "drug_more_info",
+        "entities": []
+      },
+
+      {
+        "text": "පහ",
+        "intent": "adams_know",
+        "entities": []
+      },
+      {
+        "text": "අංක පහ",
+        "intent": "adams_know",
+        "entities": []
+      },
+      {
+        "text": "අංක 5",
+        "intent": "adams_know",
+        "entities": []
+      },
+      {
+        "text": "5",
+        "intent": "adams_know",
+        "entities": []
+      },
+      {
+        "text": "Five",
+        "intent": "adams_know",
+        "entities": []
+      },
+      {
+        "text": "five",
+        "intent": "adams_know",
+        "entities": []
+      }
+    ]
+  }
+}
