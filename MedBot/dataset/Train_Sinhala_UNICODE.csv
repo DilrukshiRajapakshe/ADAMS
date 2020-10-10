@@ -1,0 +1,22 @@
+﻿sinhala_unicode,context,sub_context
+මගේ බිල දැනගන්න පුළුවන්ද ,billing,ask_for_bill_amount
+මගේ බිල කීයද,billing,ask_for_bill_amount
+මේ මාසේ මගේ බිල කොහොමද,billing,ask_for_bill_amount
+මගේ බිල් දැනගන්න විදිහක් තියනවද ,billing,ask_for_bill_amount
+මේ මාසේ බිල කීයද ,billing,ask_for_bill_amount
+බිල කීයක් ගෙවන්න තියනවාද ,billing,ask_for_bill_amount
+මේ මාසේ බිල් එක කීයද,billing,ask_for_bill_amount
+මේ මාසේ බිල් ඒක කීයක් ගෙවන්න තියනවද ,billing,ask_for_bill_amount
+මේ මාසේ බිලට කීයක් දාන්න ඕනිද,billing,ask_for_bill_amount
+මම මේ මාසේ කීයක් ගෙවන ඕනිද,billing,ask_for_bill_amount
+මගේ bill ඒක කීයක් තියනවද,billing,ask_for_bill_amount
+මම කීයක් ගෙවන්න ඕනිද කියල බලල කියනවද,billing,ask_for_bill_amount
+මට මේ මාසෙට කීයක් දාන්න තියනවද කියල පොඩ්ඩක් බලල කියනවද,billing,ask_for_bill_amount
+මගේ දැනට තියන පැකේජ් මොනවද,packages,ask_for_own_package_details
+මගේ පැකේජ් මොනවද,packages,ask_for_own_package_details
+මගේ pakage මොනවද,packages,ask_for_own_package_details
+මගේ activate වෙලා තියන pakages මොනවද,packages,ask_for_own_package_details
+මගේ දැනට සක්‍රීය පැකේජස් මොනවද,packages,ask_for_own_package_details
+මට දැනට මගේ තියන පැකේජස් ගැන දැනගන්න ඕනි,packages,ask_for_own_package_details
+මගේ දැනට වැඩ කරන පැකේජස් මොනවද,packages,ask_for_own_package_details
+දැනට තියන පැකේජස් බලාගන්න පුළුවන්ද,packages,ask_for_own_package_details

@@ -1,0 +1,66 @@
+[
+  {
+    "text": "වෛද්‍යවරයෙකු හමුවීමට",
+    "intent": "start_appoint",
+    "intent_prediction": {
+      "name": "doctor_type",
+      "confidence": 0.589316189289093
+    }
+  },
+  {
+    "text": "අංක 1",
+    "intent": "start_appoint",
+    "intent_prediction": {
+      "name": "start_medi",
+      "confidence": 0.20691026747226715
+    }
+  },
+  {
+    "text": "1",
+    "intent": "start_appoint",
+    "intent_prediction": {
+      "name": "start_medi",
+      "confidence": 0.26741883158683777
+    }
+  },
+  {
+    "text": "අංක 2",
+    "intent": "start_dise",
+    "intent_prediction": {
+      "name": "start_medi",
+      "confidence": 0.20691026747226715
+    }
+  },
+  {
+    "text": "2",
+    "intent": "start_dise",
+    "intent_prediction": {
+      "name": "start_medi",
+      "confidence": 0.26741883158683777
+    }
+  },
+  {
+    "text": "අංක 3",
+    "intent": "start_dise_identi",
+    "intent_prediction": {
+      "name": "start_medi",
+      "confidence": 0.20691026747226715
+    }
+  },
+  {
+    "text": "අංක 5",
+    "intent": "adams_know",
+    "intent_prediction": {
+      "name": "start_medi",
+      "confidence": 0.20691026747226715
+    }
+  },
+  {
+    "text": "5",
+    "intent": "adams_know",
+    "intent_prediction": {
+      "name": "start_medi",
+      "confidence": 0.26741883158683777
+    }
+  }
+]
