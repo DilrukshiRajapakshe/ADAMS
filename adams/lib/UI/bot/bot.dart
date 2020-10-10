@@ -1,14 +1,16 @@
 import 'dart:async';
-import 'package:adams/UserValidation/UserValidation.dart';
+import 'package:adams/Session/Dialog.dart';
 import 'package:adams/Session/Appointment.dart';
 import 'package:adams/mic-Color/service/ColorServiceImpl.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:adams/restService/restServiceImpl.dart';
 import 'package:flutter/material.dart';
 import 'package:speech_to_text/speech_recognition_error.dart';
 import 'package:speech_to_text/speech_recognition_result.dart';
 import 'package:speech_to_text/speech_to_text.dart';
 import 'package:adams/UI/sideNav/sideNav.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:http/http.dart' as http;
+import 'package:flutter_tts/flutter_tts.dart';
 
 void main() => runApp(bot());
 
@@ -26,20 +28,23 @@ class _MyBotState extends State<bot> {
   String lastError = "";
   String lastStatus = "";
   String _currentLocaleId = "";
+
   var colorOf = Colors.purple[600];
   String _session = "0";
-  String _question = "";
+  String _question = question_list_1;
   final SpeechToText speech = SpeechToText();
   final Geolocator _geolocatorUser = Geolocator()..forceAndroidLocationManager;
   Position _currentPositionOfUser;
   String _currentAddressOfUser;
+  final FlutterTts flutterTts = FlutterTts();
+
 
   @override
   Future<void> initState() {
     super.initState();
     initSpeechState();
-    voicePrinter();
     _getCurrentLocationOfUser();
+    _speak();
   }
 //location-01
   _getCurrentLocationOfUser() {
@@ -65,18 +70,21 @@ class _MyBotState extends State<bot> {
     }
   }
 
-
+// provide language
   Future<void> initSpeechState() async {
+    // if hasSpeech not null - speech plugin is ready
     bool hasSpeech = await speech.initialize(
         onError: errorListener, onStatus: statusListener);
     if (hasSpeech) {
       var systemLocale = await speech.systemLocale();
+      // provide all other language code
       _currentLocaleId = systemLocale.localeId;
     }
     if (!mounted) return;
 
     setState(() {
       _hasSpeech = hasSpeech;
+      // Hard code - Sinhala
       _currentLocaleId = "si_LK";
     });
   }
@@ -97,21 +105,24 @@ class _MyBotState extends State<bot> {
           Expanded(
             child: Column(
               children: <Widget>[
-                const SizedBox(height: 80.00),
-                Align(
-                  child: Text(
-                    _question,
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                const SizedBox(height: 40.00),
+                const SizedBox(height: 20.00),
                 Align(
                   child: Text(
                     lastWords,
                     textAlign: TextAlign.center,
                   ),
                 ),
-                const SizedBox(height: 100.00),
+                const SizedBox(height: 10.00),
+                Align(
+                  child: Text(
+                    _question,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 10,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 10.00),
               ],
             ),
           ),
@@ -221,19 +232,33 @@ class _MyBotState extends State<bot> {
   }
 
   Future<void> printText() async {
-    if (!speech.isListening && _hasSpeech) {
-      if (lastWords != null) {
-//        _session = await mainRunner(_question, lastWords, _session);
+    String k = "";
+    String t = "";
 
+    if (!speech.isListening && _hasSpeech) {
+      if (lastWords != null ) {
+        t = mainRunnerSession(lastWords, _session);
+        String l = mainRunner(lastWords, _session);
+        var client = new http.Client();
+        l = mainRunner( lastWords, _session);
+        k = await getRASA(client, lastWords);
+        _speak();
       }
     }
+    setState((){
+      _question = k;
+      _session = t;
+    });
   }
 
-  Future<void> voicePrinter() async {
-    String t =  await userValidationInit(_session);
-    setState((){
-      _question = t;
-    });
+  void test(){
+
+  }
+
+  Future _speak() async {
+    await flutterTts.setLanguage("si-LK");
+    await flutterTts.setPitch(1);
+    await flutterTts.speak(_question);
   }
 
 }

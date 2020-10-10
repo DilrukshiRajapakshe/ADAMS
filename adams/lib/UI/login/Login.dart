@@ -35,9 +35,9 @@ class _LoginState extends State<Login>{
                   child:Column(
                       children: <Widget>[
                       Image.asset(
-                          'assets/images/robo.png',
-                          width: 250.0,
-                          height: 320.0
+                          'assets/images/logo.png',
+                          width: 120.0,
+                          height: 120.0
                       ),
                         const SizedBox(height: 10.00),
                         Text(_text)
@@ -52,7 +52,7 @@ class _LoginState extends State<Login>{
                           text: "ගූගල් ලියාපදිංචිය",
                           onPressed: () async {
                             bool res = await LoginServiceImpl().signInWithGoogle();
-                            if(Map == null)
+                            if(res == null)
                               print("error logging in with google");
                             else{
                               Navigator.pushReplacement(context, MaterialPageRoute(

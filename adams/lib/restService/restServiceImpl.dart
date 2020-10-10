@@ -89,22 +89,27 @@ Future<String> getAppointmentInfo(http.Client client,data) async {
     String sender = await getUserName();
     String message = data;
 
-    final response = await client.post(
-      await parseJson("getRASA"),headers: <String, String>{
-      'Content-Type': 'application/json; charset=UTF-8',
-    }, body: jsonEncode(<String, String>{
-      'sender': sender, 'message': message,
-    }),
-    );
+    try{
+      final response = await client.post(
+        await parseJson("getRASA"),
+        headers: <String, String>{
+          'Content-Type': 'application/json; charset=UTF-8',
+        }, body: jsonEncode(<String, String>{
+          'sender': sender,
+          'message': message,
+        }),
+      );
 
-    if (response.statusCode == 200) {
-      final response_Body = await json.decode(response.body);
-      print(response_Body);
-      return response_Body[0]["text"];
+      if (response.statusCode == 200) {
+        final response_Body = await json.decode(response.body);
+        print(response_Body);
+        return response_Body[0]["text"];
 
-    } else {
-      throw Exception('Failed to load data in service');
-    }
+      } else {
+        throw Exception('Failed to load data in service');
+      }
+    }catch(e){print(e);}
+
   }
 
   Future<String> setRASA(http.Client client, data) async {
@@ -129,3 +134,21 @@ Future<String> getAppointmentInfo(http.Client client,data) async {
     }
   }
 
+//Future<String> test(http.Client client) async {
+//  String data = "test";
+//  final response = await client.post(
+//    'http://192.168.8.100:8000/',headers: <String, String>{
+//    'Content-Type': 'application/json; charset=UTF-8',
+//  }, body: jsonEncode(<String, String>{
+//    'Value': data,
+//  }),
+//  );
+//
+//  if (response.statusCode == 200) {
+//    final response_Body = await json.decode(response.body);
+//    print(response_Body);
+//
+//  } else {
+//    throw Exception('Failed to load data in service');
+//  }
+//}

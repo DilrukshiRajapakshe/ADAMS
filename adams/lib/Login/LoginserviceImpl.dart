@@ -36,10 +36,13 @@ class LoginServiceImpl implements LoginService{
 
     final AuthResult authResult = await _auth.signInWithCredential(credential);
     final FirebaseUser user = authResult.user;
+
+    // testing
     assert(!user.isAnonymous);
     assert(await user.getIdToken() != null);
     final FirebaseUser currentUser = await _auth.currentUser();
-    print(currentUser.email);
+
+    // testing
     assert(user.uid == currentUser.uid);
     return true;
   }
@@ -48,7 +51,6 @@ class LoginServiceImpl implements LoginService{
   void signOutGoogle() async{
     await _auth.signOut();
     await googleSignIn.signOut();
-    print("User Sign Out");
   }
 
 }
