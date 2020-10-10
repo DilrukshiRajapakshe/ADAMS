@@ -1,3 +1,0 @@
-Created Interfaces in android studio for Collect Medial Center details. 
-Need to Code Backend using dart.
-Full code will upload within few days.
