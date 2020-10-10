@@ -1,49 +1,54 @@
 import 'package:adams/UserValidation/UserValidation.dart';
 import 'package:adams/Session/Dialog.dart';
+import 'package:adams/restService/restServiceImpl.dart';
+import 'package:http/http.dart' as http;
 
-Future<String> mainRunner(String botQuestion, String userAnswer, session) async{
+String mainRunner( String userAnswer, session) {
 
-  if(num_list_1.contains(userAnswer) && question_list_1.contains(botQuestion) && session == "0"){
-    userAnswer = "අංක එක";
+    if(num_list_1.contains(userAnswer)){
+      userAnswer = "අංක එක";
+    }
+    else if(num_list_2.contains(userAnswer)){
+      userAnswer = "අංක දෙක";
+    }
+    else if(num_list_3.contains(userAnswer)){
+      userAnswer = "අංක තුන";
+    }
+    else if(num_list_4.contains(userAnswer)){
+      userAnswer = "අංක හතර";
+    }
+    else if(num_list_5.contains(userAnswer)){
+      userAnswer = "අංක පහ";
+    }else{
+      userAnswer = userAnswer;
+    }
+  return userAnswer;
+}
+
+String mainRunnerSession(String userAnswer, session) {
+  if(num_list_1.contains(userAnswer)){
     session = "1";
   }
-  else if(num_list_2.contains(userAnswer) && question_list_1.contains(botQuestion) && session == "0"){
-    userAnswer = "අංක දෙක";
-
+  else if(num_list_2.contains(userAnswer)){
     session = "2";
   }
-  else if(num_list_3.contains(userAnswer) && question_list_1.contains(botQuestion) && session == "0"){
-    userAnswer = "අංක තුන";
+  else if(num_list_3.contains(userAnswer)){
     session = "3";
   }
-  else if(num_list_4.contains(userAnswer) && question_list_1.contains(botQuestion) && session == "0"){
-    userAnswer = "අංක හතර";
+  else if(num_list_4.contains(userAnswer)){
     session = "4";
   }
-  else if(num_list_5.contains(userAnswer) && question_list_1.contains(botQuestion) && session == "0"){
-    userAnswer = "අංක පහ";
+  else if(num_list_5.contains(userAnswer)){
     session = "5";
-  }else if(question_list.contains(botQuestion) && session == "0" ){
-    userAnswer = "රහස්‍යනාමය";
-    session = "0";
-    bool validation = await userValidation(session);
-  }else if(yes_list.contains(userAnswer)){
-    userAnswer = "ඔව්";
-    session = "6";
-  } else if(no_list.contains(userAnswer)){
-    userAnswer = "නැත";
-    session = "0";
-  }else if(session == "2"){
-    userAnswer = "";
-  } else if(session == "3"){
-    userAnswer = "";
-  } else if(session == "4"){
-    userAnswer = "";
   }else{
     session = session;
-    userAnswer = userAnswer;
   }
-  print(session);
-  print(userAnswer);
   return session;
 }
+
+
+
+
+
+
+
