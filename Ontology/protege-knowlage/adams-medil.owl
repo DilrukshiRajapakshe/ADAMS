@@ -56,7 +56,7 @@
     <!-- https://adams-medi.000webhostapp.com/adams.owl#Age18 -->
 
     <owl:DatatypeProperty rdf:about="https://adams-medi.000webhostapp.com/adams.owl#Age18">
-        <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Drug"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
     
 
@@ -98,30 +98,6 @@
     
 
 
-    <!-- https://adams-medi.000webhostapp.com/adams.owl#Lab-Test -->
-
-    <owl:DatatypeProperty rdf:about="https://adams-medi.000webhostapp.com/adams.owl#Lab-Test">
-        <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Disease"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://adams-medi.000webhostapp.com/adams.owl#Less-common-symptoms -->
-
-    <owl:DatatypeProperty rdf:about="https://adams-medi.000webhostapp.com/adams.owl#Less-common-symptoms">
-        <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Disease"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://adams-medi.000webhostapp.com/adams.owl#Most-common-symptoms -->
-
-    <owl:DatatypeProperty rdf:about="https://adams-medi.000webhostapp.com/adams.owl#Most-common-symptoms">
-        <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Disease"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://adams-medi.000webhostapp.com/adams.owl#Name -->
 
     <owl:DatatypeProperty rdf:about="https://adams-medi.000webhostapp.com/adams.owl#Name">
@@ -147,14 +123,6 @@
     <owl:DatatypeProperty rdf:about="https://adams-medi.000webhostapp.com/adams.owl#Nature">
         <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Drug"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://adams-medi.000webhostapp.com/adams.owl#Prevention -->
-
-    <owl:DatatypeProperty rdf:about="https://adams-medi.000webhostapp.com/adams.owl#Prevention">
-        <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Disease"/>
     </owl:DatatypeProperty>
     
 
@@ -187,14 +155,6 @@
     
 
 
-    <!-- https://adams-medi.000webhostapp.com/adams.owl#Serious-symptoms -->
-
-    <owl:DatatypeProperty rdf:about="https://adams-medi.000webhostapp.com/adams.owl#Serious-symptoms">
-        <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Disease"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://adams-medi.000webhostapp.com/adams.owl#Side_Effects -->
 
     <owl:DatatypeProperty rdf:about="https://adams-medi.000webhostapp.com/adams.owl#Side_Effects">
@@ -212,14 +172,6 @@
     
 
 
-    <!-- https://adams-medi.000webhostapp.com/adams.owl#Status -->
-
-    <owl:DatatypeProperty rdf:about="https://adams-medi.000webhostapp.com/adams.owl#Status">
-        <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Symptom"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://adams-medi.000webhostapp.com/adams.owl#Synonyms -->
 
     <owl:DatatypeProperty rdf:about="https://adams-medi.000webhostapp.com/adams.owl#Synonyms">
@@ -227,14 +179,6 @@
         <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Drug"/>
         <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Symptom"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://adams-medi.000webhostapp.com/adams.owl#Treatments -->
-
-    <owl:DatatypeProperty rdf:about="https://adams-medi.000webhostapp.com/adams.owl#Treatments">
-        <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Disease"/>
     </owl:DatatypeProperty>
     
 
@@ -290,30 +234,6 @@
     
 
 
-    <!-- https://adams-medi.000webhostapp.com/adams.owl#Que-DIS -->
-
-    <owl:Class rdf:about="https://adams-medi.000webhostapp.com/adams.owl#Que-DIS">
-        <rdfs:subClassOf rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Question"/>
-    </owl:Class>
-    
-
-
-    <!-- https://adams-medi.000webhostapp.com/adams.owl#Que-Drug -->
-
-    <owl:Class rdf:about="https://adams-medi.000webhostapp.com/adams.owl#Que-Drug">
-        <rdfs:subClassOf rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Question"/>
-    </owl:Class>
-    
-
-
-    <!-- https://adams-medi.000webhostapp.com/adams.owl#Que-Sym -->
-
-    <owl:Class rdf:about="https://adams-medi.000webhostapp.com/adams.owl#Que-Sym">
-        <rdfs:subClassOf rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Question"/>
-    </owl:Class>
-    
-
-
     <!-- https://adams-medi.000webhostapp.com/adams.owl#Question -->
 
     <owl:Class rdf:about="https://adams-medi.000webhostapp.com/adams.owl#Question"/>
@@ -340,12 +260,10 @@
     <!-- https://adams-medi.000webhostapp.com/adams.owl#DIS0001 -->
 
     <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#DIS0001">
-        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Disease"/>
         <Description>අධි රුධිර පීඩනය පිළිබඳ වඩාත්ම භයානක දෙය නම් ඔබට එය ඇති බව ඔබ නොදැන සිටීමයි. එයට හේතුව අධි රුධිර පීඩනය ඉතා දරුණු නම් පමනක් රෝග ලක්ෂණ පෙන්විමයි. ඔබේ රුධිර පීඩනය ඉහළ මට්ටමක පවතී දැයි දැන ගැනීමට හොඳම ක්‍රමය වන්නේ නිරන්තර පරීක්ෂාවන් ය. ඔබට නිවසේදී රුධිර පීඩනය නිරීක්ෂණය කළ හැකිය. අධි රුධිර පීඩනය ඇති සමීප ඥාතියෙකු සිටී නම් මෙය විශේෂයෙන් වැදගත් වේ. දැඩි අධි රුධිර පීඩනයේ රෝග ලක්ෂණ නමි: දරුණු හිසරදය, නාසයෙන්ලේ ගැලීම, තෙහෙට්ටුව,  ව්‍යාකූලතාව, දෘෂ්ටි ගැටළු, පපුවේ වේදනාව, හුස්ම ගැනීමේ අපහසුතා, අක්‍රමවත් හෘද ස්පන්දනය සහා මුත්රා වල රුධිරය.</Description>
         <Name>අධි රුධිර පීඩනය</Name>
-        <Side_Effects>හෘදයාබාධ,ආඝාතය,හදවත අකර්මණ්‍ය වීම,වකුගඩු රෝගය හෝ අක්රීය වීම,දෘෂ්ටිය නැති වීම,ලිංගික දුර්වලතා,පපුවේ වේදනාව,පර්යන්ත ධමනි රෝග (PAD)</Side_Effects>
         <Specific>හෘද රෝග විශේෂඥ වෛද්‍යවරුන් වන්නේ හෘද හා රුධිර වාහිනී රෝග නිර්ණය කිරීම හා ප්‍රතිකාර කිරීම පිළිබඳ පුහුණුව හා විශේෂඥ දැනුම ඇති විශේෂඥයින් ය. ඔබේ අධි රුධිර පීඩනය පාලනය කිරීමට විශේෂයෙන් අපහසු නම්, ඔබ මේ අවස්ථාවේ හෘද රෝග විශේෂඥ වෛද්‍යවරයකු වෙත යොමුවීම සුදුසුය. රුධිර පීඩන රෝග විනිශ්චය සමඟ හෘද රෝග පරීක්ෂාවට ලක් කිරීම ද අත්‍යවශ්‍ය වේ. හෘද රෝග පරීක්ෂාව මගින් ඔබට හෘද සෞඛ්‍යය පිළිබඳ නිර්දේශ ලබා ගත හැකිය. වැඩි විස්තර සඳහා, ඔබේ පවුලේ සායනික වෛද්‍යවරයා වෙත යොමු වන්න.</Specific>
-        <Synonyms>hypertension,high blood pressure,අධි රුධිර පීඩනය</Synonyms>
+        <Synonyms>hypertension, high blood pressure, අධි රුධිර පීඩනය</Synonyms>
         <Type>Disease</Type>
     </owl:NamedIndividual>
     
@@ -354,12 +272,10 @@
     <!-- https://adams-medi.000webhostapp.com/adams.owl#DIS0002 -->
 
     <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#DIS0002">
-        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Disease"/>
         <Description>COVID-19 විවිධ පුද්ගලයින්ට විවිධ ආකාරවලින් බලපාන අතර තවමත් නිශ්චිත ප්‍රතිකාර ක්‍රමයක් නොමැත. බොහෝ ආසාදිත පුද්ගලයින් මෘදු හා මධ්‍යස්ථ රෝගාබාධ ඇතිවෙ. වඩාත් පොදු රෝග ලක්ෂණ: උණ, වියළි කැස්ස, වෙහෙස, කැක්කුම සහ වේදනාව, උගුර වණ වීම, පාචනය, සංසන්ධිත ප්‍රදාහය, හිසරදය, රසය හෝ සුවඳ නැති වීම, සම මත ඇති වන කැක්කුම, හෝ ඇඟිලි හෝ ඇඟිලි දුර්වර්ණ වීම. බරපතල රෝග ලක්ෂණ; හුස්ම ගැනීමේ අපහසුතාව හෝ හුස්ම හිරවීම, පපුවේ වේදනාව හෝ පීඩනය කථනය හෝ චලනය නැතිවීම. ඔබට මෙම රෝග ලක්ෂණ ඇත්නම් වහාම වෛද්‍ය ප්‍රතිකාර ලබා ගන්න. ඔබේ වෛද්‍යවරයා හෝ සෞඛ්‍ය මධ්‍යස්ථානය බැලීමට පෙර ඔවූන් අමතන්න. රෝග ලක්ෂණ පෙන්වීම සඳහා යමෙකු වෛරසයට ගොදුරු වූ දින සිට සාමාන්‍යයෙන් දින 5-14 ක් පමණ ගතවනු ඇත. COVID 19 ආසාදනය වීම වළක්වා ගැනීම සඳහා ඔබ මුඛ, නාසය ආවරණය වන පරිදි මුහුණු ආවරණයක්(වෛද්‍යමය) පැළඳිම, ඔබේ දෑත් නිතර සේදීම සහා  මිනිසුන් සමඟ ආරක්ෂිත දුරක් පවත්වා ගැනීම කල යුතුය.</Description>
         <Name>කොවිඩ් 19</Name>
-        <Side_Effects>COVID-19 වලින් සුවය ලබන සමහරුන්ට, තෙහෙට්ටුව, හුස්ම හිරවීම, මාංශ පේශි වේදනාව, ව්‍යාකූලත්වය, හිසරදය සහ ව්‍යාකූලතාව වැනි රෝග ලක්ෂණ රෝගයෙන් දිවි ගලවා ගත් පසු  මුහුණ දෙන ගැටලු ගණන අතර වේ. තවමත් එය ස්ථීරව තහවුරු කර නැත.</Side_Effects>
         <Specific>වහාම ඔබේ ප්‍රදේශයේ මහජන සෞඛ්‍ය පරීක්ෂක (PHI) හෝ ඔබේ සෞඛ්‍ය වෛද්‍ය නිලධාරී (MOH) වෙත වාර්තා කරන්න. කොවිඩ් -19 පිළිබඳ වෛද්‍ය සහ වෙනත් උපදෙස් සඳහා 1999 හොට්ලයින් අමතන්න. හදිසි අවස්ථාවකදී ගිලන්රථ පහසුකම් සඳහා 1990 අමතන්න.</Specific>
-        <Synonyms>COVID 19,COVID-19,කොවිඩ් 19,කොවිඩ් -19,covid-19,covid 19</Synonyms>
+        <Synonyms>COVID 19,COVID-19,කොවිඩ් 19,කොවිඩ් -19</Synonyms>
         <Type>Disease</Type>
     </owl:NamedIndividual>
     
@@ -371,7 +287,6 @@
         <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Disease"/>
         <Description>ඉබෝලා වෛරසය අප්‍රිකාවේ රටවල් කිහිපයක පවති. ඉබෝලා ඇති බව අතිශයින්ම කීමට අපහසු ය, සමහරවිට එය කොලරාව හෝ මැලේරියාව වැනි තවත් බරපතල තත්වයක් විය හැකිය, ප්‍රතිකාර ගැනීමේදී මෑත සංචාරක ඉතිහාසය සඳහන් කිරීමට අමතක නොකරන්න, මෙය ගැටළුව විසදීමට උපකාරී වේ. රුධිරය, මුත්රා හෝ මළපහ සාම්පලයක් ලබාගැනීමෙන් ආසාදනයක් ඇත්දැයි පරීක්ෂා කළ හැකිය. ඉබෝලා වෛරසය ආසාදනය වූ පුද්ගලයකුගේ ශරීරය තුළ කෙමෙන් වර්ධනය වේ පහත රෝග ලක්ෂණ,ඉහළ උෂ්ණත්වයක් (උණ), හිසරදයක්, සන්ධි සහ මාංශ පේශි වේදනාව, උගුරේ අමාරුවක්, දැඩි මාංශ පේශි දුර්වලතාව. මෙම රෝග ලක්ෂණ ආසාදනය වීමෙන් දින 2 ත් 21 ත් අතර පාචනය, වමනය, කැසීම, බඩේ වේදනාව සහ වකුගඩු හා අක්මාවේ ක්‍රියාකාරිත්වය අඩුවිය හැකිය. එවිට පුද්ගලයාට අභ්‍යන්තරව ලේ ගැලීමක් සිදුවිය හැකි අතර කන්, ඇස්, නාසය හෝ මුඛයෙන් ලේ ගැලීමටද ඉඩ ඇත. ඉබෝලා වළක්වා ගැනීම සඳහා සබන් හා ජලය භාවිතයෙන් ඔබේ අත් නිතර සේදීම. පළතුරු සහ එළවළු නිසි ලෙස සෝදා භාවිතෙය්දී ඒවා ආහාරයට ගැනීමට පෙර වග බලා ගන්න. ආසාදනයක් ඇතිවිය හැකි රෝග ලක්ෂණ ඇති ඕනෑම අයෙකු සමඟ ශාරීරික සම්බන්ධතා පැවැත්වීමෙන් වළකින්න. මියගිය සතුන් හෝ ඔවුන්ගේ අමු මස් හසුරුවන්න එපා සහා &quot;bushmeat&quot; කන්න එපා.</Description>
         <Name>ඉබෝලා වෛරසය</Name>
-        <Side_Effects>හිසරදය,සන්ධි වේදනාව,අක්ෂි ආබාධ</Side_Effects>
         <Specific>ශ්‍රී ලංකාවේ දක්නට නොලැබේ. බොහෝවිට ප්‍රතිකාර කරනු ලබන්නේ බෝවන රෝග විශේෂඥයන් සහ හදිසි රෝග විශේෂඥ වෛද්‍යවරුන්ය.</Specific>
         <Synonyms>ebola virus,ඉබෝලා වෛරසය,ඉබෝලා,ebola</Synonyms>
         <Type>Disease</Type>
@@ -384,16 +299,10 @@
     <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#DRUG0002">
         <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Drug"/>
         <Uses rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#DIS0001"/>
-        <Age18>මිනොක්සිඩිල් ටැබ්ලට් භාවිතා කරන්නෙකු ලෙස එය කටින් ගන්නා අතර ආහාර වේලකට පෙර හෝ පසුව භාවිතා කරයි. ඔබේ වෛද්‍යවරයා ඔබට දිනකට ටැබ්ලට් කීයක් ගත යුතු දැයි කියනු ඇත (සාමාන්‍යයෙන් මිනොක්සිඩිල් ටැබ්ලට් දිනකට වරක් හෝ දෙවරක් ගත යුතුය.)
-වැඩිහිටි මාත්‍රාව (වයස අවුරුදු 18-64):
-සාමාන්‍ය ආරම්භක මාත්‍රාව 5 mg වන අතර එය දිනකට එක් වරක් ගනු ලැබේ. ඔබේ වෛද්‍යවරයා විසින් ඔබේ මාත්‍රාව 10 mg, 20 mg, පසුව 40 mg දක්වා වැඩි කළ හැකිය, අවශ්‍ය පරිදි දිනකට එක් වරක් හෝ කිහිප වතාවක් ගනු ලැබේ. උපරිම මාත්‍රාව දිනකට එක් වරක් 100 mg වේ.</Age18>
-        <Ages0-12>ළමා මාත්‍රාව (වයස අවුරුදු 0–11)
-සාමාන්‍ය ආරම්භක මාත්‍රාව ඔබේ දරුවාගේ බර මත පදනම් වේ. එය 0.2 mg / kg, දිනකට එක් වරක් ගනු ලැබේ.
-උපරිම මාත්‍රාව දිනකට එක් වරක් 50 mg වේ.</Ages0-12>
-        <Ages12-17>මිනොක්සිඩිල් ටැබ්ලට් භාවිතා කරන්නෙකු ලෙස එය කටින් ගන්නා අතර ආහාර වේලකට පෙර හෝ පසුව භාවිතා කරයි. ඔබේ වෛද්‍යවරයා ඔබට දිනකට ටැබ්ලට් කීයක් ගත යුතු දැයි කියනු ඇත (සාමාන්‍යයෙන් මිනොක්සිඩිල් ටැබ්ලට් දිනකට වරක් හෝ දෙවරක් ගත යුතුය.)
+        <Ages0-12>මිනොක්සිඩිල් ටැබ්ලට් භාවිතා කරන්නෙකු ලෙස එය කටින් ගන්නා අතර ආහාර වේලකට පෙර හෝ පසුව භාවිතා කරයි. ඔබේ වෛද්‍යවරයා ඔබට දිනකට ටැබ්ලට් කීයක් ගත යුතු දැයි කියනු ඇත (සාමාන්‍යයෙන් මිනොක්සිඩිල් ටැබ්ලට් දිනකට වරක් හෝ දෙවරක් ගත යුතුය.)
 ළමා මාත්‍රාව (වයස අවුරුදු 12–17)
 සාමාන්‍ය ආරම්භක මාත්‍රාව 5 mg වන අතර එය දිනකට එක් වරක් ගනු ලැබේ.
-ඔබේ දරුවාගේ වෛද්‍යවරයා ඔවුන්ගේ මාත්‍රාව 10 mg, 20 mg, පසුව 40 mg දක්වා වැඩි කළ හැකිය. උපරිම මාත්‍රාව දිනකට එක් වරක් 100 mg වේ.</Ages12-17>
+ඔබේ දරුවාගේ වෛද්‍යවරයා ඔවුන්ගේ මාත්‍රාව 10 mg, 20 mg, පසුව 40 mg දක්වා වැඩි කළ හැකිය. උපරිම මාත්‍රාව දිනකට එක් වරක් 100 mg වේ.</Ages0-12>
         <Description>අධි රුධිර පීඩනය (අධි රුධිර පීඩනය) සඳහා ප්‍රතිකාර කිරීම සඳහා මිනොක්සිඩිල් ඖෂධ භාවිතා කරයි. අධි රුධිර පීඩනය අඩු කිරීමෙන් ආගාතය, හෘදයාබාධ හා වකුගඩු ආබාධ වළක්වා ගත හැකිය. මිනොක්සිඩිල් ක්‍රියා කර රුධිර නාල ලිහිල් කර රුධිරය වඩාත් පහසුවෙන් ගලායැමට සලස්වයි. අතුරු ආබාධ ලෙස කුෂ්ටය‍, කැසීම / ඉදිමීම (විශේෂයෙන් මුහුණේ / දිව / උගුරේ), දරුණු කරකැවිල්ල, හුස්ම ගැනීමේ අපහසුතා හෝ සැහැල්ලු හිසරදය.  මිනොක්සිඩිල් ශරීරයේ හිසකෙස් වර්ධනයට හෝ අඳුරු වීමට හේතු විය හැක. මෙය ඔබට කරදරයක් නම්, ඔබේ වෛද්‍යවරයා හමුවන්න. ඔබ ඖෂධය ගැනීම නැවැත්වූ විට, සාමාන්‍යයෙන් මාස 1 සිට 6 දක්වා කාලය තුළ හිසකෙස් සාමාන්‍ය තත්වයට පත්වේ. වේගවත් හෘද ස්පන්දනය, හෘදයාබාධ ඇතිවීමේ රෝග ලක්ෂණ (හුස්ම හිරවීම, වළලුකර / පාද ඉදිමීම, අසාමාන්‍ය වෙහෙස, අසාමාන්‍ය / හදිසි බර වැඩිවීම වැනි) වැනි බරපතල අතුරු ආබාධ ඇත්නම් වහාම ඔබේ වෛද්‍යවරයාට පවසන්න. ඔබට ආසාත්මිකතාවයක් ඇත්නමි, ගැබිනි නම්, 12 ට අඩු නම්, ඔබේ වෛද්‍ය ඉතිහාසය සහ ඔබේ තත්වය දොස්තරට පැවසීම ඉතා වැදගත් වේ. ඔබ ෆියෝක්‍රොමොසිටෝමා, හෘදයාබාධ, පෙනහළු හා වකුගඩු රෝග වලින් පෙලේ නමි ඔබ ඔබේ වෛද්‍යවරයාට පැවසිය යුතුයි.</Description>
         <Name>Minoxidil</Name>
         <Nature>මුඛය මඟින් ලබා ගන්නා ටැබ්ලටයකි. ප්‍රමාණය 2.5 mg සහ 10 mg පමණ වේ.</Nature>
@@ -419,9 +328,9 @@
     <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#QUE0001">
         <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Question"/>
         <Name>Side_Effects</Name>
-        <Name_Type>Drug,Disease</Name_Type>
+        <Name_Type>Drug</Name_Type>
         <Question_Type>Drug</Question_Type>
-        <Synonyms>කෙටිකාලීන සෞඛ්‍ය ගැටලු,කෙටිකාලීන අතුරු ආබාධ</Synonyms>
+        <Synonyms>අතුරු ප්‍රතිඵලයක් ද, අතුරු ප්‍රතිඵල</Synonyms>
         <Type>Question</Type>
     </owl:NamedIndividual>
     
@@ -433,8 +342,8 @@
         <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Question"/>
         <Name>Usage</Name>
         <Name_Type>Drug</Name_Type>
-        <Question_Type>Drug</Question_Type>
-        <Synonyms>කෑමට පෙරද, කෑමට පසුද,උදේට ද,දවල්ට ද,රෑට ද,කෑමට පෙර,කෑමට පසු,උදේට, දවල්,රෑට,ඉර බහින,ඉර නගින, ඉර අවරට,ඉර මුදුන්,භාවිතා කරන වෙලාව,පාවිච්චි කරන වෙලාව,පරිහරණය කරන වෙලාව,පරිශීලනය කරන වෙලාව,කොයි වෙලාවටද</Synonyms>
+        <Synonyms>කෑමට පෙරද, කෑමට පසුද, උදේට ද, දවල්ට ද, රෑට ද, කෑමට පෙර, කෑමට පසු, උදේට, දවල්, රෑට, ඉර බහින, ඉර නගින,  ඉර අවරට, ඉර මුදුන්,භාවිතා කරන,පාවිච්චි කරන,පරිහරණය කරන,පරිශීලනය කරන,ගැහැනු කෙනෙකුට ලබා දෙන මාත්‍රාව,ගැබිනි මවකට ලබා දෙන මාත්‍රාව,පිරිමි කෙනෙකුට ලබා දෙන මාත්‍රාව,දරුවෙකුට ලබා දෙන මාත්‍රාව,ළමයෙකුට ලබා දෙන මාත්‍රාව,වියැති ගැබිනි මවකට ලබා දෙන මාත්‍රාව,වියැති පිරිමි කෙනෙකුට ලබා දෙන මාත්‍රාව,වියැති ගැහැනු කෙනෙකුට ලබා දෙන මාත්‍රාව,පුද්ගලයෙකුට ලබා දෙන මාත්‍රාව,ගැහැනු කෙනෙකුට ලබා දෙන ප්‍රමාණය,ගැබිනි මවකට ලබා දෙන ප්‍රමාණය,පිරිමි කෙනෙකුට ලබා දෙන ප්‍රමාණය,දරුවෙකුට ලබා දෙන ප්‍රමාණය,ළමයෙකුට ලබා දෙන ප්‍රමාණය,වියැති ගැබිනි මවකට ලබා දෙන ප්‍රමාණය,වියැති පිරිමි කෙනෙකුට ලබා දෙන ප්‍රමාණය,වියැති ගැහැනු කෙනෙකුට ලබා දෙන ප්‍රමාණය,පුද්ගලයෙකුට ලබා දෙන ප්‍රමාණය,ගැහැනු කෙනෙකුට ලබා දෙන,ගැබිනි මවකට ලබා දෙන,පිරිමි කෙනෙකුට ලබා දෙන,දරුවෙකුට ලබා දෙන,ළමයෙකුට ලබා දෙන,වියැති ගැබිනි මවකට ලබා දෙන,වියැති පිරිමි කෙනෙකුට ලබා දෙන,වියැති ගැහැනු කෙනෙකුට ලබා දෙන,පුද්ගලයෙකුට ලබා දෙන,</Synonyms>
+        <Type>Drug</Type>
         <Type>Question</Type>
     </owl:NamedIndividual>
     
@@ -460,7 +369,7 @@
         <Name>Nature</Name>
         <Name_Type>Drug</Name_Type>
         <Question_Type>Drug</Question_Type>
-        <Synonyms>ස්වභාවය, හැඩරුව,මොන වගේද,කොයි වගේද,දියරයක් ද, පෙත්තත් ද, ටැබ්ලට් එකක් ද</Synonyms>
+        <Synonyms>ස්වභාවය, හැඩරුව, මොන වගේද, කොයි වගේද, දියරයක් ද, පෙත්තත් ද, ටැබ්ලට් එකක් ද</Synonyms>
         <Type>Question</Type>
     </owl:NamedIndividual>
     
@@ -473,7 +382,7 @@
         <Name>Reason</Name>
         <Name_Type>Drug</Name_Type>
         <Question_Type>Diseases</Question_Type>
-        <Synonyms>බෙහෙත් වර්ග,ඖෂධ වර්ග</Synonyms>
+        <Synonyms>බෙහෙත් වර්ග, ඖෂධ වර්ග</Synonyms>
         <Type>Question</Type>
     </owl:NamedIndividual>
     
@@ -486,8 +395,8 @@
         <Name>Name</Name>
         <Name_Type>Symptoms</Name_Type>
         <Question_Type>Diseases</Question_Type>
-        <Synonyms>දිගුකාලීන සෞඛ්‍ය ගැටලු,දිගුකාලීන අතුරු ආබාධ</Synonyms>
-        <Type>Question</Type>
+        <Synonyms>රෝග ලක්ෂණ</Synonyms>
+        <Type>Questiona</Type>
     </owl:NamedIndividual>
     
 
@@ -497,127 +406,9 @@
     <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#QUE0007">
         <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Question"/>
         <Name>Price</Name>
-        <Name_Type>Drug</Name_Type>
         <Question_Type>Drug</Question_Type>
         <Synonyms>පෙත්තක ගාන කීයද,ටැබ්ලට් එකක ගාන කීයද,කාඩ් එකක ගාන කීයද,price කොහොමද,පෙත්තක් කීයද,ටැබ්ලට් එකක් කීයද,කාඩ් එකක් කීයද</Synonyms>
-        <Type>Question</Type>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://adams-medi.000webhostapp.com/adams.owl#QUE0008 -->
-
-    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#QUE0008">
-        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Question"/>
-        <Name>Descriptions</Name>
-        <Name_Type>Diseases</Name_Type>
-        <Question_Type>Diseases</Question_Type>
-        <Synonyms>රෝගය ගැන දොඩන්න,රෝගය ගැන අහන්න,රෝගය ගැන දැනගන්න,රෝගය ගැන හොයන්න,රෝගය ගැන විමසන්න,රෝගය ගැන ඔබට කියන්න පුළුවන්ද,රෝගය ගැන සොයන්න,රෝගය ගැන දන්නවාද,රෝගය ගැන මට දැනගන්න ඕන,රෝගය ගැන මට විස්තර කියන්න,රෝගය ගැන විස්තර දැනගන්න ආවෙ,රෝගය පිලිබද දොඩන්න,රෝගය පිලිබද අහන්න,රෝගය පිලිබද දැනගන්න,රෝගය පිලිබද හොයන්න,රෝගය පිලිබද විමසන්න,රෝගය පිලිබද ඔබට කියන්න පුළුවන්ද,රෝගය පිලිබද සොයන්න,රෝගය පිලිබද දන්නවාද,රෝගය පිලිබද මට දැනගන්න ඕන,රෝගය පිලිබද මට විස්තර කියන්න,රෝගය පිලිබද විස්තර දැනගන්න ආවෙ</Synonyms>
-        <Type>Question</Type>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://adams-medi.000webhostapp.com/adams.owl#QUE0009 -->
-
-    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#QUE0009">
-        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Question"/>
-        <Name>Name</Name>
-        <Name_Type>Symptom</Name_Type>
-        <Question_Type>Disease</Question_Type>
-        <Synonyms>රෝගියෙක් හදුනාගන්නේ,රෝගය සෑදී ඇති බව හදුනාගන්නේ,රෝගය වැළඳී ඇති බව හදුනාගන්නේ,රෝගි බව හදුනාගන්නේ,රෝගය හදුනාගන්නේ,රෝගිවි ඇති බව හදුනාගන්නේ,රෝගියෙක් සෙයාගන්නේ,රෝගය සෑදී ඇති බව සෙයාගන්නේ,රෝගය වැළඳී ඇති බව සෙයාගන්නේ,රෝගි බව සෙයාගන්නේ,රෝගය සෙයාගන්නේ,රෝගිවි ඇති බව සෙයාගන්නේ,රෝගියෙක් හෙයාගන්නේ,රෝගය සෑදී ඇති බව හෙයාගන්නේ,රෝගය වැළඳී ඇති බව හෙයාගන්නේ,රෝගි බව හෙයාගන්නේ,රෝගය හෙයාගන්නේ,රෝගිවි ඇති බව හෙයාගන්නේ,රෝගියෙක් දැනගන්නේ,රෝගය සෑදී ඇති බව දැනගන්නේ,රෝගය වැළඳී ඇති බව දැනගන්නේ,රෝගි බව දැනගන්නේ,රෝගය දැනගන්නේ,රෝගිවි ඇති බව දැනගන්නේ</Synonyms>
-        <Type>Question</Type>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://adams-medi.000webhostapp.com/adams.owl#QUE0010 -->
-
-    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#QUE0010">
-        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Question"/>
-        <Name>Side_Effects</Name>
-        <Name_Type>Disease</Name_Type>
-        <Question_Type>Disease</Question_Type>
-        <Synonyms>අතුරු ප්‍රතිඵල,අතුරු ආබාධ</Synonyms>
-        <Type>Question</Type>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://adams-medi.000webhostapp.com/adams.owl#QUE0011 -->
-
-    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#QUE0011">
-        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Question"/>
-        <Name>Descriptions</Name>
-        <Name_Type>Drug</Name_Type>
-        <Question_Type>Drug</Question_Type>
-        <Synonyms>ඖෂධ ගැන දොඩන්න,ඖෂධ ගැන අහන්න,ඖෂධ ගැන දැනගන්න,ඖෂධ ගැන හොයන්න,ඖෂධ ගැන විමසන්න,ඖෂධ ගැන ඔබට කියන්න පුළුවන්ද,ඖෂධ ගැන සොයන්න,ඖෂධ ගැන දන්නවාද,ඖෂධ ගැන මට දැනගන්න ඕන,ඖෂධ ගැන මට විස්තර කියන්න,ඖෂධ ගැන විස්තර දැනගන්න ආවෙ,ඖෂධ පිලිබද දොඩන්න,ඖෂධ පිලිබද අහන්න,ඖෂධ පිලිබද දැනගන්න,ඖෂධ පිලිබද හොයන්න,ඖෂධ පිලිබද විමසන්න,ඖෂධ පිලිබද ඔබට කියන්න පුළුවන්ද,ඖෂධ පිලිබද සොයන්න,ඖෂධ පිලිබද දන්නවාද,ඖෂධ පිලිබද මට දැනගන්න ඕන,ඖෂධ පිලිබද මට විස්තර කියන්න,ඖෂධ පිලිබද විස්තර දැනගන්න ආවෙ</Synonyms>
-        <Type>Question</Type>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://adams-medi.000webhostapp.com/adams.owl#QUE0012 -->
-
-    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#QUE0012">
-        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Question"/>
-        <Name>Woman-Dose</Name>
-        <Name_Type>Drug</Name_Type>
-        <Question_Type>Drug</Question_Type>
-        <Synonyms>ගැහැනු කෙනෙකුට ලබා දෙන මාත්‍රාව,වියැති ගැහැනු කෙනෙකුට ලබා දෙන මාත්‍රාව,ගැහැනු කෙනෙකුට ලබා දෙන ප්‍රමාණය,වියැති ගැහැනු කෙනෙකුට ලබා දෙන ප්‍රමාණය,ගැහැනු කෙනෙකුට ලබා දෙන,වියැති පිරිමි කෙනෙකුට ලබා දෙන,වියැති ගැහැනු කෙනෙකුට ලබා දෙන</Synonyms>
-        <Type>Question</Type>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://adams-medi.000webhostapp.com/adams.owl#QUE0013 -->
-
-    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#QUE0013">
-        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Question"/>
-        <Name>Pregnant-Mother-Dosage</Name>
-        <Name_Type>Drug</Name_Type>
-        <Question_Type>Drug</Question_Type>
-        <Synonyms>ගැබිනි මවකට ලබා දෙන මාත්‍රාව,වියැති ගැබිනි මවකට ලබා දෙන මාත්‍රාව,ගැබිනි මවකට ලබා දෙන ප්‍රමාණය,වියැති ගැබිනි මවකට ලබා දෙන ප්‍රමාණය,ගැබිනි මවකට ලබා දෙන,වියැති ගැබිනි මවකට ලබා දෙන</Synonyms>
-        <Type>Question</Type>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://adams-medi.000webhostapp.com/adams.owl#QUE0014 -->
-
-    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#QUE0014">
-        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Question"/>
-        <Name>Man-Dosage</Name>
-        <Name_Type>Drug</Name_Type>
-        <Question_Type>Drug</Question_Type>
-        <Synonyms>පිරිමි කෙනෙකුට ලබා දෙන මාත්‍රාව,වියැති පිරිමි කෙනෙකුට ලබා දෙන මාත්‍රාව,පිරිමි කෙනෙකුට ලබා දෙන ප්‍රමාණය,වියැති පිරිමි කෙනෙකුට ලබා දෙන ප්‍රමාණය,පිරිමි කෙනෙකුට ලබා දෙන</Synonyms>
-        <Type>Question</Type>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://adams-medi.000webhostapp.com/adams.owl#QUE0015 -->
-
-    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#QUE0015">
-        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Question"/>
-        <Name>Childe-Dosage</Name>
-        <Name_Type>Drug</Name_Type>
-        <Question_Type>Drug</Question_Type>
-        <Synonyms>පිරිමි දරුවෙකුට ලබා දෙන මාත්‍රාව,කොල්ල්කුට ලබා දෙන මාත්‍රාව,කොලුවෙකුට ලබා දෙන මාත්‍රාව,ගැටයෙකුට ලබා දෙන මාත්‍රාව,පිරිමි ලමයෙකුට ලබා දෙන මාත්‍රාව,බාල ළමයෙකුට ලබා දෙන මාත්‍රාව,ගැහැණු දරුවෙකුට ලබා දෙන මාත්‍රාව,කෙල්ල ලබා දෙන මාත්‍රාව,ගැටිස්සී ලබා දෙන මාත්‍රාව,ගෑනු ළමයෙකුට ලබා දෙන මාත්‍රාව,දැරියකට ලබා දෙන මාත්‍රාව,නවයුවතියකුට ලබා දෙන මාත්‍රාව,පැටික්කියෙකුට ලබා දෙන මාත්‍රාව,බාලිකාවකට ලබා දෙන මාත්‍රාව,මානවිකාවකට ලබා දෙන මාත්‍රාව,යුවතියකට ලබා දෙන මාත්‍රාව,ළදැරියකට ලබා දෙන මාත්‍රාව,ළමිස්සීකට ලබා දෙන මාත්‍රාව,ළමිස්සීයෙකුට ලබා දෙන මාත්‍රාව,පිරිමි දරුවෙකුට ලබා දෙන ප්‍රමාණය,කොල්ල්කුට ලබා දෙන ප්‍රමාණය,කොලුවෙකුට ලබා දෙන ප්‍රමාණය,ගැටයෙකුට ලබා දෙන ප්‍රමාණය,පිරිමි ලමයෙකුට ලබා දෙන ප්‍රමාණය,බාල ළමයෙකුට ලබා දෙන ප්‍රමාණය,ගැහැණු දරුවෙකුට ලබා දෙන ප්‍රමාණය,කෙල්ල ලබා දෙන ප්‍රමාණය,ගැටිස්සී ලබා දෙන ප්‍රමාණය,ගෑනු ළමයෙකුට ලබා දෙන ප්‍රමාණය,දැරියකට ලබා දෙන ප්‍රමාණය,නවයුවතියකුට ලබා දෙන ප්‍රමාණය,පැටික්කියෙකුට ලබා දෙන ප්‍රමාණය,බාලිකාවකට ලබා දෙන ප්‍රමාණය,මානවිකාවකට ලබා දෙන ප්‍රමාණය,යුවතියකට ලබා දෙන ප්‍රමාණය,ළදැරියකට ලබා දෙන ප්‍රමාණය,ළමිස්සීකට ලබා දෙන ප්‍රමාණය,ළමිස්සීයෙකුට ලබා දෙන ප්‍රමාණය,දරුවෙකුට ලබා දෙන මාත්‍රාව,ළමයෙකුට ලබා දෙන මාත්‍රාව,දරුවෙකුට ලබා දෙන ප්‍රමාණය,ළමයෙකුට ලබා දෙන ප්‍රමාණය,දරුවෙකුට ලබා දෙන,ළමයෙකුට ලබා දෙන</Synonyms>
-        <Type>Question</Type>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://adams-medi.000webhostapp.com/adams.owl#QUE0016 -->
-
-    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#QUE0016">
-        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Question"/>
-        <Name>Adult-Dosage</Name>
-        <Name_Type>Drug</Name_Type>
-        <Question_Type>Drug</Question_Type>
-        <Synonyms>පුද්ගලයෙකුට ලබා දෙන මාත්‍රාව,පුද්ගලයෙකුට ලබා දෙන ප්‍රමාණය,පුද්ගලයෙකුට ලබා දෙන,වැඩිහිටි පුද්ගලයෙකුට ලබා දෙන මාත්‍රාව,වැඩිහිටි පුද්ගලයෙකුට ලබා දෙන ප්‍රමාණය,වයෝවෘද්ධ ලබා දෙන මාත්‍රාව,වයසක ලබා දෙන මාත්‍රාව,වැඩිහිටි ලබා දෙන මාත්‍රාව,වයෝවෘද්ධ ලබා දෙන ප්‍රමාණය,වයසක ලබා දෙන ප්‍රමාණය,වැඩිහිටි ලබා දෙන ප්‍රමාණය</Synonyms>
-        <Type>Question</Type>
+        <Type>Questiona</Type>
     </owl:NamedIndividual>
     
 
@@ -757,9 +548,9 @@
     <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#SYM0011">
         <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Symptom"/>
         <Has rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#DIS0002"/>
-        <Description>කොවිඩ් 19,අධි රුධිර පීඩනය</Description>
+        <Description>කොවිඩ් 19</Description>
         <Name>විඩාව</Name>
-        <Synonyms>මහන්සිය,පොඩි වැඩක් කළත් ඇඟට මහන්සිගතිය දැනීම,පොඩි වැඩක් කළත් හැති අරිනවා,විඩාව,මහන්සි,තෙහෙට්ටුව</Synonyms>
+        <Synonyms>මහන්සිය,පොඩි වැඩක් කළත් ඇඟට මහන්සිගතිය දැනීම,පොඩි වැඩක් කළත් හැති අරිනවා,විඩාව,මහන්සි</Synonyms>
         <Type>Symptoms</Type>
     </owl:NamedIndividual>
     
@@ -810,7 +601,7 @@
     <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#SYM0015">
         <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Symptom"/>
         <Has rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#DIS0002"/>
-        <Description>කොවිඩ් 19,අධි රුධිර පීඩනය</Description>
+        <Description>කොවිඩ් 19</Description>
         <Name>හුස්ම ගැනීමේ අපහසුතාව</Name>
         <Synonyms>හුස්මගන්න බැහැ,හුස්ම හිරවෙනවා,හුස්ම ගැනීමේ අපහසුතාව</Synonyms>
         <Type>Symptoms</Type>
@@ -878,64 +669,6 @@
         <Description>ඉබෝලා</Description>
         <Name>අභ්‍යන්තර රුධිර වහනය</Name>
         <Synonyms>අභ්‍යන්තරව රුධිරය වහනය,අභ්‍යන්තරව රුධිර වහනය,අභ්‍යන්තර රුධිර වහනය</Synonyms>
-        <Type>Symptoms</Type>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://adams-medi.000webhostapp.com/adams.owl#SYM0021 -->
-
-    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#SYM0021">
-        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Symptom"/>
-        <Has rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#DIS0001"/>
-        <Description>අධි රුධිර පීඩනය</Description>
-        <Name>දරුණු හිසරදය</Name>
-        <Synonyms>දරුණු හිසරදය</Synonyms>
-        <Type>Symptoms</Type>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://adams-medi.000webhostapp.com/adams.owl#SYM0022 -->
-
-    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#SYM0022">
-        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Symptom"/>
-        <Description>අධි රුධිර පීඩනය</Description>
-        <Name>නාසයෙන් ලේ ගැලීම</Name>
-        <Synonyms>නාසයෙන් ලේ ගැලීම</Synonyms>
-        <Type>Symptoms</Type>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://adams-medi.000webhostapp.com/adams.owl#SYM0023 -->
-
-    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#SYM0023">
-        <Description>අධි රුධිර පීඩනය</Description>
-        <Name>පෙනීම අඩු ය</Name>
-        <Synonyms>පෙනීම අඩු ය</Synonyms>
-        <Type>Symptoms</Type>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://adams-medi.000webhostapp.com/adams.owl#SYM0024 -->
-
-    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#SYM0024">
-        <Description>අධි රුධිර පීඩනය</Description>
-        <Name>පපුවේ වේදනාව</Name>
-        <Synonyms>පපුවේ වේදනාව</Synonyms>
-        <Type>Symptoms</Type>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://adams-medi.000webhostapp.com/adams.owl#SYM0025 -->
-
-    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#SYM0025">
-        <Description>අධි රුධිර පීඩනය</Description>
-        <Name>අක්‍රමවත් හෘද ස්පන්දනය</Name>
-        <Synonyms>අක්‍රමවත් හෘද ස්පන්දනය</Synonyms>
         <Type>Symptoms</Type>
     </owl:NamedIndividual>
     
