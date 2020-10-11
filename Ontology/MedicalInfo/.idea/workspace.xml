@@ -2,30 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7e55cba-58f3-473e-82fd-d691ea4401d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../DOI-HM-1/.idea/DOI-HM.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/MedicalInfo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/Age.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/FileReader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/Translater.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/disease.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/drug.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/mainService.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/symptom_identification.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DOI-HM/Age.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DOI-HM/FileReader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DOI-HM/Translater.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DOI-HM/disease.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DOI-HM/drug.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DOI-HM/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DOI-HM/mainService.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DOI-HM/static/query.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DOI-HM/symptom_identification.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../adams/lib/UI/Info/UserInfo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../adams/lib/UI/Info/UserInfo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../adams/lib/UI/login/Login.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../adams/lib/UI/login/Login.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../adams/lib/UserInfo/UserEmail.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../adams/lib/UserInfo/UserEmail.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,6 +97,8 @@
       <option name="presentableId" value="Default" />
       <updated>1602349827584</updated>
       <workItem from="1602349837317" duration="788000" />
+      <workItem from="1602423226882" duration="73000" />
+      <workItem from="1602423303630" duration="6000" />
     </task>
     <servers />
   </component>
@@ -139,6 +122,10 @@
       <screen x="0" y="23" width="1680" height="977" />
     </state>
     <state width="1465" height="241" key="GridCell.Tab.0.right/0.23.1680.977@0.23.1680.977" timestamp="1602350626404" />
+    <state x="484" y="310" key="com.intellij.ide.util.TipDialog" timestamp="1602423241039">
+      <screen x="0" y="23" width="1680" height="972" />
+    </state>
+    <state x="484" y="310" key="com.intellij.ide.util.TipDialog/0.23.1680.972@0.23.1680.972" timestamp="1602423241039" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MedicalInfo$main.coverage" NAME="main Coverage Results" MODIFIED="1602350586579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/src" />
