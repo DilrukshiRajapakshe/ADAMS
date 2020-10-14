@@ -34,6 +34,7 @@ class _LoginState extends State<Login>{
                   flex: 3,
                   child:Column(
                       children: <Widget>[
+                      const SizedBox(height: 10.00),
                       Image.asset(
                           'assets/images/logo.png',
                           width: 120.0,
