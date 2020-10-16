@@ -1,4 +1,5 @@
 import 'package:adams/Login/LoginserviceImpl.dart';
+import 'package:adams/UI/sideNav/profile/profile.dart';
 import 'package:adams/fileReader/service/FileReaderServiceImpl.dart';
 import 'package:flutter/material.dart';
 import 'appointment/Appointment.dart';
@@ -38,7 +39,7 @@ class _SideNavState extends State<SideNav> {
 
   @override
   Widget build(BuildContext context) {
-    primaryColor: Colors.purple[600];
+    primaryColor: Colors.blue[900];
     return Drawer (
       child: Column(
         children: <Widget>[
@@ -94,7 +95,7 @@ class _SideNavState extends State<SideNav> {
             ),
             onTap: (){
               Navigator.of(context).pop();
-              Route route = MaterialPageRoute(builder: (context) => Appointment());
+              Route route = MaterialPageRoute(builder: (context) => Profile( text : "TEXT"));
               Navigator.push(context, route);
             },
           ),

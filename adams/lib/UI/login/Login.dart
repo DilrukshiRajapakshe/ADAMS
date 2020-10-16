@@ -32,18 +32,11 @@ class _LoginState extends State<Login>{
               children: [
                 Expanded(
                   flex: 3,
-                  child:Column(
-                      children: <Widget>[
-                      const SizedBox(height: 10.00),
-                      Image.asset(
-                          'assets/images/logo.png',
-                          width: 120.0,
-                          height: 120.0
-                      ),
-                        const SizedBox(height: 10.00),
-                        Text(_text)
-                      ]
-                  )
+                  child: Image.asset(
+                      'assets/images/logo.png',
+                      width: 120.0,
+                      height: 120.0
+                  ),
                 ),Expanded(
                   flex: 1,
                   child:Column(
@@ -60,10 +53,11 @@ class _LoginState extends State<Login>{
                                   builder: (context) => bot()
                               ));
                             }
-                      },
-                    ),
-                  ]
-                ),),
+                          },
+                        ),
+                      ]
+                  ),
+                ),
               ],
             ),
           ),

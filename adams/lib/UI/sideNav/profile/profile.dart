@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Profile extends StatelessWidget{
+
+  final String text;
+  Profile({Key key, @required this.text}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,7 +16,7 @@ class Profile extends StatelessWidget{
           onPressed: () {
             Navigator.pop(context);
           },
-          child: Text('Go back!'),
+          child: Text(text),
         ),
       ),
     );

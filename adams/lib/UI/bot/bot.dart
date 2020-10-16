@@ -1,25 +1,30 @@
-import 'dart:async';
 import 'package:adams/Session/Dialog.dart';
-import 'package:adams/Session/Appointment.dart';
-import 'package:adams/mic-Color/service/ColorServiceImpl.dart';
-import 'package:adams/restService/restServiceImpl.dart';
+import 'package:adams/UI/sideNav/sideNav.dart';
+import 'package:adams/UserInfo/UserImageURL.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_tts/flutter_tts.dart';
+import 'package:readmore/readmore.dart';
 import 'package:speech_to_text/speech_recognition_error.dart';
 import 'package:speech_to_text/speech_recognition_result.dart';
 import 'package:speech_to_text/speech_to_text.dart';
-import 'package:adams/UI/sideNav/sideNav.dart';
-import 'package:geolocator/geolocator.dart';
-import 'package:http/http.dart' as http;
-import 'package:flutter_tts/flutter_tts.dart';
-
-void main() => runApp(bot());
 
 class bot extends StatefulWidget {
+
   @override
-  _MyBotState createState() => _MyBotState();
+  State<StatefulWidget> createState() {
+    return _MyBotState();
+  }
 }
 
 class _MyBotState extends State<bot> {
+
+  TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 15.0, height: 2.0,);
+
+  var userQuestion = TextEditingController();
+
+  var myType = new Icon(Icons.send, color: Colors.blue[900]);
+
+  //speech variable
   bool _hasSpeech = false;
   bool _stressTest = false;
   double level = 0.0;
@@ -28,49 +33,31 @@ class _MyBotState extends State<bot> {
   String lastError = "";
   String lastStatus = "";
   String _currentLocaleId = "";
-
-  var colorOf = Colors.purple[600];
-  String _session = "0";
-  String _question = question_list_1;
   final SpeechToText speech = SpeechToText();
-  final Geolocator _geolocatorUser = Geolocator()..forceAndroidLocationManager;
-  Position _currentPositionOfUser;
-  String _currentAddressOfUser;
+
+  // text to speech
   final FlutterTts flutterTts = FlutterTts();
 
+
+  // session
+  String _session = "0";
+  String _question = question_list_1;
+  String userAnswer = "";
+
+  String userImageUrl = "";
+
+  var VisibilityOfRow = false;
 
   @override
   Future<void> initState() {
     super.initState();
+    // provide language
     initSpeechState();
-    _getCurrentLocationOfUser();
+    getUserEmails();
     _speak();
   }
-//location-01
-  _getCurrentLocationOfUser() {
-    _geolocatorUser.getCurrentPosition(desiredAccuracy: LocationAccuracy.best).then((Position positionOfUser) {
-      setState(() {
-        _currentPositionOfUser = positionOfUser;
-      });
-      _getCurrentAddressOfUser();
-    }).catchError((ex) {
-      print(ex);
-    });
-  }
-//location-02
-  _getCurrentAddressOfUser() async {
-    try {
-      List<Placemark> place = await _geolocatorUser.placemarkFromCoordinates(_currentPositionOfUser.latitude, _currentPositionOfUser.longitude);
-      Placemark placeOfUser = place[0];
-      setState(() {
-        _currentAddressOfUser = "${placeOfUser.locality}, ${placeOfUser.country}";
-      });
-    } catch (ex) {
-      print(ex);
-    }
-  }
 
-// provide language
+  // provide language
   Future<void> initSpeechState() async {
     // if hasSpeech not null - speech plugin is ready
     bool hasSpeech = await speech.initialize(
@@ -91,75 +78,273 @@ class _MyBotState extends State<bot> {
 
   @override
   Widget build(BuildContext context) {
-    ColorServiceImpl c = new ColorServiceImpl();
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primaryColor: Colors.purple[600]),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('ADAMS'),
-        ),
-        drawer: SideNav(),
-        body: Column(children: [
-          Expanded(
-            child: Column(
-              children: <Widget>[
-                const SizedBox(height: 20.00),
-                Align(
-                  child: Text(
-                    lastWords,
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                const SizedBox(height: 10.00),
-                Align(
-                  child: Text(
-                    _question,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 10,
+      theme: ThemeData(primaryColor: Colors.blue[900]),
+        home:Scaffold(
+          appBar: AppBar(
+            title: const Text('ADAMS'),
+          ),
+          backgroundColor: Colors.white,
+          drawer: SideNav(),
+          body: Container (
+              child :Container(
+                color: Colors.white,
+                child: SafeArea(
+                  child: Container(
+                    width: double.infinity,
+                    child: Column(
+                      children: [
+                        Expanded(
+                          flex: 17,
+                          child:Center(
+                                child:SingleChildScrollView(
+                                  child:Container(
+                                    child:Column(
+                                        mainAxisAlignment: MainAxisAlignment.start,
+                                        children: [
+                                          Column(
+                                            children:[
+                                              SingleChildScrollView(
+                                                child:Container(
+                                                    child:Column(
+                                                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                                        children: [
+                                                          Center(
+                                                            child:Padding(
+                                                              padding: EdgeInsets.all(8.0),
+                                                              child: Container(
+                                                                child:Column(
+                                                                    children: [
+                                                                      Row(
+                                                                          mainAxisAlignment: MainAxisAlignment.start,
+                                                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                                                          children: <Widget>[
+                                                                            Expanded(
+                                                                              flex: 1,
+                                                                              child: Padding(
+                                                                                padding: EdgeInsets.fromLTRB(0, 8, 0, 0),
+                                                                                child:new Container(
+                                                                                    width: 45.0,
+                                                                                    height: 50.0,
+                                                                                    decoration: new BoxDecoration(
+                                                                                        shape: BoxShape.circle,
+                                                                                        image: new DecorationImage(
+                                                                                          fit: BoxFit.fill,
+                                                                                          image: new ExactAssetImage('assets/images/robo.png',
+                                                                                          ),
+                                                                                        )
+                                                                                    )
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                            Expanded(
+                                                                              flex: 9,
+                                                                              child: Padding(
+                                                                                padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
+                                                                                child: Card(
+                                                                                  shape: RoundedRectangleBorder(
+                                                                                    borderRadius: BorderRadius.circular(15.0),
+                                                                                    side: BorderSide(width: 0.5, color: Colors.blue[900]),
+                                                                                  ),
+                                                                                  child: Column(
+                                                                                    mainAxisSize: MainAxisSize.min,
+                                                                                    children: <Widget>[
+                                                                                      Padding(
+                                                                                        padding: EdgeInsets.all(15),
+                                                                                        child:ReadMoreText(
+                                                                                          _question,
+                                                                                          trimLines: 12,
+                                                                                          colorClickableText: Colors.blue[900],
+                                                                                          trimMode: TrimMode.Line,
+                                                                                          trimCollapsedText: '...Show more',
+                                                                                          trimExpandedText: ' show less',
+                                                                                        ),
+                                                                                      )
+                                                                                    ],
+                                                                                  ),
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                          ]
+                                                                      ),
+                                                                    ]
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          Center(
+                                                            child:Padding(
+                                                              padding: EdgeInsets.all(2.0),
+                                                              child: Container(
+                                                                child:Column(
+                                                                    children: [
+                                                                      Visibility(
+                                                                        visible: VisibilityOfRow,
+                                                                        child: Row(
+                                                                            mainAxisAlignment: MainAxisAlignment.start,
+                                                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                                                            children: <Widget>[
+                                                                              Expanded(
+                                                                                flex: 9,
+                                                                                child: Padding(
+                                                                                  padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
+                                                                                  child: Card(
+                                                                                    shape: RoundedRectangleBorder(
+                                                                                      borderRadius: BorderRadius.circular(15.0),
+                                                                                      side: BorderSide(width: 0.5, color: Colors.blue[900]),
+                                                                                    ),
+                                                                                    child: Column(
+                                                                                      mainAxisSize: MainAxisSize.min,
+                                                                                      children: <Widget>[
+                                                                                        Padding(
+                                                                                          padding: EdgeInsets.all(15),
+                                                                                          child:ReadMoreText(
+                                                                                            userAnswer,
+                                                                                            trimLines: 12,
+                                                                                            colorClickableText: Colors.blue[900],
+                                                                                            trimMode: TrimMode.Line,
+                                                                                            trimCollapsedText: '...Show more',
+                                                                                            trimExpandedText: ' show less',
+                                                                                          ),
+                                                                                        )
+                                                                                      ],
+                                                                                    ),
+                                                                                  ),
+                                                                                ),
+                                                                              ),
+                                                                              Expanded(
+                                                                                flex: 1,
+                                                                                child: Padding(
+                                                                                  padding: EdgeInsets.fromLTRB(0, 8, 0, 0),
+                                                                                  child:new Container(
+                                                                                      width: 45.0,
+                                                                                      height: 43.0,
+                                                                                      decoration: new BoxDecoration(
+                                                                                          shape: BoxShape.circle,
+                                                                                          image: new DecorationImage(
+                                                                                            fit: BoxFit.fill,
+                                                                                            image: new NetworkImage(userImageUrl),
+                                                                                          )
+                                                                                      )
+                                                                                  ),
+                                                                                ),
+                                                                              ),
+                                                                            ]
+                                                                        ),
+                                                                      ),
+                                                                    ]
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ]
+                                                    )
+                                                ),
+                                              ),
+                                            ]
+                                          ),
+                                        ]
+                                    ),
+                                  ),
+                                ),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 3,
+                          child:Center(
+                            child:SingleChildScrollView(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Center(
+                                    child:Align(
+                                        child:Padding(
+                                          padding: EdgeInsets.all(0),
+                                          child: Container(
+                                            child:Column(
+                                                mainAxisAlignment: MainAxisAlignment.end,
+                                                children: <Widget>[
+                                                  Card(
+                                                    shape: RoundedRectangleBorder(
+                                                      borderRadius: BorderRadius.circular(15.0),
+                                                      side: BorderSide(width: 0.5, color: Colors.blue[900]),
+                                                    ),
+                                                    child: Column(
+                                                        children:<Widget>[
+                                                          Align(
+                                                            child:Row(
+                                                                children: <Widget>[
+                                                                  Expanded(
+                                                                    flex: 8,
+                                                                    child:Padding(
+                                                                      padding: EdgeInsets.all(8.0),
+                                                                      child:Align(
+                                                                        alignment: Alignment.bottomLeft,
+                                                                        child:TextField(
+                                                                          obscureText: false,
+                                                                          style: style,
+                                                                          maxLines: null,
+                                                                          decoration: InputDecoration(
+                                                                            contentPadding: EdgeInsets.fromLTRB(5.0, 5.0, 5.0, 0.0),
+                                                                          ),
+                                                                          controller: userQuestion,
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Expanded(
+                                                                    flex: 1,
+                                                                    child:IconButton(
+                                                                      icon: new Icon(Icons.mic, color: Colors.blue[900]),
+                                                                      iconSize: 20,
+                                                                      focusNode: FocusNode(),
+                                                                      onPressed : !_hasSpeech || speech.isListening
+                                                                          ? null
+                                                                          : startListening,
+                                                                    ),
+                                                                  ),
+                                                                  Expanded(
+                                                                    flex: 1,
+                                                                    child:IconButton(
+                                                                      icon: myType,
+                                                                      iconSize: 20,
+                                                                      onPressed : (){
+                                                                        send();
+                                                                        userQuestion.clear();
+                                                                      },
+                                                                    ),
+                                                                  ),
+                                                                ]
+                                                            ),
+                                                          ),
+                                                        ]
+                                                    ),
+                                                  ),
+                                                ]
+                                            ),
+                                          ),
+                                        )
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          )
+                        ),
+                      ],
                     ),
                   ),
                 ),
-                const SizedBox(height: 10.00),
-              ],
-            ),
-          ),
-        ]),
-        floatingActionButton: FloatingActionButton(
-          child: Align(
-            child: Container(
-              width: 40,
-              height: 40,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                      blurRadius: .26,
-                      spreadRadius: level * 1.5,
-                      color: Colors.purple.withOpacity(0.5))
-                ],
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(50)),
-              ),
-              child: IconButton(
-                icon: Icon(
-                  Icons.mic,
-                  color: colorOf,
-                ),
               ),
             ),
-          ),
-          onPressed: !_hasSpeech || speech.isListening ? null : startListening,
-          tooltip: 'ADAMS',
-          backgroundColor: Colors.white,
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      ),
     );
   }
 
+// ************------------------------ STT started
   void stressTest() {
     if (_stressTest) {
       return;
@@ -208,8 +393,8 @@ class _MyBotState extends State<bot> {
   void resultListener(SpeechRecognitionResult result) {
     setState(() {
       lastWords = "${result.recognizedWords}";
+      userQuestion.text = lastWords;
     });
-    printText();
   }
 
   void soundLevelListener(double level) {
@@ -230,35 +415,34 @@ class _MyBotState extends State<bot> {
       lastStatus = "$status";
     });
   }
+// ************------------------------ STT End
 
-  Future<void> printText() async {
-    String k = "";
-    String t = "";
-
-    if (!speech.isListening && _hasSpeech) {
-      if (lastWords != null ) {
-        t = mainRunnerSession(lastWords, _session);
-        String l = mainRunner(lastWords, _session);
-        var client = new http.Client();
-        l = mainRunner( lastWords, _session);
-        k = await getRASA(client, lastWords);
-        _speak();
-      }
-    }
-    setState((){
-      _question = k;
-      _session = t;
-    });
-  }
-
-  void test(){
-
-  }
-
+// ************------------------------ TTS started
   Future _speak() async {
     await flutterTts.setLanguage("si-LK");
     await flutterTts.setPitch(1);
     await flutterTts.speak(_question);
   }
+// ************------------------------ TTS end
 
+  Future<void> send() async {
+    String a = "";
+    var v = false;
+    if(userQuestion.text != null){
+      a = userQuestion.text;
+      v=true;
+    }
+    setState((){
+      userAnswer = a;
+      VisibilityOfRow = v;
+    });
+  }
+
+  Future<void> getUserEmails() async {
+    String url = await getUserImageURL();
+    setState(() {
+      userImageUrl = url;
+    });
+  }
 }
+

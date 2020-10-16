@@ -57,6 +57,15 @@ dependencies:
   flutter_tts: ^1.0.0
 # card
   sliding_card: ^0.1.2
+#  button
+  nice_button: ^0.1.7
+#  phone number
+  intl_phone_field: ^1.3.0
+#  date piker
+  intl: ^0.16.1
+#  reading cart info
+  readmore: ^1.0.0
+
 
 dev_dependencies:
   flutter_test:

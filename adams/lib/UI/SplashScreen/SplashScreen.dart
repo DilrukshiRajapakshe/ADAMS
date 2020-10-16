@@ -69,7 +69,8 @@ class _SplashState extends State<Splash_Screen> {
                       width: 120.0,
                       height: 120.0
                   ),
-                ),Expanded(
+                ),
+                Expanded(
                   flex: 1,
                   child:Column(
                       children: <Widget>[
