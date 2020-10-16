@@ -1,4 +1,4 @@
-from Translater import translate
+from app.src.Translater import translate
 
 number = {
     1: "one",
