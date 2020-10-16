@@ -15,3 +15,10 @@ Future<bool> userValidation(String answer) async {
 
   return true;
 }
+
+Future<bool> secretKeyValidation(String answer) async {
+  String email = await getUserEmail();
+  String name = await getUserName();
+
+  return true;
+}
