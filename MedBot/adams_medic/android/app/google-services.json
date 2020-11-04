@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "254470726306",
+    "firebase_url": "https://adams-medi.firebaseio.com",
+    "project_id": "adams-medi",
+    "storage_bucket": "adams-medi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254470726306:android:c24ec06462fecbba27adfb",
+        "android_client_info": {
+          "package_name": "com.example.adams_medic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "254470726306-adfuj9p565fn5v5vgt9pi0m4lba62c2l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsDW8txa14AMG0wAwoaj-FBEr0IKw-Zsw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "254470726306-adfuj9p565fn5v5vgt9pi0m4lba62c2l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
