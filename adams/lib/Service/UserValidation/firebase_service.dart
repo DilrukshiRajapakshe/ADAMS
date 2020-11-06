@@ -1,4 +1,4 @@
-import 'package:adams/Service/UserValidation/user.dart';
+import 'package:adams/Module/user.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:intl/intl.dart';
 import 'package:translator/translator.dart';
