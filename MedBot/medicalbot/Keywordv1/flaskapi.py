@@ -5,7 +5,7 @@ import keywordExtractor
 from googletrans import Translator
 translator = Translator()
 
-firebase = firebase.FirebaseApplication('https://adams-medi.firebaseio.com/', None)
+firebase = firebase.FirebaseApplication('https://medbot-b31d6.firebaseio.com/', None)
 result = firebase.get('/users', None)
 
 app = Flask(__name__)
