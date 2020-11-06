@@ -1,8 +1,8 @@
-import 'package:adams/UI/Info/UserInfo.dart';
 import 'package:flutter/material.dart';
-import 'UI/SplashScreen/SplashScreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'View/UI/bot/bot.dart';
 
+// main thread
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -25,7 +25,7 @@ class LoadingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return StreamBuilder(
       builder: (context,AsyncSnapshot<FirebaseUser> snapshot) {
-        return User_Info();
+        return bot();
       },
     );
   }
