@@ -1,3 +1,4 @@
 .idea/
-/Ontology/MedicalInfo/venv/
-/Ontology/DOI-HM/venv/
+/Ontology/MediInfo/venv
+/Ontology/DOI-HM/venv
+/Ontology/MedicalInfo/.idea
