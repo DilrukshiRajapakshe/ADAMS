@@ -1,12 +1,14 @@
 import requests
 
-from app.src.FileReader import read_json
+# from app.src.FileReader import read_json
+from app.src.FileReader import Query
 
 url = 'http://localhost:3030/ds/sparql'
 
 
 def runQuery(service):
-    query = read_json(service)
+    query = Query()
+    query = query.read_json(service)
     r = requests.get(url, params={'format': 'json', 'query': query})
     data = r.json()
     _list = data["results"]["bindings"]
@@ -15,12 +17,20 @@ def runQuery(service):
 
 def NameValue(list_, sentence):
     name_list = []
+    print("------Question Type--------")
+    print("Question type : Symptom")
+    print("------Intent identification--------")
     for i in range(len(list_)):
         Synonyms = list_[i]["Synonyms"]["value"]
         value = Synonyms.split(",")
         for a in range(len(value)):
             if value[a] in sentence:
                 name_list.append(list_[i]["Name"]["value"])
+                print(list_[i]["Name"]["value"])
+
+    print("------SPARQL query --------")
+    query = Query()
+    query.print_querry()
     return name_list
 
 

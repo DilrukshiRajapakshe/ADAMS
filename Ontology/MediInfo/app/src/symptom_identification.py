@@ -1,5 +1,7 @@
 import requests
 from collections import Counter
+
+from app.src.FileReader import Query
 from app.src.mainService import keyWordIdentification, runQuery, NameValue
 
 url = 'http://localhost:3030/ds/sparql'
@@ -18,6 +20,7 @@ def sortList(_list):
 
     for i in sorted(dict(Counter(_list)).keys()):
         _list_count.append({i: str(dict(Counter(_list))[i])})
+
     return _list_count
 
 
@@ -38,11 +41,15 @@ def percentageValue(all_list, count_list):
 
 def percentageDialog(percentage):
     last = ""
+    print("------analyze answer --------")
     for i in range(len(percentage)):
         _value = float(list(percentage[i].values())[0])
         _key = str(percentage[i].keys())
         _key = _key.split("'")
-        percentageDi = _key[1] + " රෝගය වැළදීමේ සම්භාවිතාවය " + str(_value) + "% ප්‍රතිශතයක්ද, "
+        # percentageDi = _key[1] + " රෝගය වැළදීමේ සම්භාවිතාවය " + str(_value) + "% ප්‍රතිශතයක්ද, "
+        # percentageDi = _key[1] + " රෝගය වැළදීමේ සම්භාවිතාවය " + str(_value) + "%, "
+        percentageDi = _key[1] + " රෝගය වැළදීමේ සම්භාවිතාවය " + str(_value) + "% "
+        print(percentageDi)
         last = percentageDi + last
     return last
 
@@ -52,15 +59,19 @@ def getDialog(percentage):
     const = "ඔබ ලබා දුන් රෝග ලක්ෂණ අනුව "
     max_ = validationMax(percentage)
     p = percentageDialog(percentage).rsplit(",", 1)
-    print(specific(percentage))
+
     if max_ == 1:
         decision = const + p[0] + " පමණ වේ. ඔබට " + \
                    str(maxValue(percentage)) + " ප්‍රතිශතයකට වඩා වැඩි ප්‍රතිශතයකින් " + maxValueDIS(percentage) + \
                    " නම් රෝගයේ රෝග ලක්ෂණ ඇති බවට තහවුරු වී ඇත. " + specific(percentage)
+        print("------Decision--------")
+        print("decision : " + maxValueDIS(percentage) + " : " + str(maxValue(percentage)) + "%")
+
     elif max_ == 0:
         decision = "ඔබ ලබා දුන් තොරතුරු ප්‍රමාණවත් නොවේ."
     elif max_ > 1:
         decision = const + p[0] + " පමණ වේ."
+
     return decision
 
 
@@ -69,7 +80,7 @@ def maxValue(percentage):
     max_value = 0
     for i in range(len(percentage)):
         value = float(list(percentage[i].values())[0])
-        if value >= 75.00:
+        if value >= 50.00:
             returnValue.append(value)
     if len(returnValue) == 0:
         max_value = 0
@@ -93,7 +104,7 @@ def maxValueDIS(percentage):
     max_key = ""
     for i in range(len(percentage)):
         value = float(list(percentage[i].values())[0])
-        if value >= 75:
+        if value >= 50:
             key = str(percentage[i].keys())
             key = key.split("'")
             dict_V = {key[1]: percentage[i].values() for i in range(len(percentage))}
@@ -102,6 +113,7 @@ def maxValueDIS(percentage):
         max_key = "None"
     else:
         max_key = max(dict_V.keys())
+
     return max_key
 
 

@@ -1,0 +1,14 @@
+{
+  "sparql" : [
+      {
+        "function": "service1",
+        "query": "PREFIX adams: <https://adams-medi.000webhostapp.com/adams.owl#>SELECT * WHERE { ?adams adams:Name ?Name ; adams:Description ?Description ; adams:Synonyms ?Synonyms ; adams:Type ?Type ; VALUES ?Type {\"Symptoms\"} }"
+      },{
+        "function": "service2",
+        "query": "PREFIX adams: <https://adams-medi.000webhostapp.com/adams.owl#>SELECT * WHERE { ?adams adams:Name ?Name ; adams:Description ?Description ; adams:Synonyms ?Synonyms ; adams:Type ?Type ; VALUES ?Type {\"Drug\"} }"
+      }, {
+        "function": "service3",
+        "query": "PREFIX adams: <https://adams-medi.000webhostapp.com/adams.owl#>SELECT * WHERE { ?adams adams:Name ?Name ; adams:Description ?Description ; adams:Synonyms ?Synonyms ; adams:Type ?Type ; VALUES ?Type {\"Disease\"} }"
+      }
+    ]
+  }
