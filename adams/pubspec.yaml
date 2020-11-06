@@ -65,6 +65,20 @@ dependencies:
   intl: ^0.16.1
 #  reading cart info
   readmore: ^1.0.0
+#  cloud firestore
+  cloud_firestore: ^0.13.7
+#  Text-to-Speech handler
+  translator: ^0.1.5
+#  QR code handler
+  qr_flutter: ^3.2.0
+#  mobile sreenshot handler
+  screenshot: ^0.2.0
+#  image saving
+  image_gallery_saver: ^1.6.1
+#  screenshot and share handler
+  screenshot_and_share: ^0.0.2
+#  permission handler
+  permission_handler: ^5.0.1+1
 
 
 dev_dependencies:
