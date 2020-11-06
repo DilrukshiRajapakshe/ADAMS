@@ -1,5 +1,0 @@
-ahocorapy==1.5.2
-future==0.18.2
-imbalanced-learn==0.6.1
-nltk==3.4.5
-six==1.14.0
