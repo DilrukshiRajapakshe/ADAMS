@@ -1,9 +1,9 @@
 # **Main Component** 
 
-*  ## Introduction : 
-#### This paper proposes an Artificial Intelligence based mobile solution to assist Sinhala speaking users to make appointments to doctors and to obtain medical advices. This Automated Doctor Appointment Management System (ADAMS) consists of Speech Recognition unit, Query Processing unit, Dialog Management unit, Voice Generator synthesizer unit, and User Information Management unit. The ADAMS gets the users’ speech utterances and recognize the language content of it for further processing. Language content is further processed using query processing unit to identify users’ intent. To fulfil the users’ intent, a reply is generated from Dialogue Management Unit. This reply/answer will be delivered to the user by means of a voice synthesizer. The proposed system is successfully implemented using state of the art technology stack including Flutter, Python, Protégé and Firebase. Performance of the system is demonstrated using several sample scenarios/dialogues. ​
+## Introduction : 
+####    This paper proposes an Artificial Intelligence based mobile solution to assist Sinhala speaking users to make   appointments to doctors and to obtain medical advices. This Automated Doctor Appointment Management System (ADAMS) consists of Speech Recognition unit, Query Processing unit, Dialog Management unit, Voice Generator synthesizer unit, and User Information Management unit. The ADAMS gets the users’ speech utterances and recognize the language content of it for further processing. Language content is further processed using query processing unit to identify users’ intent. To fulfil the users’ intent, a reply is generated from Dialogue Management Unit. This reply/answer will be delivered to the user by means of a voice synthesizer. The proposed system is successfully implemented using state of the art technology stack including Flutter, Python, Protégé and Firebase. Performance of the system is demonstrated using several sample scenarios/dialogues. ​
 
-*  ## Research Problem : 
+## Research Problem : 
 *  ####      Lack of English and medical knowledge​ 
 *  ####      Poor user experience of mediacl domin mobile systems
 *  #### ​     lack of virtual Intelligent agent for Sinhala user
@@ -11,11 +11,11 @@
 *  #### ​     Poor mobile e-channeling platform for businessman​
 *  #### ​     Lack of service providing 24*7​
 
-*  ## objective : 
-*  ####      The main objective of the proposed system(Determine the Optimum Identification to sort out the Human Medical(Drug and symptom) questionnaire (DOI-HM)) is a mobile solution based on artificial intelligence and to assist Sinhala speaking users in obtaining medical advice and  make a Doctor Appointment.
+## objective : 
+####      The main objective of the proposed system(Determine the Optimum Identification to sort out the Human Medical(Drug and symptom) questionnaire (DOI-HM)) is a mobile solution based on artificial intelligence and to assist Sinhala speaking users in obtaining medical advice and  make a Doctor Appointment.
 
-*  ## Solution : 
-*  ####      Developing an Artificial Intelligence based mobile solution to assist Sinhala speaking users to make appointments to doctors and to obtain medical advices.​
+## Solution : 
+####      Developing an Artificial Intelligence based mobile solution to assist Sinhala speaking users to make appointments to doctors and to obtain medical advices.​
 
 ## Sub Objectives :
 ####        • Voice to Text Analyzer & Ontology Query development
@@ -27,17 +27,17 @@
 
 ## 1. 1st Member (Branch - IT16234062) Voice to Text Analyzer & Ontology Query development-: 
 
-*  ## Introduction : Artificial Intelligence based mobile solution to assist Sinhala speaking users to obtain medical advices. ​
+### Introduction : Artificial Intelligence based mobile solution to assist Sinhala speaking users to obtain medical advices. ​
 
-*  ## Research Problem : 
+### Research Problem : 
 *  ####      Lack of English and medical knowledge​ 
 *  ####      Poor user experience of mediacl domin mobile systems
 *  #### ​     lack of virtual Intelligent agent for Sinhala user
 
-*  ## objective : 
+### objective : 
 *  ####      The main objective of the proposed system(Determine the Optimum Identification to sort out the Human Medical(Drug and symptom) questionnaire (DOI-HM)) is a mobile solution based on artificial intelligence and to assist Sinhala speaking users in obtaining medical advice.
 
-## **Sub Objectives**
+### **Sub Objectives**
 ###     1.	Developing Virtual agent (ADAMS) - (ADAMS Folder)
 ####        • Voice to text
 ####		• Sign-In 
@@ -53,7 +53,7 @@
 ####		• SPARQL Query genration
 ####		• Responce genration
 
-## **System Architecture**
+### **System Architecture**
 
 ###     1.	Developing Virtual agent (ADAMS) - 
 #### When we are developing ADAMS, we used the Flutter SDK for mobile app development. It is an SDK to build high-performance, high-accuracy apps for IOS, Android, Web, and desktop from a single codebase. According to the authors of the Handbook of Human Factors in Medical Device Design, the colors which can be easily recognize by humans are red, green, yellow, orange, and blue. So, we used blue and white colour for developing UI of ADAMS [12]. The users are required to have a Google account to access ADAMS. After the user login supported by Google, the app will navigate to the bot interface and the user is recognized by ADAMS. To interact with the system, the users can use either voice or text.  
@@ -65,17 +65,17 @@
 
 ## 2. 2nd Member (Branch - IT17255820) Appointment Management-:   
 
-*  ## Introduction : Artificial Intelligence based mobile solution to assist Sinhala speaking users to obtain medical advices. ​
+### Introduction : Artificial Intelligence based mobile solution to assist Sinhala speaking users to obtain medical advices. ​
 
-*  ## Research Problem : 
+### Research Problem : 
 *  ####      Lack of English and medical knowledge​ 
 *  ####      Poor user experience of mediacl domin mobile systems
 *  #### ​     lack of virtual Intelligent agent for Sinhala user
 
-*  ## objective : 
-*  ####      Appointment management process. Have to find intents from the Sinhala question and generate important words that need to create responses regarding identified intents.   
+### objective : 
+####      Appointment management process. Have to find intents from the Sinhala question and generate important words that need to create responses regarding identified intents.   
 
-## **Sub Objectives**
+### **Sub Objectives**
 ###     1.	Natural Language Understanding Process - (MedBot Folder --> Medical Bot)
 ####        • Divide medical facts from given sentences 
 ####		• Translate identified all Sinhala and English intents to English   
@@ -83,7 +83,7 @@
 ####		• Connection between microservice
 ###     2.	Medical Data Collection Application  — (MedBot Folder --> mobile-app)
 
-## **System Architecture**
+### **System Architecture**
 
 ###     1.	Natural Language Understanding Process - 
 #### NLP is used to understand questions that are given as Sinhala speech. Initially, Sinhala speech input is converted into Sinhala text and send it to appointment management section.  
@@ -93,16 +93,16 @@
 
 ## 3. 3rd Member (Branch - IT17029278) Maintaining the Integrity of the Specifications-: 
 
-*  ## Introduction : Artificial Intelligence based mobile solution to assist Sinhala speaking users to obtain medical advices. ​
+### Introduction : Artificial Intelligence based mobile solution to assist Sinhala speaking users to obtain medical advices. ​
 
-*  ## Research Problem : 
+### Research Problem : 
 *  ####      There exists a problem where the connectivity between Flutter and the RASA framework is not fulfilled.
 *  ####      Existing systems generate Sinhala voice output which is not that smooth or not good in quality and also sometimes not healthier to human beings. Speed has also become an issue for the people when using these types of systems.
 
-*  ## Objective : 
-*  ####       Implement the connection between Flutter mobile application and RASA framework. Sinhala voice output generation and Automated doctor appointment management.
+### Objective : 
+####       Implement the connection between Flutter mobile application and RASA framework. Sinhala voice output generation and Automated doctor appointment management.
 
-## **Sub Objectives**
+### **Sub Objectives**
 ####	• Implementation of Webhook API
 ####	• Python REST API development
 ####	• Language Translator
@@ -112,7 +112,7 @@
 ####	• QR code generator
 ####	• Sinhala Voice output
 
-## **System Architecture**
+### **System Architecture**
 
 #### Implementation of a RASA Plugin and Sinhala Text to Speech system consisting of a voice generator synthesizer unit, language translating unit, a plugin between the mobile application and dialogue management, Firebase database query processing unit, user validation process, user log details saving process, session management unit, QR code generator unit, and an automated appointment saving unit. 
 
@@ -127,23 +127,23 @@
 
 ## 4. 4th Member (Branch - IT17043656) RASA Framework Development-:
 
-*  ## Introduction : By using Rasa framework Identify the Sinhala user quection and generate it relavant answer. ​
+### Introduction : By using Rasa framework Identify the Sinhala user quection and generate it relavant answer. ​
 
-*  ## Research Problem : 
+## Research Problem : 
 *  ####      Lack of English and medical knowledge​ 
 *  ####      Poor user experience of mediacl domin mobile systems
 *  #### ​     lack of virtual Intelligent agent for Sinhala user
 
-*  ## objective : 
-*  ####      The main objective of this dialogue management part is to identify the user question and generate the relevant answer for the user.
+### objective : 
+####      The main objective of this dialogue management part is to identify the user question and generate the relevant answer for the user.
 
-## **Sub Objectives**
+### **Sub Objectives**
 ###     1.	Identify the user question
 ###     2.	Train the Sinhala Data Module
 ###	    3.	Dialogue generating process 
 ###     4.  Connectivity between RASA NLU and RASA Core
 
-## **System Architecture**
+### **System Architecture**
 
 ### User’s given question received for the RASA framework using Webhook API (REST API). That text is taken into the RASA NLU. Markdown format and JSON format are training formats of RASA -NLU. Markdown format is the easiest data training format available in RASA NLU
 ### In this research, JSON is used as training data format because it is compatible with the mobile application development rather than Markdown format. By using JSON format, system will enrich training data, and it is easy for any developer to read and write. Some power users are interested in Markdown as it is easy to understand for them. 
@@ -151,17 +151,17 @@
 ### Supervise Embeddings pipeline is used for this research. Because there is no any Sinhala language model. Supervise Embeddings pipeline is the best solution for that problem. In this process Whitespace Tokenizer is available inside the supervise Embedding. Config.yml file can customize the tokenizer. After the intent extraction, the process moves to the RASA CORE. Purpose of this RASA CORE is generating the relevant answer for the user’s question. 
 ### Utter and Action techniques are used to generate the response. Utter contains the hardcoded answer and Action contains the answer which was generated using the REST API important facts. Both the techniques are used for this research. Utter technique sentences are written in domain.yml file. Before using Action technique, have to start the action server. After generating the relevant answer, Text-to-Speech process will catch it using Webhook API. RASA Stories can handle the conversation. Both intent (question) and Utter or Action (answer) technique were connected by stories.md file. Those stories are written by Markdown format.
  
-# Other information
+## Other information
 
-* ## **Group ID** - 2020-175
+* #### **Group ID** - 2020-175
  
-* ## **Research Domain** - Robotics and Intelligent Systems
+* #### **Research Domain** - Robotics and Intelligent Systems
  
-* ## **Supervisor** - Prof. Koliya Pulasinghe
+* #### **Supervisor** - Prof. Koliya Pulasinghe
 
-* ## **Co Supervisor** - Ms. Vijani Piyawardana
+* #### **Co Supervisor** - Ms. Vijani Piyawardana
 
-* ## **Member Details -:**
+* #### **Member Details -:**
 
 | IT Number   | Name               |
 | ----------- | ------------------ |
