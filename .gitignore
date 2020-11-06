@@ -1,9 +1,3 @@
 .idea/
-/Ontology/DOI-HM-1/
-/Ontology/apache-jena-fuseki-3.16.0/
 /Ontology/MedicalInfo/venv/
-/test/
-/binode/
-/system-administration-app/
-/adams-v01/
-/protege-knowlage/
+/Ontology/DOI-HM/venv/
