@@ -1,51 +1,37 @@
-# **Main Component** 
+# **Main Component** - Voice to Text Analyzer & Ontology Query development 
 
-*  ## Research questions : In Sri Lanka Doesn't have any Automated Conversational Appointment Management System for Sinhala users.
+*  ## Introduction : Artificial Intelligence based mobile solution to assist Sinhala speaking users to obtain medical advices. ​
 
-*  ## objective : Automated Doctor Appointment Management System in medical domain for Sinhala user(ADAMS).
+*  ## Research Problem : 
+*  ####      Lack of English and medical knowledge​ 
+*  ####      Poor user experience of mediacl domin mobile systems
+*  #### ​     lack of virtual Intelligent agent for Sinhala user
 
+*  ## objective : 
+*  ####      The main objective of the proposed system(Determine the Optimum Identification to sort out the Human Medical(Drug and symptom) questionnaire (DOI-HM)) is a mobile solution based on artificial intelligence and to assist Sinhala speaking users in obtaining medical advice.
 
-# **Individual**
+## **Sub Objectives**
+###     1.	Developing Virtual agent (ADAMS) - (ADAMS Folder)
+####        • Voice to text
+####		• Sign-In 
+####		• Login 
+####		• Connection between microservice
+####		• Session creation
+####		• ADAMS interface development 
+###     2.	Determine the Optimum Identification to sort out the Human Medical(Drug and symptom) questionnaire (DOI-HM) — (Ontology Folder)
+####		• REST API genration 
+####		• Question identification 
+####		• Intent identification 
+####		• Decision making
+####		• SPARQL Query genration
+####		• Responce genration
 
-## 1. 1st Member -: 
+## **SSystem Architecture**
 
-*  ### Research questions : Most patients do not recognize their disease.
+##     1.	Developing Virtual agent (ADAMS) - 
+#### When we are developing ADAMS, we used the Flutter SDK for mobile app development. It is an SDK to build high-performance, high-accuracy apps for IOS, Android, Web, and desktop from a single codebase. According to the authors of the Handbook of Human Factors in Medical Device Design, the colors which can be easily recognize by humans are red, green, yellow, orange, and blue. So, we used blue and white colour for developing UI of ADAMS [12]. The users are required to have a Google account to access ADAMS. After the user login supported by Google, the app will navigate to the bot interface and the user is recognized by ADAMS. To interact with the system, the users can use either voice or text.  
+#### The user's voice (Sinhala voice to text output) is converted to text using speech_to_text 2.3.0 Dart Package. When the patient and ADAMS interact with each other system will generate a session according to the user reactions. The purpose of generating a session is to identify the system's user action and guide new users. If a user did not interact with the system at least 5 times, the system will guide the user. According to the session, the system will address relevant Microservice. Microservice generates a non-analysed result output for user questionnaires and that result will send to the ADAMS. ADAMS will send that to the RASA dialogue framework. The microservice and ADAMS are communicating using REST API. A Webhook API is used to connect ADAMS to RASA framework. This is the process of voice analyser. The user's NIC number and email are validated to avoid creating multiple accounts.
 
-*  ### Objective : Determine the optimum identification to sort out the human diseases (patient is given).
-
-## 2. 2nd Member -:   
-
-*  ### Research questions : Appointments Management using a Mobile device.
-
-*  ### Objective :  The patient has the facility to channel a doctor without visiting the hospital. 
-
-## 3. 3rd Member -: 
-
-*  ### Research questions : Sinhala Medical doamin Text to Speech and Dialogue generation.
-
-*  ### Objective : Dialogue management of the Mobile App(voice and Text).
-
-## 4. 4th Member -:
-
-*  ### Research questions : NLU connection into RASA Framework.
-
-*  ### Objective : Developing a chat flow for the patient.
- 
-# Other information
-
-* ## **Group ID** - 2020-175
- 
-* ## **Research Domain** - Robotics and Intelligent Systems
- 
-* ## **Supervisor** - Prof. Koliya Pulasinghe
-
-* ## **Co Supervisor** - Ms. Vijani Piyawardana
-
-* ## **Member Details -:**
-
-| IT Number   | Name               |
-| ----------- | ------------------ |
-| IT16234062  | D.D.S Rajapakshe   |
-| IT17029278  | U.L.N.P. Uswatte   |
-| IT17255820  | Kudawithana K.N.B  |
-| IT17043656  | Nishshanka N.A.B.D |
+##     2.	Determine the Optimum Identification to sort out the Human Medical(Drug and symptom) questionnaire (DOI-HM) —
+#### ADAMS can be used to give instructions to the patients on their questions about diseases, drugs, and side effects. To archive this goal, DOI-HM is developed. The DOI-HM is an Ontology to generate answer to user question. The DOI-HM uses Sinhala Protégé Knowledge Base to answer user questions. The Ontologies knowledge representation language is RDF & OWL. The Apache Jena Fuseki is a SPARQL server and provides a protocol for the query, update, and SPARQL graph store protocol. Figure 3 SPARQL query shows how to retrieve the Individual values of the Ontology.
+#### When retrieving information about drugs, WuPalmer algorithm is used to identify a drug name. The proposed system identified a human disease considering the fact Most and Less common and Serious symptoms. DOI-HM is developed in Python. Several Ontology applications use Protégé Knowledge Base, but not done for Sinhala language. This is the first time of developing an Ontology for Sinhala. The easiest way to identify the keywords of a user question is by managing relationships with the classes and Individual values in the Protégé. The Protégé is an object-oriented base Knowledge Base
