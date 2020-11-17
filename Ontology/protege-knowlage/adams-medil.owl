@@ -81,6 +81,7 @@
 
     <owl:DatatypeProperty rdf:about="https://adams-medi.000webhostapp.com/adams.owl#Common">
         <rdfs:subPropertyOf rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Side_Effects"/>
+        <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Disease"/>
         <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Drug"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
@@ -110,6 +111,17 @@
 
     <owl:DatatypeProperty rdf:about="https://adams-medi.000webhostapp.com/adams.owl#Less-common-symptoms">
         <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Disease"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.owl#Long-term -->
+
+    <owl:DatatypeProperty rdf:about="https://adams-medi.000webhostapp.com/adams.owl#Long-term">
+        <rdfs:subPropertyOf rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Side_Effects"/>
+        <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Disease"/>
+        <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Drug"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -181,6 +193,7 @@
 
     <owl:DatatypeProperty rdf:about="https://adams-medi.000webhostapp.com/adams.owl#Serious">
         <rdfs:subPropertyOf rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Side_Effects"/>
+        <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Disease"/>
         <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Drug"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
@@ -191,6 +204,17 @@
 
     <owl:DatatypeProperty rdf:about="https://adams-medi.000webhostapp.com/adams.owl#Serious-symptoms">
         <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Disease"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.owl#Short-term -->
+
+    <owl:DatatypeProperty rdf:about="https://adams-medi.000webhostapp.com/adams.owl#Short-term">
+        <rdfs:subPropertyOf rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Side_Effects"/>
+        <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Disease"/>
+        <rdfs:domain rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Drug"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -418,8 +442,8 @@
 
     <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#QUE0001">
         <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Question"/>
-        <Name>Side_Effects</Name>
-        <Name_Type>Drug,Disease</Name_Type>
+        <Name>Short-term</Name>
+        <Name_Type>Drug</Name_Type>
         <Question_Type>Drug</Question_Type>
         <Synonyms>කෙටිකාලීන සෞඛ්‍ය ගැටලු,කෙටිකාලීන අතුරු ආබාධ</Synonyms>
         <Type>Question</Type>
@@ -483,8 +507,8 @@
 
     <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#QUE0006">
         <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Question"/>
-        <Name>Name</Name>
-        <Name_Type>Symptoms</Name_Type>
+        <Name>Long-term</Name>
+        <Name_Type>Diseases</Name_Type>
         <Question_Type>Diseases</Question_Type>
         <Synonyms>දිගුකාලීන සෞඛ්‍ය ගැටලු,දිගුකාලීන අතුරු ආබාධ</Synonyms>
         <Type>Question</Type>
@@ -617,6 +641,58 @@
         <Name_Type>Drug</Name_Type>
         <Question_Type>Drug</Question_Type>
         <Synonyms>පුද්ගලයෙකුට ලබා දෙන මාත්‍රාව,පුද්ගලයෙකුට ලබා දෙන ප්‍රමාණය,පුද්ගලයෙකුට ලබා දෙන,වැඩිහිටි පුද්ගලයෙකුට ලබා දෙන මාත්‍රාව,වැඩිහිටි පුද්ගලයෙකුට ලබා දෙන ප්‍රමාණය,වයෝවෘද්ධ ලබා දෙන මාත්‍රාව,වයසක ලබා දෙන මාත්‍රාව,වැඩිහිටි ලබා දෙන මාත්‍රාව,වයෝවෘද්ධ ලබා දෙන ප්‍රමාණය,වයසක ලබා දෙන ප්‍රමාණය,වැඩිහිටි ලබා දෙන ප්‍රමාණය</Synonyms>
+        <Type>Question</Type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.owl#QUE0017 -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#QUE0017">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Question"/>
+        <Name>Short-term</Name>
+        <Name_Type>Diseases</Name_Type>
+        <Question_Type>Diseases</Question_Type>
+        <Synonyms>කෙටිකාලීන සෞඛ්‍ය ගැටලු,කෙටිකාලීන අතුරු ආබාධ</Synonyms>
+        <Type>Question</Type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.owl#QUE0018 -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#QUE0018">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Question"/>
+        <Name>Long-term</Name>
+        <Name_Type>Drug</Name_Type>
+        <Question_Type>Drug</Question_Type>
+        <Synonyms>දිගුකාලීන සෞඛ්‍ය ගැටලු,දිගුකාලීන අතුරු ආබාධ</Synonyms>
+        <Type>Question</Type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.owl#QUE0019 -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#QUE0019">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Question"/>
+        <Name>Side_Effects</Name>
+        <Name_Type>Drug</Name_Type>
+        <Question_Type>Drug</Question_Type>
+        <Synonyms>අතුරු ප්‍රතිඵල,අතුරු ආබාධ</Synonyms>
+        <Type>Question</Type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.owl#QUE0020 -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#QUE0020">
+        <rdf:type rdf:resource="https://adams-medi.000webhostapp.com/adams.owl#Question"/>
+        <Name>Synonyms</Name>
+        <Name_Type>Symptoms</Name_Type>
+        <Question_Type>Symptoms</Question_Type>
+        <Synonyms>රෝගයක් වැළඳී ඇත්ද,රෝගය වැළඳී ඇත්ද,රෝගයක් වැළඳී ඇතද,රෝගය වැළඳී ඇතද</Synonyms>
         <Type>Question</Type>
     </owl:NamedIndividual>
     
@@ -936,6 +1012,17 @@
         <Description>අධි රුධිර පීඩනය</Description>
         <Name>අක්‍රමවත් හෘද ස්පන්දනය</Name>
         <Synonyms>අක්‍රමවත් හෘද ස්පන්දනය</Synonyms>
+        <Type>Symptoms</Type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://adams-medi.000webhostapp.com/adams.owl#SYM0026 -->
+
+    <owl:NamedIndividual rdf:about="https://adams-medi.000webhostapp.com/adams.owl#SYM0026">
+        <Description>කොවිඩ් 19</Description>
+        <Name>උණ</Name>
+        <Synonyms>උණ,උණ</Synonyms>
         <Type>Symptoms</Type>
     </owl:NamedIndividual>
     
