@@ -64,8 +64,8 @@ class _MyBotState extends State<bot> {
   // session
   String _session = "0";
 
-//  chat flow variable
-  String _question = "";
+//  chat flow variable ඔබට මුන ගැසියහැකි වෛද්‍යවරුන් වන්නේ නිමල් පෙරේරා කමල් සිල්වා සුනිල් නිශාන්ත
+  String _question = "ඔබට මුන ගැසියහැකි වෛද්‍යවරුන් වන්නේ නිමල් පෙරේරා කමල් සිල්වා සුනිල් නිශාන්ත";
   String userAnswer = "";
 
 //  user image
@@ -280,7 +280,7 @@ class _MyBotState extends State<bot> {
                         ),
 //                        chat box
                         Expanded(
-                          flex: 2,
+                          flex: 3,
                           child:Center(
                             child:SingleChildScrollView(
                               child: Column(
@@ -462,7 +462,7 @@ class _MyBotState extends State<bot> {
       v=true;
     }
     setState((){
-      userAnswer = a;
+      userAnswer = "මට දියවැඩියාව පිලිබදව වෛද්‍යවරයෙකු මුනගැසිය යුතුයි";
       VisibilityOfRow = v;
     });
   }
