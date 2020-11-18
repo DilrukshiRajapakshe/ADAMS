@@ -1,13 +1,5 @@
-from app.Main_Crud import getALL, tokenizer, getNameType
-from app.CONSTANT import ONE_QUESTION, NAME
-
-
-# retrieving an ontology file with specific value only
-def getIndividual(_list, _individual):
-    _individualList = []
-    for a in range(len(_list)):
-        _individualList.append(_list[a][_individual]["value"])
-    return _individualList
+from app.Main_Crud import getALL, tokenizer, getNameType, getIndividual
+from app.CONSTANT import ONE_QUESTION, NAME, NAME_TYPE
 
 
 # retrieving Synonyms value in given list
@@ -20,8 +12,10 @@ def getSynonyms(_list):
 
 #  get Question_Type and Name_Type  in all question
 def getNameValueList(_nameType):
+
     _Question_Type = getIndividual(getALL(ONE_QUESTION(_nameType)), "Question_Type")
     _Name_Type = getIndividual(getALL(ONE_QUESTION(_nameType)), "Name_Type")
+
     return ("Question_Type", _Question_Type), ("Name_Type", _Name_Type)
 
 
@@ -42,7 +36,6 @@ def getAllValueOfTypeList(typeList):
     _list = []
     for i in range(len(typeList)):
         _list.append({typeList[i]: getSynonyms(getALL(NAME(typeList[i])))})
-
     return _list
 
 
@@ -65,5 +58,18 @@ def getAllIntent(_nameType, allKey, sentence):
                         _keyName.append(getNameType(_key2))
 
     return ("Type", list(set(_keyType))), ("Intent", list(set(_keyName)))
+
+
+def getQuestion_NameType_(TypeList, _Intent):
+
+    returnValue = ""
+
+    if len(TypeList) > 1:
+        _type = getIndividual(getALL(NAME_TYPE(_Intent[0])), "Type")
+        returnValue = _type[0]
+    else:
+        returnValue = TypeList[0]
+    return returnValue
+
 
 
