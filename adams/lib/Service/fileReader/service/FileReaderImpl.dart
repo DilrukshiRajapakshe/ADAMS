@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:core';
 import 'dart:convert';
-import 'dart:html';
 import 'package:flutter/services.dart';
 import 'package:adams/Service/fileReader/constance/JsonPath.dart';
 

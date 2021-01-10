@@ -8,99 +8,50 @@ import '../restService.dart';
 // Rest api connection -- start
 class RestServiceImpl implements RestService {
   UserInformation info = new UserInformation();
-// drug Info
 
-  Future<String> getDrug(http.Client client, data) async {
-    final response = await client.post(
-      await parseJson("getDrug"), headers: <String, String>{
-      'Content-Type': 'application/json; charset=UTF-8',
-    }, body: jsonEncode(<String, String>{
-      'value': data,
-    }),
-    );
-
-    if (response.statusCode == 200) {
-      final response_Body = await json.decode(response.body);
-      print(response_Body);
-      return response_Body["value"];
-    } else {
-      throw Exception('Failed to load data in service');
-    }
-  }
-
-
-//  Future<String> getIdentification(http.Client client,data) async {
+// RASA webhook api
+//  @override
+//  Future<String> getRASA(http.Client client, data) async {
+//    String sender = await info.getUserName();
+//    String message = data;
 //
-//    final response = await client.post(
-//      await parseJson("getIdentification"),headers: <String, String>{
-//      'Content-Type': 'application/json; charset=UTF-8',
-//    }, body: jsonEncode(<String, String>{
-//      'value': data,
-//    }),
-//    );
+//    try {
+//      final response = await client.post(
+//        await parseJson("rasa"),
+//        headers: <String, String>{
+//          'Content-Type': 'application/json; charset=UTF-8',
+//        },
+//        body: jsonEncode(<String, String>{
+//          'sender': sender,
+//          'message': message,
+//        }),
+//      );
 //
-//    if (response.statusCode == 200) {
-//      final response_Body = await json.decode(response.body);
-//      print(response_Body);
-//      return response_Body["value"];
-//
-//    } else {
-//      throw Exception('Failed to load data in service');
+//      if (response.statusCode == 200) {
+//        final response_Body = await json.decode(response.body);
+//        print(response_Body);
+//        return response_Body[0]["text"];
+//      } else {
+//        throw Exception('Failed to load data in service');
+//      }
+//    } catch (e) {
+//      print(e);
 //    }
 //  }
 
-// Disease Info
-  Future<String> getDisease(http.Client client, data) async {
-    final response = await client.post(
-      await parseJson("getDisease"), headers: <String, String>{
-      'Content-Type': 'application/json; charset=UTF-8',
-    }, body: jsonEncode(<String, String>{
-      'value': data,
-    }),
-    );
-
-    if (response.statusCode == 200) {
-      final response_Body = await json.decode(response.body);
-      print(response_Body);
-      return response_Body["value"];
-    } else {
-      throw Exception('Failed to load data in service');
-    }
-  }
-
-// Appointment Info
-  Future<String> getAppointmentInfo(http.Client client, data) async {
-    final response = await client.post(
-      await parseJson("getAppointmentInfo"), headers: <String, String>{
-      'Content-Type': 'application/json; charset=UTF-8',
-    }, body: jsonEncode(<String, String>{
-      'value': data,
-    }),
-    );
-
-    if (response.statusCode == 200) {
-      final response_Body = await json.decode(response.body);
-      print(response_Body);
-      return response_Body["value"];
-    } else {
-      throw Exception('Failed to load data in service');
-    }
-  }
-
-// RASA webhook api connection
   Future<String> getRASA(http.Client client, data) async {
     String sender = await info.getUserName();
     String message = data;
-
     try {
       final response = await client.post(
-        await parseJson("getRASA"),
+        "http://192.168.8.102:5005/webhooks/rest/webhook",
         headers: <String, String>{
           'Content-Type': 'application/json; charset=UTF-8',
-        }, body: jsonEncode(<String, String>{
-        'sender': sender,
-        'message': message,
-      }),
+        },
+        body: jsonEncode(<String, String>{
+          'sender': sender,
+          'message': message,
+        }),
       );
 
       if (response.statusCode == 200) {
@@ -115,45 +66,87 @@ class RestServiceImpl implements RestService {
     }
   }
 
-// RASA and Mciroservice connection(RASA plugin) service  api connection
-  Future<String> setRASA(http.Client client, data) async {
-    String sender = await info.getUserName();
-    String message = data;
-    final response = await client.post(
-      await parseJson("setRASA"), headers: <String, String>{
-      'Content-Type': 'application/json; charset=UTF-8',
-    }, body: jsonEncode(<String, String>{
-      'sender': sender, 'message': message,
-    }),
-    );
 
-    if (response.statusCode == 200) {
-      final response_Body = await json.decode(response.body);
-      print(response_Body);
-      return response_Body[0]["text"];
-    } else {
-      throw Exception('Failed to load data in service');
+//  ontology
+  @override
+  Future<String> getOnto(http.Client client, data) async {
+    String message = data;
+    try {
+      final response = await client.post(
+        await parseJson("onto"),
+        headers: <String, String>{
+          'Content-Type': 'application/json; charset=UTF-8',
+        },
+        body: jsonEncode(<String, String>{
+          'message': message,
+        }),
+      );
+
+      if (response.statusCode == 200) {
+        final response_Body = await json.decode(response.body);
+        print(response_Body);
+        return response_Body[0]["massage"];
+      } else {
+        throw Exception('Failed to load data in service');
+      }
+    } catch (e) {
+      print(e);
     }
   }
 
-//Future<String> test(http.Client client) async {
-//  String data = "test";
-//  final response = await client.post(
-//    'http://192.168.8.100:8000/',headers: <String, String>{
-//    'Content-Type': 'application/json; charset=UTF-8',
-//  }, body: jsonEncode(<String, String>{
-//    'Value': data,
-//  }),
-//  );
-//
-//  if (response.statusCode == 200) {
-//    final response_Body = await json.decode(response.body);
-//    print(response_Body);
-//
-//  } else {
-//    throw Exception('Failed to load data in service');
-//  }
-//}
+// RASA plugin
+  @override
+  Future<String> getRASA_Plugin(http.Client client, data) async {
+    var message = data;
+    try {
+      final response = await client.post(
+        await parseJson("rasaPlugin"),
+        headers: <String, String>{
+          'Content-Type': 'application/json; charset=UTF-8',
+        },
+        body: jsonEncode(<String, String>{
+          'message': message,
+        }),
+      );
+
+      if (response.statusCode == 200) {
+        final response_Body = await json.decode(response.body);
+        print(response_Body);
+        return response_Body[0]["massage"];
+      } else {
+        throw Exception('Failed to load data in service');
+      }
+    } catch (e) {
+      print(e);
+    }
+  }
+
+//  Appointment
+  @override
+  Future<String> getAppointmentInfo(http.Client client, data) async {
+    String message = data;
+    try {
+      final response = await client.post(
+        await parseJson("appointment"),
+        headers: <String, String>{
+          'Content-Type': 'application/json; charset=UTF-8',
+        },
+        body: jsonEncode(<String, String>{
+          'message': message,
+        }),
+      );
+
+      if (response.statusCode == 200) {
+        final response_Body = await json.decode(response.body);
+        print(response_Body);
+        return response_Body[0]["massage"];
+      } else {
+        throw Exception('Failed to load data in service');
+      }
+    } catch (e) {
+      print(e);
+    }
+  }
 
 // Rest api connection -- end
 }

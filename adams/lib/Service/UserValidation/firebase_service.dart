@@ -1,12 +1,19 @@
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:adams/Module/user.dart';
+import 'package:adams/Service/restService/restService.dart';
+import 'dart:async';
+import 'package:http/http.dart' as http;
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:intl/intl.dart';
 import 'package:translator/translator.dart';
 
-//firebase firestore handling db connectivity
+//firebase firestore db connectivity
 class FirebaseServiceSearch {
   static final FirebaseServiceSearch _firestoreService =
-      FirebaseServiceSearch._internal();
+  FirebaseServiceSearch._internal();
   final Firestore _db = Firestore.instance;
   String doccId = '';
 
@@ -23,11 +30,11 @@ class FirebaseServiceSearch {
         .snapshots()
         .map(
           (snapshot) => snapshot.documents
-              .map(
-                (doc) => User.fromMap(doc.data, doc.documentID),
-              )
-              .toList(),
-        );
+          .map(
+            (doc) => User.fromMap(doc.data, doc.documentID),
+      )
+          .toList(),
+    );
   }
 
 //query for current status checking
@@ -77,7 +84,7 @@ class FirebaseServiceSearch {
 
   Future<String> addUSerData(User user) async {
     DocumentReference docRef =
-        await Firestore.instance.collection('User').add(user.toMap());
+    await Firestore.instance.collection('User').add(user.toMap());
     print(docRef.documentID);
     print('added diId, ${docRef.documentID}');
     return docRef.documentID;
@@ -85,14 +92,20 @@ class FirebaseServiceSearch {
 
   //capturing important facts
   Future<String> updateUserFieldStatus(
-      String documentId, int statusId, String importantFact) async {
+      String email, int statusId, String importantFact) async {
+
+    RestService rest = new RestService();
+    var client = new http.Client();
+
+    String documentId = await checkDataByEmail(email, statusId);
+
     String result = _statusCheck(statusId);
     print('statusid $statusId');
     try {
       Map<String, String> data = new Map();
       data['status'] = result;
       print('result - $result');
-      if (statusId == 1) {
+      if (statusId == 2) {
         data['important_fact'] = importantFact;
       }
       print('data - $data');
@@ -100,6 +113,19 @@ class FirebaseServiceSearch {
           .collection("User")
           .document(documentId)
           .updateData(data);
+
+      // Calling Flask rest API to store cards
+//      rember important change a variabel  ==================
+      var apiRequestData = {
+        "status": data['status'],
+        "importantFact": importantFact,
+        "email": "myMail@gmail.com",
+        "logincount": 2,
+        "newUser": false,
+      };
+
+      var apiPlugin = rest.getRASA_Plugin(client, apiRequestData);
+
       result = 'success';
     } catch (e) {
       print(e);

@@ -1,12 +1,11 @@
 
 class Session {
 // user session creation --- start
-  String mainRunner(String userAnswer, session) {}
+  Future<String> mainRunner(String userAnswer, String session) {}
 
-  String mainRunnerSession(String userAnswer, session) {}
-
+//  Future<String> mainRunnerSession(String userAnswer, String session, String email) {}
+  Future<String> mainRunnerSession(String userAnswer, String session) {}
 // user session creation --- end
-
 
 }
 
